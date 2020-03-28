@@ -1,0 +1,36 @@
+*
+{
+    margin:0;
+    padding:0;
+}
+header{
+    background-color: black;
+    height: 30px;
+}
+.main-nav{
+    float: right;
+    margin-top:  9px;
+    list-style: none;
+}
+.main-nav li{
+    display: inline-block;
+  
+}
+.main-nav li a{
+    padding: 5px 20px;
+    text-decoration: none;
+    color:white;
+    font-size: 12px;
+    font-family: "Roboto",sans-serif;
+}
+.main-nav li a:hover{
+    border: white solid 1px;
+}
+.organisation h{
+    font-size: 12px;
+    float: left;
+    margin-top:  9px;
+    color:white;
+    font-weight: bold;
+    font-family: "Roboto",sans-serif;
+}

@@ -4,33 +4,119 @@
     padding:0;
 }
 header{
-    background-color: black;
-    height: 30px;
+    background-color: rgb(227, 227, 228);
+    height: 300px;
 }
-.main-nav{
+.small-nav{
     float: right;
-    margin-top:  9px;
+    margin-top:  5px;
     list-style: none;
 }
-.main-nav li{
-    display: inline-block;
+.small-nav li{
+  display: inline;
   
 }
-.main-nav li a{
-    padding: 5px 20px;
+.small-nav li a{
+    padding: 4px 10px;
     text-decoration: none;
-    color:white;
-    font-size: 12px;
+    color:black;
+    font-size: 13px;
     font-family: "Roboto",sans-serif;
 }
-.main-nav li a:hover{
-    border: white solid 1px;
+.small-nav li a:hover{
+    color :rgb(198,0,33);
+    font-weight: bold;
 }
 .organisation h{
     font-size: 12px;
     float: left;
+    margin-left: 10px;
     margin-top:  9px;
-    color:white;
+    color:black;
     font-weight: bold;
     font-family: "Roboto",sans-serif;
+}
+.second-row{
+    background-color: rgb(227, 227, 228);
+}
+.search-box{
+    position: absolute;
+    top:12%;
+    left:26%;
+    background-color: black;
+   /* transform: translate(0%,-50%); */
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+}
+.search-box:hover> .search-txt{
+    width:500px;
+    padding: 0 6px;
+}
+.search-box:hover> .search-btn{
+    background:white;
+    color:rgb(198,0,33);
+}
+.search-btn{
+    color:white;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background:black ;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.4s;
+}
+.search-txt{
+    border:none;
+    background: none;
+    outline:none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size:16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 500px;
+}
+.logo{
+    position:fixed;
+    top:5%;
+    left:2%;
+}
+.profile{
+    position:fixed;
+    top:11%;
+    left:75%;
+}
+.cart{
+    position:fixed;
+    top:11%;
+    left:80%;
+}
+
+.main-nav{
+    
+    height: 40px;
+    list-style: none;
+    position: fixed;
+    top:25%;
+    left:1%;
+}
+.main-nav li{
+    display: inline-block; 
+}
+.main-nav li a{
+    padding: 4px 10px;
+    text-decoration: none;
+    color:black;
+    font-size: 30px;
+    font-family: "Roboto",sans-serif;
+}
+.main-nav li a:hover{
+    color :rgb(198,0,33);
+    font-weight: bolder;
 }

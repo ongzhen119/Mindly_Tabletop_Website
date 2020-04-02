@@ -7,53 +7,79 @@
         <link href="style.css" rel="stylesheet" type="text/css"/>
         <link href="layout.css" rel="stylesheet"/>
     </head>
+    <style>
+      .sticky-top{
+        background-color: white;
+        position: sticky;
+        top:0;
+      }
+    </style>
     <body>
- <header> 
-      <div class="organisation">
-        <h>MINDLY TABLETOP Cafe and Store in Penang,Malaysia</h>
+      <div class ="header">
+        <div class="inner-header">
+        <h>MINDLT TABLETOP Cafe and Store in Penang , Malaysia</h>
+          <ul>
+            <li><a href="">Game Request</a></li>
+            <li><a href="">Cafe</a></li>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">Contact Us</a></li>
+            <li><a href=""><i class="fab fa-facebook-square fa-lg"></i></a></li>
+            <li><a href=""><i class="fas fa-envelope fa-lg"></i></a></li>
+            <li><a href=""><i class="fas fa-phone"></i></a></li>
+          </ul>
+        </div>
       </div>
-      <ul class="small-nav">
-        <li><a href="">Game Request</a></li>
-        <li><a href="">Cafe</a></li>
-        <li><a href="">FAQ</a></li>
-        <li><a href="">Contact Us</a></li>
-        <li><a href=""><i class="fab fa-facebook-square fa-lg"></i></a></li>
-        <li><a href=""><i class="fas fa-envelope fa-lg"></i></a></li>
-        <li><a href=""><i class="fas fa-phone"></i></a></li>
-      </ul>
-      <div class="logo">
-        <img src="mindly_logo.png" alt="website_logo" width="200px" height="160px" />
-      </div>
-        <div class="search-box">
+    <div class="sticky-top">
+      <div class="inner-header" >
+        <img src="mindly_logo.png"width="100px"height="95px"/>
+        <div class="search-box" >
           <input class="search-txt" type="text" name="" placeholder="Type to search">
           <a class="search-btn" href="#">
             <i class="fas fa-search"></i>
           </a>
         </div>
-        <div class="profile">
-            <i class="fas fa-user fa-4x" ></i>
+        <div class="profile-btn">
+          <i class="fas fa-user fa-4x" ></i>
+      </div>
+      <div class="cart-btn">
+          <i class="fas fa-shopping-cart fa-4x"></i>
+      </div>
+      </div>
+      <div style="background-color: rgb(227, 227, 228)">
+        <div class="inner-header" >
+          <ul class="main-nav" >
+            <li><a href="homepage.htm">HOME <i class="fas fa-home fa-lg"></i></a></li>
+            <li><a href="">DEALS <i class="fas fa-angle-down fa-lg"></i></a></li>
+            <li><a href="">CATEGORY <i class="fas fa-angle-down fa-lg"></i></a></li>
+            <li><a href="">CAFE <i class="fas fa-coffee fa-lg"></i></a></li>
+          </ul>
         </div>
-        <div class="cart">
-            <i class="fas fa-shopping-cart fa-4x"></i>
-        </div>
-        
-        <ul class="main-nav" >
-          <li><a href="homepage.htm">HOME <i class="fas fa-home fa-lg"></i></a></li>
-          <li><a href="">DEALS <i class="fas fa-angle-down fa-lg"></i></a></li>
-          <li><a href="">CATEGORY <i class="fas fa-angle-down fa-lg"></i></a></li>
-          <li><a href="">CAFE <i class="fas fa-coffee fa-lg"></i></a></li>
-        </ul>
-    </header>
+      </div>
+    </div>
+
+
+        <footer style="background-color: rgb(227, 227, 228)" >
+          
+        </footer>
     <h2><a href = "homepage.htm">HOME</a> / <b>TILES GAMES</b></h2>
+    <aside id="categories">
+      <b>PRODUCT CATEGORIES</b>
+      <ul>
+        <li><a href="">ACCESORIES</a></li>
+        <li><a href="">CARD GAMES</a></li>
+        <li><a href="">BOARD GAMES</a></li>
+        <li><a href="">TILES GAMES</a></li>
+      </ul>
+    </aside>
     <div class= "prodpic">
-        <table border = "1" cellpadding = "10">
+        <table cellpadding = "10">
             <tr>
                 <td><img src = "product_pic/azul_1.jpeg" align = "middle"></td>
                 <td><img src = "product_pic/domino_1.jfif" align = "middle"></td>
                 <td><img src = "product_pic/mahjong_1.jfif" align = "middle"></td>
                 <td><img src = "product_pic/kingsAbbey_1.jpg" align = "middle"></td>
             </tr>
-            <tr>
+            <tr class ="price">
                 <td>PLACEHOLDER!</td>
                 <td>PLACEHOLDER!</td>
                 <td>PLACEHOLDER!</td>
@@ -65,6 +91,12 @@
                 <td>PLACEHOLDER!</td>
                 <td>PLACEHOLDER!</td>
             </tr>
+            <tr class ="price">
+              <td>PLACEHOLDER!</td>
+              <td>PLACEHOLDER!</td>
+              <td>PLACEHOLDER!</td>
+              <td>PLACEHOLDER!</td>
+          </tr>
         </table>
     </div>
     </body>

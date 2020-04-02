@@ -1,8 +1,24 @@
+
+
+
 h2{
     margin-top:3%;
     margin-left:5%;
     font-variant:small-caps;
-    font-family: "Roboto", sans-serif;
+    
+}
+
+aside#categories{
+    margin-left:5%;
+    margin-top:2%;
+    background-color: rgb(227, 227, 228);
+    width:15%;
+  
+}
+
+aside#categories a{
+    text-decoration: none;
+    color:red;
 }
 
 h2 a{
@@ -20,12 +36,16 @@ div.prodpic table{
     border-collapse: collapse;
     text-align:center;
     padding:10px;
-    margin-top:5%;
-    margin-left:45%;
+    margin-top:-8%;
+    margin-left:30%;
     margin-right:25%;
 }
 
 div.prodpic td img{
     width:200px;
     height:200px;
+}
+
+div.prodpic td img:hover{
+    transform: scale(1.01);
 }

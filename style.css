@@ -2,32 +2,43 @@
 {
     margin:0;
     padding:0;
+    list-style: none;
+    text-decoration: none;
 }
-header{
+.header {
+    float: top;
     background-color: rgb(227, 227, 228);
-    height: 300px;
+    height: 30px;
+    display: block;
+    width:100%;
 }
-.small-nav{
+.header ul{
     float: right;
-    margin-top:  5px;
+    margin-top:  3px;
     list-style: none;
 }
-.small-nav li{
+.header li{
   display: inline;
   
 }
-.small-nav li a{
+.header li a{
     padding: 4px 10px;
     text-decoration: none;
     color:black;
     font-size: 13px;
     font-family: "Roboto",sans-serif;
 }
-.small-nav li a:hover{
+.header li a:hover{
     color :rgb(198,0,33);
-    font-weight: bold;
+    text-decoration: underline;
 }
-.organisation h{
+.inner-header{
+    width: 1000px;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+.inner-header h{
     font-size: 12px;
     float: left;
     margin-left: 10px;
@@ -36,13 +47,10 @@ header{
     font-weight: bold;
     font-family: "Roboto",sans-serif;
 }
-.second-row{
-    background-color: rgb(227, 227, 228);
-}
 .search-box{
     position: absolute;
     top:12%;
-    left:26%;
+    left:30%;
     background-color: black;
    /* transform: translate(0%,-50%); */
     height: 40px;
@@ -82,41 +90,33 @@ header{
     line-height: 40px;
     width: 500px;
 }
-.logo{
-    position:fixed;
-    top:5%;
-    left:2%;
+.profile-btn{
+    position: absolute;
+    top: 12%;
+    right:35%
 }
-.profile{
-    position:fixed;
-    top:11%;
-    left:75%;
+.cart-btn{
+    position: absolute;
+    top: 12%;
+    right:30%
 }
-.cart{
-    position:fixed;
-    top:11%;
-    left:80%;
-}
-
 .main-nav{
-    
-    height: 40px;
-    list-style: none;
-    position: fixed;
-    top:25%;
-    left:1%;
+    position: -webkit-sticky;
+    top:0;
+    display: flex;
+    padding: 10px;
+  
 }
 .main-nav li{
     display: inline-block; 
 }
 .main-nav li a{
-    padding: 4px 10px;
+    padding: 5px 10px;
     text-decoration: none;
     color:black;
-    font-size: 30px;
+    font-size: 20px;
     font-family: "Roboto",sans-serif;
 }
 .main-nav li a:hover{
     color :rgb(198,0,33);
-    font-weight: bolder;
 }

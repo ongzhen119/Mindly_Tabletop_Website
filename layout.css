@@ -1,0 +1,31 @@
+h2{
+    margin-top:3%;
+    margin-left:5%;
+    font-variant:small-caps;
+    font-family: "Roboto", sans-serif;
+}
+
+h2 a{
+    text-decoration: none;
+    color:black;
+}
+
+h2 a:hover{
+    color:red;
+    font-weight: bold;
+}
+
+div.prodpic table{
+    color:red;
+    border-collapse: collapse;
+    text-align:center;
+    padding:10px;
+    margin-top:5%;
+    margin-left:45%;
+    margin-right:25%;
+}
+
+div.prodpic td img{
+    width:200px;
+    height:200px;
+}

@@ -61,16 +61,46 @@
         <footer style="background-color: rgb(227, 227, 228)" >
           
         </footer>
-    <h2><a href = "homepage.htm">HOME</a> / <b>TILES GAMES</b></h2>
-    <aside id="categories">
-      <b>PRODUCT CATEGORIES</b>
+    <!--Categories block-->
+    <div id="categories">
+ 
+      <h2><a href = "homepage.htm">HOME</a> / <b>TILES GAMES</b></h2>
+      <b class="tag1" style="margin-left: 60px;">PRODUCT CATEGORIES</b><br><br>
       <ul>
-        <li><a href="">ACCESORIES</a></li>
-        <li><a href="">CARD GAMES</a></li>
-        <li><a href="">BOARD GAMES</a></li>
-        <li><a href="">TILES GAMES</a></li>
+        <li><a href="">ACCESORIES</a><hr></li>
+        <li><a href="">CARD GAMES</a><hr></li>
+        <li><a href="">BOARD GAMES</a><hr></li>
+        <li><a href="">TILES GAMES</a><hr></li>
+        <li><a href="">NEW RELEASE GAMES</a><hr></li>
+        <li><a href="">HOT SELLING GAMES</a><hr></li>
+        <li><a href="">RECOMMENDED GAMES</a><hr></li>
+        <li><a href="">PROMOTION </a><hr></li>
       </ul>
-    </aside>
+      <div>
+      <b class="tag1" style="line-height: 4; margin-left: 80px;">FILTER BY PRICE</b>
+      <form class="price">
+        <div>
+        <input type="radio" id="price1" name="price" checked/>
+        <label for="price1">RM0 - 10</label></div>
+        <div>
+        <input type="radio" id="price2" name="price" />
+        <label for="price2">RM10 - 50</label></div>
+        <div>
+        <input type="radio" id="price3" name="price"/>
+        <label for="price3">RM50 - 100</label></div>
+        <div>
+        <input type="radio" id="price4" name="price"/>
+        <label for="price4">RM100 - 250</label></div>
+        <div>
+        <input type="radio" id="price5" name="price"/>
+        <label for="price5">RM250+</label></div>
+        <div>
+        <input type="submit" id="submit" value="filter"/></div>
+      </form>
+      </div>
+
+  </div>
+  <!--prod table-->
     <div class= "prodpic">
         <table cellpadding = "10">
             <tr>
@@ -98,6 +128,5 @@
               <td>PLACEHOLDER!</td>
           </tr>
         </table>
-    </div>
     </body>
 </html>

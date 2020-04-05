@@ -3,15 +3,66 @@
     <head>
         <title>Mindly Tabletop cafe and Store in Penang , Malaysia</title>
         <meta charset="utf-8"/>
-        <script src="https://kit.fontawesome.com/979e56d4a3.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/979e56d4a3.js" crossorigin="anonymous" rel="stylesheet"></script>
         <link href="style.css" rel="stylesheet" type="text/css"/>
     </head>
-    <style>
-      .sticky-top{
-        background-color: white;
-        position: sticky;
-        top:0;
-      }
+  <style>
+    .sticky-top{
+      background-color: white;
+      position: sticky;
+      top:0;}
+    .main-nav {
+      overflow: hidden;
+      background-color: rgb(227, 227, 228);}
+
+    .main-nav a {
+      float: left;
+      font-size: 16px;
+      color:black ;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;}
+
+    .dropdown {
+      float: left;
+      overflow: hidden;}
+        
+    .dropdown .dropbtn {
+      font-size: 16px;  
+      border: none;
+      outline: none;
+      color: black;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;}
+    .main-nav a:hover, .dropdown:hover .dropbtn {
+      color: rgb(198,0,33);}
+      
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    .dropdown-content a:hover {
+     background-color: #ddd;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+      
+      
     </style>
     <body>
       <div class ="header">
@@ -22,13 +73,14 @@
             <li><a href="">Cafe</a></li>
             <li><a href="">FAQ</a></li>
             <li><a href="">Contact Us</a></li>
-            <li><a href=""><i class="fab fa-facebook-square fa-lg"></i></a></li>
-            <li><a href=""><i class="fas fa-envelope fa-lg"></i></a></li>
-            <li><a href=""><i class="fas fa-phone"></i></a></li>
+            <li><a href="" title="Follow on Facebook"><i class="fab fa-facebook-square fa-lg"></i></a></li>
+            <li><a href="" title="Send us an email"><i class="fas fa-envelope fa-lg"></i></a></li>
+            <li><a href="" title="Call us"><i class="fas fa-phone"></i></a></li>
           </ul>
         </div>
       </div>
     <div class="sticky-top">
+
       <div class="inner-header" >
         <img src="mindly_logo.png"width="100px"height="95px"/>
         <div class="search-box" >
@@ -39,26 +91,52 @@
         </div>
         <div class="profile-btn">
           <i class="fas fa-user fa-4x" ></i>
-      </div>
-      <div class="cart-btn">
+        </div><div class="cart-btn">
           <i class="fas fa-shopping-cart fa-4x"></i>
+        </div>
       </div>
-      </div>
+
       <div style="background-color: rgb(227, 227, 228)">
         <div class="inner-header" >
-          <ul class="main-nav" >
-            <li><a href="homepage.htm">HOME <i class="fas fa-home fa-lg"></i></a></li>
-            <li><a href="">DEALS <i class="fas fa-angle-down fa-lg"></i></a></li>
-            <li><a href="">CATEGORY <i class="fas fa-angle-down fa-lg"></i></a></li>
-            <li><a href="">CAFE <i class="fas fa-coffee fa-lg"></i></a></li>
-          </ul>
+          
+          <div class="main-nav" >
+            <a href="homepage.htm">HOME <i class="fas fa-home fa-lg"></i></a>
+            <div class="dropdown">
+              <button class="dropbtn" > DEALS <i class="fas fa-caret-down fa-lg"></i></button>
+              <div class="dropdown-content">
+                <a href="#">Hot Selling</a>
+                <a href="#">New Arrival</a>
+                <a href="#">All Games</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">CATEGORY<i class="fas fa-caret-down fa-lg"></i></button>
+              <div class="dropdown-content">
+                <a href="#">Board Games</a>
+                <a href="#">Strategy Games</a>
+                <a href="#">Tile-based Games</a>
+                <a href="#">Accessories</a>
+              </div>
+            </div>
+            <a href=""> CAFE <i class="fas fa-coffee fa-lg"></i></a>
+          </div>
+
         </div>
       </div>
     </div>
-    <img src="mindly_logo.png"width="100px"height="5000px"/>
+    <img src="mindly_logo.png"width="1500px"height="3000px"/>
 
-        <footer style="background-color: rgb(227, 227, 228)" >
-          
-        </footer>
-    </body>
+    <div  class="footer">
+      <div class="inner-footer">
+          <h>Copyright 2020 (c) 
+            <strong>Mindly Tabletop store</strong> </h>
+            <ul>
+              <li><a href="">Condition of use</a> </li>|
+              <li><a href="">Contact Us </a></li>|
+              <li><a href="">Login </a></li>|
+              <li><a href="">Sign Up </a></li>
+            </ul>
+      </div>
+    </div>
+  </body>
 </html>

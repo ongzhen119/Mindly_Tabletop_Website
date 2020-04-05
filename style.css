@@ -4,6 +4,7 @@
     padding:0;
     list-style: none;
     text-decoration: none;
+    font-family: "Roboto",sans-serif;
 }
 .header {
     float: top;
@@ -14,8 +15,8 @@
 }
 .header ul{
     float: right;
-    margin-top:  3px;
-    list-style: none;
+    margin-top:  5px;
+  
 }
 .header li{
   display: inline;
@@ -37,6 +38,7 @@
     height: 100%;
     display: block;
     margin: 0 auto;
+    position: relative;
 }
 .inner-header h{
     font-size: 12px;
@@ -50,7 +52,7 @@
 .search-box{
     position: absolute;
     top:12%;
-    left:30%;
+    left:12%;
     background-color: black;
    /* transform: translate(0%,-50%); */
     height: 40px;
@@ -93,30 +95,63 @@
 .profile-btn{
     position: absolute;
     top: 12%;
-    right:35%
+    left: 73%
 }
 .cart-btn{
     position: absolute;
     top: 12%;
-    right:30%
+    left:83%
 }
 .main-nav{
-    position: -webkit-sticky;
-    top:0;
-    display: flex;
     padding: 10px;
-  
+    overflow: hidden;
 }
-.main-nav li{
-    display: inline-block; 
+
+.footer{
+    float: bottom;
+    background-color: rgb(227, 227, 228);
+    height: 40px;
+    display: block;
+    width:100%;
 }
-.main-nav li a{
-    padding: 5px 10px;
-    text-decoration: none;
+.inner-footer{
+    width: 1000px;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+.footer-nav{
+    
+    float: right;
+    float: right;
+    margin-top:  3px;
+    
+}
+.footer ul{
+    margin-top:  5px;
+    float: right;
+    
+}
+.footer li{
+    display: inline;
+}
+.footer h{
+    font-size: 12px;
+    float: left;
+    margin-left: 10px;
+    margin-top:  9px;
     color:black;
-    font-size: 20px;
+    font-weight: bold;
     font-family: "Roboto",sans-serif;
 }
-.main-nav li a:hover{
+.footer li a{
+    padding: 4px 10px;
+    text-decoration: none;
+    color:black;
+    font-size: 13px;
+    font-family: "Roboto",sans-serif;
+}
+.footer li a:hover{
     color :rgb(198,0,33);
+    text-decoration: underline;
 }

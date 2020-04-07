@@ -6,6 +6,10 @@
     text-decoration: none;
     font-family: "Roboto",sans-serif;
 }
+html,body{
+    width: 100%;
+    height: 100%;
+}
 .header {
     float: top;
     background-color: rgb(227, 227, 228);
@@ -18,7 +22,7 @@
     margin-top:  5px;
   
 }
-.header li{
+.header li ,.footer li {
   display: inline;
   
 }
@@ -33,11 +37,12 @@
     color :rgb(198,0,33);
     text-decoration: underline;
 }
-.inner-header{
+.inner-header , .inner-footer ,.inner-section{
     width: 1000px;
     height: 100%;
     display: block;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
 }
 .inner-header h{
@@ -103,38 +108,65 @@
     left:83%
 }
 .main-nav{
-    padding: 10px;
+    height: 40px;
+    padding: 0px;
     overflow: hidden;
 }
+.section {
+    background-color: white;
+    width: 100%;
+    height: 300px;
+    padding: 1px;
+    position: absolute;
+    top: 1200px;
+}
+
+.social-icons a{
+    border: 1px solid black;
+    color :white;
+    background-color: black;
+    padding: 6px;
+    border-radius: 50%;
+}
+.social-icons a.facebook-icon:hover{
+    color: #4267B2;
+    background-color: white;
+    border:1px solid #4267B2;
+}
+.social-icons a.envelope-icon:hover{
+  
+    background-color: rgba(0, 0, 255);
+    border:1px solid rgba(0, 0, 255);
+
+}
+.social-icons a.phone-icon:hover{
+   
+    background-color:rgb(0, 128, 64);
+    border:1px solid rgb(0, 128, 64);
+
+}
+
 
 .footer{
-    float: bottom;
+    position: absolute;
+    top: 1500px;
     background-color: rgb(227, 227, 228);
     height: 40px;
     display: block;
     width:100%;
 }
-.inner-footer{
-    width: 1000px;
-    height: 100%;
-    display: block;
-    margin: 0 auto;
-}
+
 .footer-nav{
     
     float: right;
     float: right;
     margin-top:  3px;
-    
 }
 .footer ul{
     margin-top:  5px;
     float: right;
-    
 }
-.footer li{
-    display: inline;
-}
+
 .footer h{
     font-size: 12px;
     float: left;

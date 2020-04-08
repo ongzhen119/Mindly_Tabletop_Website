@@ -8,15 +8,7 @@
         <link href="layout.css" rel="stylesheet"/>
     </head>
     <style>
-      .sticky-top{
-        background-color: white;
-        position: sticky;
-        top:0;}
-      .main-nav {
-        overflow: hidden;
-        background-color: rgb(227, 227, 228);
-        z-index: 1;
-      }
+
       </style>
     <body>
       <div class ="header">
@@ -27,13 +19,14 @@
             <li><a href="">Cafe</a></li>
             <li><a href="">FAQ</a></li>
             <li><a href="">Contact Us</a></li>
-            <li><a href=""><i class="fab fa-facebook-square fa-lg"></i></a></li>
-            <li><a href=""><i class="fas fa-envelope fa-lg"></i></a></li>
-            <li><a href=""><i class="fas fa-phone"></i></a></li>
+            <li><a href="" title="Follow on Facebook"><i class="fab fa-facebook-square fa-lg"></i></a></li>
+            <li><a href="" title="Send us an email"><i class="fas fa-envelope fa-lg"></i></a></li>
+            <li><a href="" title="Call us"><i class="fas fa-phone"></i></a></li>
           </ul>
         </div>
       </div>
     <div class="sticky-top">
+
       <div class="inner-header" >
         <img src="mindly_logo.png"width="100px"height="95px"/>
         <div class="search-box" >
@@ -44,19 +37,35 @@
         </div>
         <div class="profile-btn">
           <i class="fas fa-user fa-4x" ></i>
-      </div>
-      <div class="cart-btn">
+        </div><div class="cart-btn">
           <i class="fas fa-shopping-cart fa-4x"></i>
+        </div>
       </div>
-      </div>
+
       <div style="background-color: rgb(227, 227, 228)">
         <div class="inner-header" >
-          <ul class="main-nav" >
-            <li><a href="homepage.htm">HOME <i class="fas fa-home fa-lg"></i></a></li>
-            <li><a href="">DEALS <i class="fas fa-angle-down fa-lg"></i></a></li>
-            <li><a href="">CATEGORY <i class="fas fa-angle-down fa-lg"></i></a></li>
-            <li><a href="">CAFE <i class="fas fa-coffee fa-lg"></i></a></li>
-          </ul>
+          
+          <div class="main-nav" >
+            <a href="homepage.htm">HOME <i class="fas fa-home fa-lg"></i></a>
+            <div class="dropdown">
+              <button class="dropbtn" > DEALS <i class="fas fa-caret-down fa-lg"></i></button>
+              <div class="dropdown-content">
+                <a href="#">Hot Selling</a>
+                <a href="#">New Arrival</a>
+                <a href="#">All Games</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">CATEGORY<i class="fas fa-caret-down fa-lg"></i></button>
+              <div class="dropdown-content">
+                <a href="#">Board Games</a>
+                <a href="#">Strategy Games</a>
+                <a href="#">Tile-based Games</a>
+                <a href="#">Accessories</a>
+              </div>
+            </div>
+            <a href=""> CAFE <i class="fas fa-coffee fa-lg"></i></a>
+          </div>
         </div>
       </div>
     </div>

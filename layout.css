@@ -9,6 +9,10 @@ div#categories{
 
 
 /*categories header*/
+div#categories{
+    height:100%;
+}
+
 div#categories h2 {
     line-height:2cm;
     text-align: center;
@@ -43,13 +47,15 @@ hr {
 }
 
 
-/*price*/
-.price{
+/*categories filter*/
+.cfilter{
     font-weight: bold;
     margin-left:90px;
-    color:rgb(135, 136, 212);
     line-height: 2;
+    color:rgb(135, 136, 212);
 }
+
+
 /*submit button*/
 #submit{
     width:100px;
@@ -64,15 +70,15 @@ hr {
 
 
 /*table style*/
-div.prodpic table{
-    color:red;
+div.prodpic{
     border-collapse: collapse;
     text-align:center;
     padding:10px;
-    margin-top:-8%;
-    margin-left:30%;
+    margin-top:-38%;
+    margin-left:23%;
     margin-right:25%;
 }
+
 /*table img style*/
 div.prodpic td img{
     border:rgb(227, 227, 228);
@@ -80,8 +86,27 @@ div.prodpic td img{
     height:200px;
 }
 
+div.prodpic td{
+    padding: 0px 40px;
+}
+
+div.prodpic tr.price td{
+    padding-bottom:50px;
+}
+
+div.view{
+    background-color: red;
+    color:white;
+    position:absolute;
+    
+}
+
 div.prodpic td img:hover{
     transform: scale(1.02);
+}
+
+tr.price{
+    color:blue;
 }
 /*footer*/
 footer#page{
@@ -96,4 +121,34 @@ footer#page a{
 
 footer#page a:hover{
     color:red;
+}
+
+/*index*/
+
+div#index table{
+    margin-left:40%;
+}
+
+div#index td{
+    padding:10px 15px;
+}
+div.ibutton{
+    border: 1px black solid;
+    width:20px;
+    text-align: center;
+    border-radius: 15px;
+    font-size:1.0em;
+    padding:2px;
+}
+
+div#index a{
+   color:black;
+}
+
+div#index td.current a{
+    color:white;
+}
+
+div#index td.current div{
+    background-color:black;
 }

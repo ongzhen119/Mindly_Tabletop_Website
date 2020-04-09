@@ -55,6 +55,7 @@ hr {
 /*submit button*/
 #submit {
     width: 100px;
+    height:30px;
     border-radius: 25px;
     font-size: 1em;
     font-variant: small-caps;
@@ -71,14 +72,33 @@ div.prodpic {
     right:5%;
 }
 
-div.prodpic table {
+
+
+div.prodpic table{
     border-collapse: collapse;
     margin:40px 0;
-    font-size:0.9em;
+    text-decoration:none;
     min-width: 1000px;
     min-height: 250px;
     text-align:center;
+}
+div.prodpic div.name{
+    width:200px;
+    
+}
+div.prodpic div.name p{
+    color: rgb(135, 136, 212);
+    text-shadow: 1px 1px gray;
+    font-family:'Roboto';
+    font-size:1.2em;
+    word-wrap:break-word;
+}
 
+div.prodpic p.price{
+    color:black;
+    font-weight:bold;
+    font-family:'Roboto';
+    line-height: 2em;
 }
 
 
@@ -120,7 +140,7 @@ div.container {
 
 div.container .view {
     position: absolute;
-    bottom: 19px;
+    bottom: 2px;
     width: 100%;
     display:none;
     background-color: red;
@@ -135,7 +155,7 @@ div.container .view {
 div.container .cart a i{
     position:absolute;
     display:none;
-    bottom:55px;
+    bottom:40px;
     left:10px;
     font-size:2.1em;
     background-color:black;
@@ -151,7 +171,7 @@ div.container .cart a i{
 div.container .fav a i{
     position:absolute;
     display:none;
-    bottom:55px;
+    bottom:40px;
     right:10px;
     font-size:2.1em;
     background-color:black;
@@ -165,7 +185,7 @@ div.container .fav a i{
 }
 
 .cart .cart-ttp{
-    bottom:110px;
+    bottom:100px;
     left:-20px;
     width:120px;
     visibility: hidden;
@@ -180,8 +200,8 @@ div.container .fav a i{
 }
 
 .fav .fav-ttp{
-    bottom:110px;
-    left:110px;
+    bottom:100px;
+    right:-20px;
     width:120px;
     visibility: hidden;
     background-color:black;
@@ -204,7 +224,7 @@ div.container:hover a .view{
 }
 
 div.container a .view:hover{
-    color:red;
+    color:yellow;
 }
 
 div.container:hover .cart i{
@@ -218,7 +238,7 @@ div.container:hover .fav i{
 }
 
 div.container .cart:hover i{
-    color:red;
+    color:rgb(112, 223, 168);
 }
 
 div.container .cart:hover .cart-ttp{

@@ -102,6 +102,7 @@ div.view{
 }
 
 div.prodpic td img:hover{
+    z-index: -1;
     transform: scale(1.02);
 }
 

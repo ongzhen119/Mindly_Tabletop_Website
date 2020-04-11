@@ -7,12 +7,23 @@
         <link href="style.css" rel="stylesheet" type="text/css"/>
         <link href="home.css" rel="stylesheet" type="text/css"/>
     </head>
+    <style>
+      .inner{
+          width: 1000px;
+          margin-left: auto;
+          margin-right: auto;
+      }
+      .z-1{
+        z-index: -1;
+      }
 
 
-    <body>
+    </style>
+
+    <body style="height: auto;">
       <div class ="header">
         <div class="inner-header">
-        <h>MINDLT TABLETOP Cafe and Store in Penang , Malaysia</h>
+        <h>MINDLY TABLETOP Cafe and Store in Penang , Malaysia</h>
           <ul>
             <li><a href="">Game Request</a></li>
             <li><a href="">Cafe</a></li>
@@ -24,75 +35,86 @@
           </ul>
         </div>
       </div>
-    <div class="sticky-top">
-
-      <div class="inner-header" >
-        <img src="mindly_logo.png"width="100px"height="95px"/>
-        <div class="search-box" >
-          <input class="search-txt" type="text" name="" placeholder="Type to search">
-          <a class="search-btn" href="#">
-            <i class="fas fa-search"></i>
-          </a>
-        </div>
-        <div class="profile-btn">
-          <i class="fas fa-user fa-4x" ></i>
-        </div><div class="cart-btn">
-          <i class="fas fa-shopping-cart fa-4x"></i>
-        </div>
-      </div>
-
-      <div style="background-color: rgb(227, 227, 228)">
+      <div class="sticky-top">
+    
         <div class="inner-header" >
-          
-          <div class="main-nav" >
-            <a href="homepage.htm">HOME <i class="fas fa-home fa-lg"></i></a>
-            <div class="dropdown">
-              <button class="dropbtn" > DEALS <i class="fas fa-caret-down fa-lg"></i></button>
-              <div class="dropdown-content">
-                <a href="#">Hot Selling</a>
-                <a href="#">New Arrival</a>
-                <a href="#">All Games</a>
+          <img src="mindly_logo.png"width="100px"height="95px"/>
+          <div class="search-box" >
+            <input class="search-txt" type="text" name="" placeholder="Type to search">
+            <a class="search-btn" href="#">
+              <i class="fas fa-search"></i>
+            </a>
+          </div>
+          <div class="profile-btn">
+            <i class="fas fa-user fa-4x" ></i>
+          </div><div class="cart-btn">
+            <i class="fas fa-shopping-cart fa-4x"></i>
+          </div>
+      </div>
+  
+      <div style="background-color: rgb(227, 227, 228)">
+          <div class="inner-header" >
+            
+            <div class="main-nav" >
+              <a href="homepage.htm">HOME <i class="fas fa-home fa-lg"></i></a>
+              <div class="dropdown">
+                <button class="dropbtn" > DEALS <i class="fas fa-caret-down fa-lg"></i></button>
+                <div class="dropdown-content">
+                  <a href="#">Hot Selling</a>
+                  <a href="#">New Arrival</a>
+                  <a href="#">All Games</a>
+                </div>
               </div>
-            </div>
-            <div class="dropdown">
-              <button class="dropbtn">CATEGORY<i class="fas fa-caret-down fa-lg"></i></button>
-              <div class="dropdown-content">
-                <a href="#">Board Games</a>
-                <a href="#">Strategy Games</a>
-                <a href="#">Tile-based Games</a>
-                <a href="#">Accessories</a>
+              <div class="dropdown">
+                <button class="dropbtn">CATEGORY<i class="fas fa-caret-down fa-lg"></i></button>
+                <div class="dropdown-content">
+                  <a href="#">Board Games</a>
+                  <a href="#">Strategy Games</a>
+                  <a href="#">Tile-based Games</a>
+                  <a href="#">Accessories</a>
+                </div>
               </div>
+              <a href=""> CAFE <i class="fas fa-coffee fa-lg"></i></a>
             </div>
-            <a href=""> CAFE <i class="fas fa-coffee fa-lg"></i></a>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="slideshow-container">
+      <!-- CONTENT  -->
+      <div id="slideshow-container">
+        <div class="mySlides fade ">
 
-      <div class="mySlides fade ">
-        <img src="home_pic/covid-special-deal.png" width="700px" height="500px">
-        <div class="text">Caption Text</div>
-      </div>
-      
-      <div class="mySlides fade ">
+          <img src="home_pic/freeshipping.jpg" width="700px" height="520px" >
+          
+        </div>
         
-        <img src="home_pic/freeshipping.jpg"  width="700px" height="500px">
-        <div class="text">Caption Two</div>
+        <div class="mySlides fade " >
+          
+          <img src="home_pic/specialpromo.jpg"  width="700px" height="520px">
+        </div>
+        
+        <div class="mySlides fade ">
+          <img src="home_pic/covid-19-special-deal.png"  width="700px" height="520px" style="object-fit: cover;" usemap="#shopnow">
+          <map name="shopnow">
+            <area shape="rect" coords="455,650,630,720" href="#" >
+          </map>
+        </div>
+
+        <div class="banner">
+          <h1 class="title" >
+            <span class="text1"><b>Mindly <br/> Tabletop <br/> Cafe</b></span>
+            <span class="text2"> Visit us right now!</span>
+        </div>
+
+        <div style="position: absolute; top: 500px;left: 600px;">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+        </div>
+
       </div>
-      
-      <div class="mySlides fade">
-        <img src="home_pic/specialpromo.jpg"  width="700px" height="500px">
-        <div class="text">Caption Three</div>
-      </div>
-      <div style="text-align:right;">
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-      </div>
-    </div>
-    <script>
+
+    <script type="text/javascript">
       var slideIndex = 0;
       showSlides();
       
@@ -113,53 +135,53 @@
         setTimeout(showSlides, 4000); // Change image every 4 seconds
       }
     </script>
-    <div class="banner">
-      <img src="home_pic/cafephoto.png" alt="cafe banner"   height="500px"
-      width="270px" style="object-fit: cover;">
-      <h1 style="font-size: 22px;
-       position: absolute; top:100px; left: 40px;
-       text-align: center;">
-        <b>MINDLY TABLETOP <br> CAFE</b></h1>
 
-      <p></p>
-    </div>
-
-    <div class="section"  >
-      <div class="inner-section" >
-        <div class="about-us" style="width: 50%; height: 100%;" >
-          <h1>About Mindly Tabletop</h1>
-          <img src="mindly_logo.png" width="200px"height="190px"/>
-          <p style="position: absolute;top:10%;left:20%; margin-top:40px;  text-align: left; kerning: 500px;">
-            Board game cafe and store in Penang,<br>
-             Malaysia that sell original genuine board <br>
-             games and provide shipping services<br>
-              across the whole country. </p>
-              <div class="social-icons" style="position: absolute; left: 40px;" >
-                <a href="#" title="Follow on Facebook" class="facebook-icon"><i class="fab fa-facebook-square fa-lg"></i></a>
-                <a href="#" title="Send us an email" class="envelope-icon"><i class="fas fa-envelope fa-lg"></i></a>
-                <a href="#" title="Call us" class="phone-icon"><i class="fas fa-phone"></i></a>
-              </div>
-        </div>
-        <div class="we-accept" style="position: absolute; top:0% ; left: 60%;">
-          <h1 style="text-align: left; ">We Accept</h1>
-          <img src="we-accept.png" alt="">
-        </div>
+    <!-- HOT SELLING AND NEW ARRIVAL-->
+    <hr/> <br/><br/>
+       <div class="container card" id="hot-selling">
+        <span>Hot Selling</span>
       </div>
-    </div>
-
-    <div  class="footer" >
-
-      <div class="inner-footer" >
-          <h>Copyright 2020 (c) <b>Mindly Tabletop store</b> </h>
-            <ul>
-              <li><a href="">Condition of use</a> </li>|
-              <li><a href="">Contact Us </a></li>|
-              <li><a href="">Login </a></li>|
-              <li><a href="">Sign Up </a></li>
-            </ul>
-
+      <br/> <br/> <hr/> <br/><br/>
+      <div class="container card" id="new-arrival">
+        <span>New Arrival</span>
       </div>
-    </div>
+
+        <!--Footer-->
+        <div  class="footer" >
+
+          <div class="inner-section" >
+            <div class="about-us" style="width: 50%; " >
+              <h1>About Mindly Tabletop</h1>
+              <img src="mindly_logo.png" width="200px"height="190px" style="left: 50px;">
+              <p style="position: absolute;top: 280px;left: 20px;">
+                Board game cafe and store in Penang,<br>
+                 Malaysia that sell original genuine board <br>
+                 games and provide shipping services<br>
+                  across the whole country. </p>
+                  <div class="social-icons" style="position: absolute; left: 250px;top: 360px;" >
+                    <a href="#" title="Follow on Facebook" class="facebook-icon"><i class="fab fa-facebook-square fa-lg"></i></a>
+                    <a href="#" title="Send us an email" class="envelope-icon"><i class="fas fa-envelope fa-lg"></i></a>
+                    <a href="#" title="Call us" class="phone-icon"><i class="fas fa-phone"></i></a>
+                  </div>
+            </div>
+            <div class="we-accept" style="position: absolute; left: 550px;">
+              <h1 style="text-align: center; ">We Accept</h1>
+             
+            </div>
+            <img src="we-accept.png" alt="" style="border-radius: 10%; width: 400px;position: absolute;left: 650px;top: 75px;">
+          </div>
+          <div style="background-color: #e3e3e3; height: 30px;">
+            <div class="inner-footer" >
+              <h>Copyright 2020 (c) <b>Mindly Tabletop store</b> </h>
+                <ul>
+                  <li><a href="">Condition of use</a> </li>|
+                  <li><a href="">Contact Us </a></li>|
+                  <li><a href="">Login </a></li>|
+                  <li><a href="">Sign Up </a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
 
 
   </body>

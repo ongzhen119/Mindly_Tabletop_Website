@@ -3,16 +3,12 @@
 } 
 
  /*Slideshow container */
-.slideshow-container {
-  border: #717171 solid 1px;
-  position: absolute;  
-  width: 700px;
-  height: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+#slideshow-container {
+  position: relative;  
   left: 450px;
-  z-index: -1;
+  display: block;
+  width: 1000px;
+  height: 600px;
 }
 /* The dots/bullets/indicators  */
 .dot {
@@ -24,9 +20,6 @@
   display: inline-block;
   transition: background-color 0.6s ease;
   z-index: 1;
-  position: relative;
-  top:-50px;
-  left: -10px;
 } 
 
 .dot.active {
@@ -59,8 +52,55 @@
 }
 
 .banner {
-  z-index: -1;
+  background-image: url('home_pic/cafephoto.png');
+  background-size: cover;
+  background-position: center;
   position: absolute;
-  right: 450px;
-  border:2px  black ;
+  top: 265px;
+  left: 850px;
+  width: 270px;
+  height: 520px;
+  text-align: center;
+  transform: translate(-50%,-50%);
+}
+.banner span{
+  text-transform: uppercase;
+  display: block;
+}
+.text1{
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 300px;
+  letter-spacing: 8px;
+
+  position: relative;
+  top: 100px;
+  animation: text 3s 1;
+
+}
+
+.text2{
+  font-size: 20px;
+}
+@keyframes text{
+  0%{
+    opacity: 0;
+    margin-bottom: -40px;
+  }
+  30%{
+    letter-spacing: 19px;
+    margin-bottom: -40px;
+  }
+  85%{
+    letter-spacing: 8px;
+    margin-bottom: -40px;
+  }
+}
+.container{
+  position: relative;
+  background-color: #E3E3E3;
+  height: 300px;
+  width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
 }

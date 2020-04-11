@@ -1,0 +1,321 @@
+/*categories block*/
+div#categories {
+    position:absolute;
+    background-color: rgb(227, 227, 228);
+    float:left;
+    width:19%;
+    height:1290px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+div#categories h2 {
+    line-height: 2cm;
+    text-align: center;
+}
+
+div#categories h2 a {
+    text-align: center;
+    text-decoration: none;
+    color: rgb(135, 136, 212);
+}
+
+
+div#categories ul {
+    text-align: center;
+}
+
+div#categories ul li a {
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: bold;
+    line-height: 2.0;
+    color: rgb(135, 136, 212);
+}
+
+div#categories a:hover {
+    color: red;
+    font-weight: bold;
+}
+
+/*straight line*/
+hr {
+    color: rgb(210, 211, 216);
+}
+
+
+/*categories filter*/
+.cfilter {
+    font-weight: bold;
+    margin-left: 90px;
+    line-height: 2;
+    color: rgb(135, 136, 212);
+}
+
+
+/*submit button*/
+#submit {
+    width: 100px;
+    height:30px;
+    border-radius: 25px;
+    font-size: 1em;
+    font-variant: small-caps;
+}
+
+#submit:hover {
+    background-color: lightgray;
+}
+
+
+/*table style*/
+div.prodpic {
+    position: absolute;
+    right:5%;
+}
+
+
+
+div.prodpic table{
+    border-collapse: collapse;
+    margin:40px 0;
+    text-decoration:none;
+    min-width: 1000px;
+    min-height: 250px;
+    text-align:center;
+}
+div.prodpic div.name{
+    width:200px;
+    
+}
+div.prodpic div.name p{
+    color: rgb(135, 136, 212);
+    text-shadow: 1px 1px gray;
+    font-family:'Roboto';
+    font-size:1.2em;
+    word-wrap:break-word;
+}
+
+div.prodpic p.price{
+    color:black;
+    font-weight:bold;
+    font-family:'Roboto';
+    line-height: 2em;
+}
+
+
+div.prodpic td {
+    padding: 50px 40px;
+}
+
+
+div.prodpic img {
+    width: 200px;
+    height: 200px;
+    border-bottom: 1px rgb(210, 211, 216) solid;
+    border:1px solid white;
+}
+
+
+div.container:hover img {
+    transform: scale(1.02);
+    border:1px solid black;
+
+}
+
+
+
+/*view more button*/
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.75;
+    }
+}
+
+div.container {
+    position: relative;
+}
+
+div.container .view {
+    position: absolute;
+    bottom: 2px;
+    width: 100%;
+    display:none;
+    background-color: red;
+    color: black;
+    height: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+}
+
+div.container .cart a i{
+    position:absolute;
+    display:none;
+    bottom:40px;
+    left:10px;
+    font-size:2.1em;
+    background-color:black;
+    opacity:75%;
+    border-radius:25px;
+    color:white;
+    width:50px;
+    height:50px;
+    line-height:50px;
+    text-align:center;
+}
+
+div.container .fav a i{
+    position:absolute;
+    display:none;
+    bottom:40px;
+    right:10px;
+    font-size:2.1em;
+    background-color:black;
+    opacity:75%;
+    border-radius:25px;
+    color:white;
+    width: 50px;
+    height:50px;
+    line-height:50px;
+    text-align:center;
+}
+
+.cart .cart-ttp{
+    bottom:100px;
+    left:-20px;
+    width:120px;
+    visibility: hidden;
+    background-color:black;
+    opacity:75%;
+    color:#fff;
+    text-align:center;
+    padding:5px 0;
+    border-radius: 6px;
+    position:absolute;
+    z-index:2;
+}
+
+.fav .fav-ttp{
+    bottom:100px;
+    right:-20px;
+    width:120px;
+    visibility: hidden;
+    background-color:black;
+    opacity:75%;
+    color:#fff;
+    text-align:center;
+    padding:5px 0;
+    border-radius: 6px;
+    position:absolute;
+    z-index:2;
+}
+
+div.container:hover a .view{
+    color: rgb(227, 227, 228);
+    background-color: black;
+    opacity: 75%;
+    display: block;
+    animation: fadeIn 0.5s normal;
+    transform:scale(1.02);
+}
+
+div.container a .view:hover{
+    color:yellow;
+}
+
+div.container:hover .cart i{
+    display:block;
+    animation: fadeIn 0.5s normal;
+}
+
+div.container:hover .fav i{
+    display:block;
+    animation: fadeIn 0.5s normal;
+}
+
+div.container .cart:hover i{
+    color:rgb(112, 223, 168);
+}
+
+div.container .cart:hover .cart-ttp{
+    visibility:visible;
+    animation: fadeIn 0.5s normal;
+}
+
+div.container .fav:hover i{
+    color:red;
+}
+
+div.container .fav:hover .fav-ttp{
+    visibility:visible;
+    animation: fadeIn 0.5s normal;
+}
+
+
+
+
+/*footer*/
+footer#page {
+    background-color: blue;
+    text-align: center;
+}
+
+footer#page a {
+    letter-spacing: 30px;
+    color: white;
+}
+
+footer#page a:hover {
+    color: red;
+}
+
+/*index*/
+
+div#index {
+    position: absolute;
+    width: 100%;
+    bottom:-713px;
+    height:50px;
+    background-color:rgb(104, 101, 101);
+}
+
+
+div#index table {
+    margin:0px auto;
+}
+
+div#index td {
+    padding: 10px 8px;
+}
+
+div.ibutton {
+    border: 2px solid white;
+    width: 20px;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 1.0em;
+    padding: 2px;
+    color:white;
+    font-weight: bold;
+}
+
+div#index a {
+    color: black;
+}
+
+div#index td.current a {
+    color: white;
+}
+
+div#index td.current div {
+    background-color: black;
+    border: 2px white solid;
+}
+
+div.ibutton:hover{
+    background-color:black;
+}

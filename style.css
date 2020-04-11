@@ -20,6 +20,8 @@ body{
     height: 30px;
     display: block;
     width:100%;
+    position:relative;
+    
 }
 .header ul{
     float: right;
@@ -121,8 +123,19 @@ body{
     background-color: white;
     position: sticky;
     top:0;
+<<<<<<< HEAD
     z-index: 10;
 }
+=======
+    z-index:1;
+}
+
+  .main-nav {
+    overflow: hidden;
+    background-color: rgb(227, 227, 228);
+  
+  }
+>>>>>>> 5f49c52065f853481073481b0fb22bbe39a45be4
 
 .main-nav a {
     float: left;
@@ -154,8 +167,12 @@ body{
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+<<<<<<< HEAD
     z-index: 2;
 }
+=======
+  }
+>>>>>>> 5f49c52065f853481073481b0fb22bbe39a45be4
   .dropdown-content a {
     float: none;
     color: black;

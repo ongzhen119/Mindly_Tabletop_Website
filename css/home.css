@@ -57,7 +57,7 @@
 
 .banner {
   display: inline-block;
-  background-image: url('home_pic/cafephoto.png');
+  background-image: url('../image/home_pic/cafephoto.png');
   background-size: cover;
   background-position: center;
   position: absolute;

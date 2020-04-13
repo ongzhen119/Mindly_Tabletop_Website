@@ -261,4 +261,35 @@ top: 70px;
     color :rgb(198,0,33);
     text-decoration: underline;
 }
+/* for the use of contact us and game request*/
+form label ,form input{
+    font-size: 20px ;
+    padding: 5px;
+    margin-left: 10px;
+    letter-spacing: 0.5px;
+  }
+  input{
+    font-size: 16px;
+    font-family:  serif;
+  }
+  form textarea{
+    font-family:  serif;
+    font-size: 20px;
+    padding: 3px 7px;
+
+  }
+  .red{
+    color:#C60021 !important;
+  }
+  #button{
+    font-weight: bold;
+    font-family: sans-serif !important;
+    background-color: #e3e3e3;
+    border: 1px solid black;
+  }
+  #button:hover{
+    cursor: pointer;
+    color: #C60021;
+    border: 1px solid black;
+  }
 

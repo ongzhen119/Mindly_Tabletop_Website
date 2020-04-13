@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/979e56d4a3.js" crossorigin="anonymous"></script>
     <link href="../css/style.css" rel="stylesheet" type="text/css"/>
     <link href="../css/pPage.css" rel="stylesheet" type="text/css"/>
     <title>Document</title>
   
 </head>
-<body>
+<body onload="qty(0);">
    
     <div class ="header">
         <div class="inner-header">
@@ -27,7 +28,7 @@
       <div class="sticky-top">
 
         <div class="inner-header" >
-          <img src="mindly_logo.png"width="100px"height="95px"/>
+          <img src="../image/component/mindly_logo.png"width="100px"height="95px"/>
           <div class="search-box" >
             <input class="search-txt" type="text" name="" placeholder="Type to search">
             <a class="search-btn" href="#">
@@ -104,6 +105,16 @@
 
         slides[slideIndex-1].style.display = "block";
         }
+
+        var QtyIndex = 1;
+        document.getElementById("result").innerHTML = QtyIndex;
+
+        function qty(n){
+            QtyIndex += n;
+            if (QtyIndex < 1) {QtyIndex = 1};
+            if (QtyIndex > 19) {QtyIndex = 19};
+            document.getElementById("result").innerHTML = QtyIndex;
+        }
     </script>
     <!--<div style="text-align:center">
         <span class="dot" onclick="currentSlide(1)"></span>
@@ -112,12 +123,34 @@
       </div>-->
     </div>
     <div class="summary">
-        <p>Azul : Stained Glass (Limited Edition)</p>
-        <p>RM 82.90</p>
+        <div class="name">Azul : Stained Glass (Limited Edition)</div>
+        <div class="price"><p>RM 82.90</p><div class="stock">19 in stock</div></div>
+        <div class="rating">
+          Customer's reviews : 
+          <table style="display:inline-block">
+            <tr>
+              <td>&#9733;</td>
+              <td>&#9733;</td>
+              <td>&#9733;</td>
+              <td>&#9733;</td>
+              <td class="empty">&#9734;</td>
+            </tr>
+          </table>
+          <p style="display:inline-block">4.0/5 (Good)</p>
+        </div>
+        <div class="b_quantity">
+          <div class="add" onclick="qty(1);">
+            <a>+</a>
+          </div>
+          <div class="minus" onclick="qty(-1);">
+            <a>-</a>
+          </div>
+          <div id="result"></div>
         <label for="quantity">Quantity</label>
-        <input type="number" id="quantity" name="quantity" min="1" max="90"/>
-        <input type="button" id="addcart" name="addcart" value="Add to cart"/>
-        <input type="button" id="addfav" name="addfav" value="Add to favourite"/>  
+        </div>
+      <button class="addcart"><i class="fa fa-cart-plus"></i> Add to cart</button>
+      <button class="addfav"><i class="fa fa-heart"></i> Add to favourite</button>
+      </div>
     </div>
     <div class="description">
         <h2>Description</h2>
@@ -126,6 +159,21 @@
         <h2>Information</h2>
         <p></p>
     </div>
-
+    <div class="recommended">
+      
+      <table>
+        <tr>
+          <th>
+            Recommended Product
+          </th>
+        </tr>
+        <tr>
+      <td><img src="../image/product_pic/betrayalathouse_1.jpg"/></td>
+      </tr>
+      <tr>
+        <td><img src="../image/product_pic/mahjong_1.jfif"/></td>
+      </tr>
+    </table>
+    </div>
 </body>
 </html>

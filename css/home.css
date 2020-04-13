@@ -1,14 +1,18 @@
 .mySlides {
   display: none; 
+  position: absolute;
+  top: 8px;
 } 
 
  /*Slideshow container */
 #slideshow-container {
   position: relative;  
-  left: 450px;
   display: block;
   width: 1000px;
   height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 /* The dots/bullets/indicators  */
 .dot {
@@ -52,6 +56,7 @@
 }
 
 .banner {
+  display: inline-block;
   background-image: url('home_pic/cafephoto.png');
   background-size: cover;
   background-position: center;
@@ -60,12 +65,12 @@
   left: 850px;
   width: 270px;
   height: 520px;
-  text-align: center;
   transform: translate(-50%,-50%);
 }
 .banner span{
   text-transform: uppercase;
   display: block;
+  text-align: center;
 }
 .text1{
   font-size: 25px;

@@ -5,7 +5,13 @@
         <meta charset="utf-8"/>
         <script src="https://kit.fontawesome.com/979e56d4a3.js" crossorigin="anonymous" rel="stylesheet"></script>
         <link href="../css/style.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="../css/lightslider.css" type="text/css"/>
         <link href="../css/home.css" rel="stylesheet" type="text/css"/>
+        <!--JQuery-->
+        <script type="text/javascript" src="../js/lightslider.js"></script>
+
+
+
     </head>
     <style>
       .inner{
@@ -16,7 +22,7 @@
       .z-1{
         z-index: -1;
       }
-      .box{
+      .caption-box{
         background-color: rgba(0, 0, 0, 0.4);
         width: 400px;
         height: 150px;
@@ -28,7 +34,7 @@
         margin-left: 10px;
 
       }
-      .box button{
+      .caption-box button{
         position: absolute;
         top: 80px;
         left: 30px;
@@ -71,9 +77,10 @@
             </a>
           </div>
           <div class="profile-btn">
-            <i class="fas fa-user fa-4x" ></i>
+            <i class="fas fa-user fa-3x" ></i>
           </div><div class="cart-btn">
-            <i class="fas fa-shopping-cart fa-4x"></i>
+            <i class="fas fa-shopping-cart fa-3x"></i> 
+            <span style="font-size: 25px;">/ RM0.00</span>            
           </div>
       </div>
   
@@ -91,7 +98,7 @@
                 </div>
               </div>
               <div class="dropdown">
-                <button class="dropbtn">CATEGORY<i class="fas fa-caret-down fa-lg"></i></button>
+                <button class="dropbtn"> CATEGORY <i class="fas fa-caret-down fa-lg"></i></button>
                 <div class="dropdown-content">
                   <a href="#">Board Games</a>
                   <a href="#">Strategy Games</a>
@@ -110,16 +117,16 @@
         <div class="mySlides fade ">
 
           <img src="../image/home_pic/freeshipping.jpg" width="700px" height="520px" >
-          <div class="box" style="top: 200px; left: 250px;">Free shipping over whole West Malaysia
-            <button>SHOP NOW</button>
+          <div class="caption-box" style="top: 200px; left: 250px;text-align: center;">Free shipping over whole West Malaysia
+            <button style="cursor: pointer;letter-spacing: 1px;">SHOP NOW</button>
           </div>
         </div>
         
         <div class="mySlides fade " >
           
           <img src="../image/home_pic/specialpromo.jpg"style  width="700px" height="520px">
-          <div class="box"style="top:250px ;left:270px" >GRAB IT BEFORE GONE!
-            <button>SHOP NOW</button>
+          <div class="caption-box"style="top:250px ;left:270px;text-align: center;" >GRAB IT BEFORE GONE!
+            <button style="cursor: pointer;letter-spacing: 1px;">SHOP NOW</button>
           </div>
         </div>
         
@@ -168,8 +175,57 @@
 
     <!-- HOT SELLING AND NEW ARRIVAL-->
     <hr/> <br/><br/>
+    <span>Hot Selling</span>
        <div class="container card" id="hot-selling">
-        <span>Hot Selling</span>
+         <!--slider--------------------->
+         <ul id="autoWidth" class="cs-hidden">
+           <!---1--------------------->
+  <li class="item-a">         <!-- slider - box-->
+        <div class="box card">
+          <!-- game title-->
+          <p class="game">Azul:Stained Glass (Limited Edition)</p>
+          <!-- game image-->
+          <img src="../image/product_pic/azul_1.jpeg" alt="game" class="prod">
+          <!-- price-->
+          <p class="price"> RM 82.90</p>
+          <div class="cart">
+            <a href="#">
+              <i class="fa fa-cart-plus" aria-hidden="true"></i>
+            </a>
+          </div></li>
+          <!---1--------------------->
+  <li class="item-a">         <!-- slider - box-->
+        <div class="box card">
+          <!-- game title-->
+          <p class="game">Azul:Stained Glass (Limited Edition)</p>
+          <!-- game image-->
+          <img src="../image/product_pic/azul_1.jpeg" alt="game" class="prod">
+          <!-- price-->
+          <p class="price"> RM 82.90</p>
+          <div class="cart">
+            <a href="#">
+              <i class="fa fa-cart-plus" aria-hidden="true"></i>
+            </a>
+          </div></li>
+          <!---1--------------------->
+  <li class="item-a">         <!-- slider - box-->
+        <div class="box card">
+          <!-- game title-->
+          <p class="game">Azul:Stained Glass (Limited Edition)</p>
+          <!-- game image-->
+          <img src="../image/product_pic/azul_1.jpeg" alt="game" class="prod">
+          <!-- price-->
+          <p class="price"> RM 82.90</p>
+          <div class="cart">
+            <a href="#">
+              <i class="fa fa-cart-plus" aria-hidden="true"></i>
+            </a>
+          </div></li>
+         </ul>
+
+
+          
+        </div>
       </div>
       <br/> <br/> <hr/> <br/><br/>
       <div class="container card" id="new-arrival">
@@ -182,7 +238,7 @@
           <div class="inner-section" >
             <div class="about-us" style="width: 50%; " >
               <h1>About Mindly Tabletop</h1>
-              <img src="../image/component/mindly_logo.png" width="200px"height="190px" style="left: 50px;">
+              <img src="../image/component/trans_mindly_logo.png" width="240px"height="190px" style="left: 50px;">
               <p style="position: absolute;top: 280px;left: 20px;">
                 Board game cafe and store in Penang,<br>
                  Malaysia that sell original genuine board <br>

@@ -68,8 +68,9 @@ hr {
 
 /*table style*/
 div.prodpic {
-    position: absolute;
-    right:5%;
+    position: relative;
+    padding:0px 0px 0px 400px;
+    
 }
 
 

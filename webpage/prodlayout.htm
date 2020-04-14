@@ -86,28 +86,63 @@
         <li><a href="">NEW ARRIVAL</a><hr></li>
         <li><a href="">PROMOTIONS</a><hr></li>
       </ul>
-      <div>
       <b class="tag1" style="line-height: 4; margin-left: 80px;">FILTER BY PRICE</b>
       <!--cfilter stands for filter price-->
-      <form class="cfilter">
+      <script>
+        var priceF = 0;
+    
+        function filterIndex(n){
+            priceF = n;
+        }
+        function filter(n){
+          
+          var table = document.getElementsByClassName("product");
+          for(var i = 0; i < table.length; i++){
+            table[i].style.visibility="visible";
+          }
+          for(i = 0; i < table.length; i++){
+            var dummy = parseFloat(table[i].getElementsByClassName("price")[0].innerHTML);
+            if(n==1){
+              if( dummy >  10)  {table[i].style.visibility = "hidden";}
+            }
+            if(n==2){
+              if(dummy < 10 || dummy > 50) {table[i].style.visibility = "hidden";}
+            }
+            if(n==3){
+              if(dummy < 50 || dummy > 100) {table[i].style.visibility = "hidden";}
+            }
+            if(n==4){
+              if(dummy < 100 || dummy > 250) {table[i].style.visibility = "hidden";}
+            }
+            if(n==5){
+              if(dummy < 250) {table[i].style.visibility = "hidden";}
+            }
+            }
+          
+    
+  
+        }
+      </script>
+        <div class="cfilter">
         <div>
-        <input type="radio" id="price1" name="price" checked/>
-        <label for="price1">RM0 - 10</label></div>
+        <input type="radio" id="price0" name="price" checked onclick="filterIndex(0);"/>
+        <label for="price0">NONE</label></div>
+        <input type="radio" id="price1" name="price" onclick="filterIndex(1);"/>
+        <label for="price1">RM0 - 10</label>
         <div>
-        <input type="radio" id="price2" name="price" />
+        <input type="radio" id="price2" name="price" onclick="filterIndex(2);"/>
         <label for="price2">RM10 - 50</label></div>
         <div>
-        <input type="radio" id="price3" name="price"/>
+        <input type="radio" id="price3" name="price" onclick="filterIndex(3);"/>
         <label for="price3">RM50 - 100</label></div>
         <div>
-        <input type="radio" id="price4" name="price"/>
+        <input type="radio" id="price4" name="price" onclick="filterIndex(4);"/>
         <label for="price4">RM100 - 250</label></div>
         <div>
-        <input type="radio" id="price5" name="price"/>
+        <input type="radio" id="price5" name="price" onclick="filterIndex(5)"/>
         <label for="price5">RM250+</label></div>
         <div>
-        <input type="submit" id="submit" value="filter"/></div>
-      </form>
+        <input type="submit" id="submit" value="filter" onclick="filter(priceF);"/></div>
       </div>
   </div>
   <!--prod table-->
@@ -115,33 +150,32 @@
         <table>
             <tr>
               <!--td div img div -->
-                <td><div class="container"><a href = "prodpage.htm"><img src = "../image/product_pic/azul_1.jpeg" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div></div><div class="name"><a href="prodpage.htm"><p >Azul: Stained Glass (Limited Edition)</p></a></div><p class="price">RM 82.90</p></td>
+                <td class="product"><div class="container"><a href = "prodpage.htm"><img src = "../image/product_pic/azul_1.jpeg" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div><p>Azul: Stained Glass (Limited Edition)</p><div class="containerp">RM<span class="price" >82.90</span></div></div></td>
 
-                <td><div class="container"><a href = ""><img src = "../image/product_pic/mahjong_1.jfif" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div></div><div class="name"><a href=""><p >Chinese Mahjong Game Set</p></a></div><p class="price">RM 120.50</p></td>
+                <td class="product"><div class="container"><a href = "prodpage.htm"><img src = "../image/product_pic/mahjong_1.jfif" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div><p>Chinese Mahjong Game Set</p><div class="containerp">RM<span class="price" >120.50</span></div></div></td>
 
-                <td><div class="container"><a href = ""><img src = "../image/product_pic/domino_1.jfif" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div></div><div class="name"><a href=""><p >Domino Squares Set</p></a></div><p class="price">RM 31.10</p></td>
+                <td class="product"><div class="container"><a href = "prodpage.htm"><img src = "../image/product_pic/domino_1.jfif" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div><p>Domino Squares Set</p><div class="containerp">RM<span class="price" >31.10</span></div></div></td>
 
-                <td><div class="container"><a href = ""><img src = "../image/product_pic/kingsAbbey_1.jpg" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div></div><div class="name"><a href=""><p >The King's Abbey (English first edition) (2016)</p></a></div><p class="price">RM 324.40</p></td>
+                <td class="product"><div class="container"><a href = "prodpage.htm"><img src = "../image/product_pic/kingsAbbey_1.jpg" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div><p>The King's Abbey (English First Edition)</p><div class="containerp">RM<span class="price" >324.40</span></div></div></td>
 
             </tr>
             <tr>
               <!--td div img div -->
-              <td><div class="container"><a href = ""><img src = "../image/product_pic/tiles_1.jpg" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div></div><div class="name"><a href=""><p >Tiles (1995)</p></a></div><p class="price">RM 40.00</p></td>
+              <td class="product"><div class="container"><a href = "prodpage.htm"><img src = "../image/product_pic/tiles_1.jpg" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div><p>Tiles (1995)</p><div class="containerp">RM<span class="price" >40.00</span></div></div></td>
 
-              <td><div class="container"><a href = ""><img src = "../image/product_pic/scrabble_1.png" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div></div><div class="name"><a href=""><p >Scrabble Original (Mattel Australian edition)</p></a></div><p class="price">RM 59.70</p></td>
+              <td class="product"><div class="container"><a href = "prodpage.htm"><img src = "../image/product_pic/scrabble_1.png" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div><p>Scrabble Original (Australia Edition)</p><div class="containerp">RM<span class="price" >69.70</span></div></div></td>
 
-              <td><div class="container"><a href = ""><img src = "../image/product_pic/evo_1.jpg" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div></div><div class="name"><a href=""><p >Evo (second edition)</p></a></div><p class="price">RM 412.30</p></td>
+              <td class="product"><div class="container"><a href = "prodpage.htm"><img src = "../image/product_pic/evo_1.jpg" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div><p>EVO (Second Edition)</p><div class="containerp">RM<span class="price" >412.30</span></div></div></td>
 
-             <td><div class="container"><a href = ""><img src = "../image/product_pic/fjords_1.jpg" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div></div><div class="name"><a href=""><p >Fjords (2004)</p></a></div><p class="price">RM 154.40</p></td>
-            </tr>
+              <td class="product"><div class="container"><a href = "prodpage.htm"><img src = "../image/product_pic/fjords_1.jpg " ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div><p>Fjords (2004)</p><div class="containerp">RM<span class="price" >154.40</span></div></div></td>
             <tr>
-              <td><div class="container"><a href = ""><img src = "../image/product_pic/fjords_1.jpg" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div></div><div class="name"><a href=""><p >Forbidden Island (Game of the year edition)</p></a></div><p class="price">RM 210.40</p></td>
+              <td class="product"><div class="container"><a href = "prodpage.htm"><img src = "../image/product_pic/forbiddenisland_1.jpg" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div><p>Forbidden Island (Game of the year Edition)</p><div class="containerp">RM<span class="price" >210.40</span></div></div></td>
               
-              <td><div class="container"><a href = ""><img src = "../image/product_pic/betrayalathouse_1.jpg" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div></div><div class="name"><a href=""><p >Betrayal at House on the Hill</p></a></div><p class="price">RM 102.30</p></td>
+              <td class="product"><div class="container"><a href = "prodpage.htm"><img src = "../image/product_pic/betrayalathouse_1.jpg" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div><p>Betrayal at House on the Hill</p><div class="containerp">RM<span class="price" >102.30</span></div></div></td>
 
-              <td><div class="container"><a href = ""><img src = "../image/product_pic/tantrix_1.jpg" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div></div><div class="name"><a href=""><p >Tantrix</p></a></div><p class="price">RM 46.00</p></td>
+              <td class="product"><div class="container"><a href = "prodpage.htm"><img src = "../image/product_pic/tantrix_1.jpg" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div><p>Tantrix</p><div class="containerp">RM<span class="price" >23.00</span></div></div></td>
 
-              <td><div class="container"><a href = ""><img src = "../image/product_pic/tromino_1.jpg" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div></div><div class="name"><a href=""><p >Tromino</p></a></div><p class="price">RM 36.50</p></td>
+              <td class="product"><div class="container"><a href = "prodpage.htm"><img src = "../image/product_pic/tromino_1.jpg" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div><p>Tromino</p><div class="containerp">RM<span class="price" >36.50</span></div></div></td>
             </tr>
         </table>
         </div>

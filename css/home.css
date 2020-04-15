@@ -3,6 +3,10 @@
   position: absolute;
   top: 8px;
 } 
+html,body{
+  position: relative;
+  height: 100%;
+}
 
  /*Slideshow container */
 #slideshow-container {
@@ -101,37 +105,147 @@
     margin-bottom: -40px;
   }
 }
-.container{
-  position: relative;
-  background-color: #E3E3E3;
-  height: 300px;
-  width: 1600px;
-  margin-right: auto;
-  margin-left: auto;
+
+.inner{
+    width: 1000px!important;
+    margin-left: auto;
+    margin-right: auto;
 }
-.box{
-  height: 250px;
+.z-1{
+  z-index: -10 !important;
+}
+.caption-box{
+  background-color: rgba(0, 0, 0, 0.4);
   width: 400px;
+  height: 150px;
+  display: block;
+  position: absolute;
+  color: #f6f6f8;
+  font-size: 28px;
+  letter-spacing: 4px;
+  margin-left: 10px;
+
+}
+.caption-box button{
+  position: absolute;
+  top: 80px;
+  left: 30px;
+  background-color: black;
+  color: #f6f6f8;
+  border:black solid 3px;
+  display: block;
+  width: 130px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: lighter;
+}
+/*slider css*/
+.swiper-container {
+  position: relative;
+  top: 0px;
+  width: 100%;
+  height: 300px;
+}
+.swiper-slide {
+text-align: center;
+font-size: 18px;
+
+/* Center slide text vertically */
+display: -webkit-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+-webkit-justify-content: center;
+justify-content: center;
+-webkit-box-align: center;
+-ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;
+}
+.slider-box{
+  height: 280px;
+  width: 450px;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  border-radius: 10px;
-  justify-content: space-between;
-  box-sizing: border-box;
-  margin: 20px 10px;
+  text-align: center;
+  border: 1px solid rgba(187,187,187,0.40);
 }
-.prod{
-  height: 200px;
+.slider-box a{
+  text-decoration: none;
+  text-align: center;
+}
+.img-box{
+  height: 160px;
+}
+.img-box img {
+  height: auto;
   max-width: 100%;
   max-height: 100%;
-  position: absolute;
-  top: 20px;
-  left: 20px;
 }
-.game{
+.status{
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  color: #C60021;
+}
+.detail{
+  display: felx;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: 20px;
+  line-height: 35px;
+  position: absolute;
+  bottom: 0px;
 }
 .price{
-  position: absolute;
-  left: 270px;
-  top: 50px;
+  color:#ffffff;
+  background-color: #C60021;
+  line-height: 20px;
 }
+.view{
+  position: absolute;
+  bottom: 35px;
+  height: 30px;
+  background-color: #e3e3e3;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.view a{
+  color: #000000;
+}
+.slider-box:hover{
+  box-shadow: 2px 2px 12px rgba(47, 47, 47, 0.40);
+}
+.slider-box:hover .img-box img{
+  transform: scale(1.46);
+  transition: all ease 0.3s;
+}
+.view:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  background-color: #C60021;
+  box-shadow: 2px 2px 12px rgba(47, 47, 47, 0.40);
+  transition: all ease 0.1s;
+}
+.view a:hover{
+  color: #e3e3e3;
+}
+.grabbable{
+  cursor: grab;
+  cursor: -webkit-grab;
+}
+.grabbable:active{
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+

@@ -1,0 +1,8 @@
+
+.faq{ 
+    width: 1000px;
+    height: 80px;
+    position: relative;
+    background-color: gray;
+    top: 50px;
+}

@@ -6,47 +6,9 @@
         <script src="https://kit.fontawesome.com/979e56d4a3.js" crossorigin="anonymous" rel="stylesheet"></script>
         <link href="../css/style.css" rel="stylesheet" type="text/css"/>
         <link href="../css/home.css" rel="stylesheet" type="text/css"/>
-
-
-        
+        <link rel="stylesheet" href="../css/swiper.min.css" type="text/css">
     </head>
-    <style>
-      .inner{
-          width: 1000px;
-          margin-left: auto;
-          margin-right: auto;
-      }
-      .z-1{
-        z-index: -1;
-      }
-      .caption-box{
-        background-color: rgba(0, 0, 0, 0.4);
-        width: 400px;
-        height: 150px;
-        display: block;
-        position: absolute;
-        color: #f6f6f8;
-        font-size: 28px;
-        letter-spacing: 4px;
-        margin-left: 10px;
 
-      }
-      .caption-box button{
-        position: absolute;
-        top: 80px;
-        left: 30px;
-        background-color: black;
-        color: #f6f6f8;
-        border:black solid 3px;
-        display: block;
-        width: 130px;
-        height: 50px;
-        font-size: 20px;
-        font-weight: lighter;
-      }
-
-
-    </style>
 
     <body style="height: auto;">
       <div class ="header">
@@ -147,7 +109,7 @@
         </div>
 
       </div>
-
+    <!--script for slideshow-->
     <script type="text/javascript">
       var slideIndex = 0;
       showSlides();
@@ -172,78 +134,101 @@
 
     <!-- HOT SELLING AND NEW ARRIVAL-->
     <hr/> <br/><br/>
-    <span>Hot Selling</span>
-      <!-- Swiper slider-->
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-    <!--slide 1-------------------------------------------->
-      <div class="swiper-slide">Slide 1</div>
-
-    </div>
-
-  </div>
-       <div class="container card" id="hot-selling">
-        <div class="box card">
-          <!-- game title-->
-          <p class="game">Azul:Stained Glass (Limited Edition)</p>
-          <!-- game image-->
-          <img src="../image/product_pic/azul_1.jpeg" alt="game" class="prod">
-          <!-- price-->
-          <p class="price"> RM 82.90</p>
-          <div class="cart">
-            <a href="#">
-              <i class="fa fa-cart-plus" aria-hidden="true"></i>
-            </a>
+  
+      <div class="swiper-container grabbable">
+        <div class="swiper-wrapper ">
+          <!--slide 1----------------------------------------->
+          <div class="swiper-slide">
+            <div class="slider-box">
+              <p class="status">HOT</p>
+              <div class="img-box">
+               <img src="../image/product_pic/azul_1.jpeg" alt="" >
+              </div>
+              <div class="view">
+                  <a href="#">View More</a>
+              </div>
+              <p class="detail">Azul (Limited Edition) Glass 
+                <a href="#" class="price">Price-RM129.80</a>
+            </p>
+            </div>
           </div>
-          
+          <!--slide 2----------------------------------------->
+          <div class="swiper-slide">Slide 2</div>
+          <!--slide 3----------------------------------------->
+          <div class="swiper-slide">Slide 3</div>
+          <!--slide 4----------------------------------------->
+          <div class="swiper-slide">Slide 4</div>
+          <!--slide 5----------------------------------------->
+          <div class="swiper-slide">Slide 5</div>
+          <!--slide 6----------------------------------------->
+          <div class="swiper-slide">Slide 6</div>
+          <!--slide 7----------------------------------------->
+          <div class="swiper-slide">Slide 7</div>
+          <!--slide 8----------------------------------------->
+          <div class="swiper-slide">Slide 8</div>
+          <!--slide 9----------------------------------------->
+          <div class="swiper-slide">Slide 9</div>
+          <!--slide 10----------------------------------------->
+          <div class="swiper-slide">Slide 10</div>
         </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
       </div>
+    
 
 
-      <br/> <br/> <hr/> <br/><br/>
-      <div class="container card" id="new-arrival">
-        <span>New Arrival</span>
-      </div>
+  
 
-        <!--Footer-->
-        <div  class="footer" >
 
-          <div class="inner-section" >
-            <div class="about-us" style="width: 50%; " >
-              <h1>About Mindly Tabletop</h1>
-              <img src="../image/component/trans_mindly_logo.png" width="240px"height="190px" style="left: 50px;">
-              <p style="position: absolute;top: 280px;left: 20px;">
-                Board game cafe and store in Penang,<br>
-                 Malaysia that sell original genuine board <br>
-                 games and provide shipping services<br>
-                  across the whole country. </p>
-                  <div class="social-icons" style="position: absolute; left: 250px;top: 360px;" >
-                    <a href="https://www.facebook.com/pg/Mindly-Tabletop-cafe-and-store-100484604971735/posts/?ref=page_internal"target="_blank" title="Follow on Facebook" class="facebook-icon"><i class="fab fa-facebook-square fa-lg"></i></a>
-                    <a href="mailto:ongzc-pm19@student.tarc.edu.my" title="Send us an email" class="envelope-icon"><i class="fas fa-envelope fa-lg"></i></a>
-                    <a href="tel:017-5751954" title="Call us" class="phone-icon"><i class="fas fa-phone"></i></a>
-                  </div>
-            </div>
-            <div class="we-accept" style="position: absolute; left: 550px;">
-              <h1 style="text-align: center; ">We Accept</h1>
-             
-            </div>
-            <img src="../image/component/we-accept.png" alt="" style="border-radius: 10%; width: 400px;position: absolute;left: 650px;top: 75px;">
+
+    <br/> <br/> <hr/> <br/><br/>
+
+
+
+      <!-- Swiper JS -->
+      <script type="text/javascript" src="../js/swiper.min.js"></script>
+      <script src="../js/script.js"></script>
+
+
+      <!--Footer-->
+      <div  class="footer" >
+        <div class="inner-section" >
+          <div class="about-us" style="width: 50%; " >
+            <h1>About Mindly Tabletop</h1>
+            <img src="../image/component/trans_mindly_logo.png" width="240px"height="190px" style="left: 50px;">
+            <p style="position: absolute;top: 280px;left: 20px;">
+              Board game cafe and store in Penang,<br>
+               Malaysia that sell original genuine board <br>
+               games and provide shipping services<br>
+                across the whole country. </p>
+                <div class="social-icons" style="position: absolute; left: 250px;top: 360px;" >
+                  <a href="https://www.facebook.com/pg/Mindly-Tabletop-cafe-and-store-100484604971735/posts/?ref=page_internal"target="_blank" title="Follow on Facebook" class="facebook-icon"><i class="fab fa-facebook-square fa-lg"></i></a>
+                  <a href="mailto:ongzc-pm19@student.tarc.edu.my" title="Send us an email" class="envelope-icon"><i class="fas fa-envelope fa-lg"></i></a>
+                  <a href="tel:017-5751954" title="Call us" class="phone-icon"><i class="fas fa-phone"></i></a>
+                </div>
           </div>
-          <div style="background-color: #e3e3e3; height: 30px;">
-            <div class="inner-footer" >
-              <h>Copyright 2020 (c) <b>Mindly Tabletop store</b> </h>
-                <ul>
-                  <li><a href="">Condition of use</a> </li>|
-                  <li><a href="">Contact Us </a></li>|
-                  <li><a href="">Login </a></li>|
-                  <li><a href="">Sign Up </a></li>
-                </ul>
-            </div>
+          <div class="we-accept" style="position: absolute; left: 550px;">
+            <h1 style="text-align: center; ">We Accept</h1>
+           
+          </div>
+          <img src="../image/component/we-accept.png" alt="" style="border-radius: 10%; width: 400px;position: absolute;left: 650px;top: 75px;">
+        </div>
+        <div style="background-color: #e3e3e3; height: 30px;">
+          <div class="inner-footer" >
+            <h>Copyright 2020 (c) <b>Mindly Tabletop store</b> </h>
+              <ul>
+                <li><a href="">Condition of use</a> </li>|
+                <li><a href="">Contact Us </a></li>|
+                <li><a href="">Login </a></li>|
+                <li><a href="">Sign Up </a></li>
+              </ul>
           </div>
         </div>
+   </div>
 
 
   </body>
+
 </html>
 
 

@@ -1,32 +1,37 @@
 /*categories block*/
+
 div#categories {
     position:relative;
     background-color: rgb(227, 227, 228);
-    float:left;
+    top:0px;
+    left:0px;
+    height:100%;
+    display:inline-block;
     width:19%;
-    height:1290px;
+    padding:0px 0px 500px 0px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-div#categories h2 {
+#categories h2 {
     line-height: 2cm;
     text-align: center;
 }
 
-div#categories h2 a {
+#categories h2 a {
     text-align: center;
     text-decoration: none;
     color: rgb(135, 136, 212);
 }
 
 
-div#categories ul {
+#categories ul {
     list-style: none;
     text-align: center;
+   
 }
 
-div#categories ul li a {
-  
+#categories ul li a {
+    
     text-decoration: none;
     letter-spacing: 1px;
     font-weight: bold;
@@ -34,9 +39,15 @@ div#categories ul li a {
     color: rgb(135, 136, 212);
 }
 
-div#categories a:hover {
-    color: red;
-    font-weight: bold;
+#categories a#cpage{
+    user-select: none;
+    color:orange;
+    cursor:none;
+    pointer-events:none;
+}
+
+#categories a:hover {
+    color:blue;
 }
 
 /*straight line*/
@@ -69,17 +80,22 @@ hr {
 
 
 /*table style*/
+
+
+
 .prodpic, .filter{
-    position: relative;
-    left:125px;
+    position: absolute;
+    left:425px;
+    display:inline-block;  
 }
+
 
 
 
 .prodpic table, .filter table{
     border-collapse:separate;
     text-decoration:none;
-    min-width: 1000px;
+    min-width: 500px;
     min-height: 350px;
     text-align:center;
 }
@@ -133,7 +149,7 @@ td.product{
     background-color: rgb(227, 227, 228);   
     position:absolute;
     width:1235px;
-    left:200px;
+    left:-100px;
     top:20px;
     padding:50px 0px 50px 0px;
     font-family: Arial, Helvetica, sans-serif;
@@ -324,11 +340,12 @@ footer#page a:hover {
 /*index*/
 
 div#index {
-    position: absolute;
+    position: relative;
+    display:block;
     width: 100%;
-    bottom:-713px;
     height:50px;
     background-color:rgb(104, 101, 101);
+
 }
 
 

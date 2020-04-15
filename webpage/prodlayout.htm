@@ -77,14 +77,14 @@
       <h2><a href = "homepage.htm">HOME</a> / <b>TILES GAMES</b></h2>
       <b class="tag1" style="margin-left: 60px;">PRODUCT CATEGORIES</b><br><br>
       <ul>
-        <li><a href="">ACCESORIES</a><hr></li>
-        <li><a href="">CARD GAMES</a><hr></li>
-        <li><a href="">BOARD GAMES</a><hr></li>
-        <li><a href="">TILES GAMES</a><hr></li>
-        <li><a href="">ALL GAMES</a><hr></li>
-        <li><a href="">HOT SELLING</a><hr></li>
-        <li><a href="">NEW ARRIVAL</a><hr></li>
-        <li><a href="">PROMOTIONS</a><hr></li>
+        <li><a href="prodlayout.htm">ACCESORIES</a><hr></li>
+        <li><a href="prodlayout.htm">CARD GAMES</a><hr></li>
+        <li><a href="prodlayout.htm">BOARD GAMES</a><hr></li>
+        <li><a href="prodlayout.htm" id="cpage">TILES GAMES</a><hr></li>
+        <li><a href="prodlayout.htm">ALL GAMES</a><hr></li>
+        <li><a href="prodlayout.htm">HOT SELLING</a><hr></li>
+        <li><a href="prodlayout.htm">NEW ARRIVAL</a><hr></li>
+        <li><a href="prodlayout.htm">PROMOTIONS</a><hr></li>
       </ul>
       <b class="tag1" style="line-height: 4; margin-left: 80px;">FILTER BY PRICE</b>
       <!--cfilter stands for filter price-->
@@ -149,7 +149,7 @@
             }
           }
           
-          if (counter == 0){
+          if (counter == 0 && n != 0){
             ntable[0].innerHTML = "<div class='nresult'><i class='fa fa-search'></i><h2>We couldn't find a product matching the price range</h2><p>You can try selecting other price range.</div>"
           }
           else{
@@ -220,7 +220,7 @@
             </tr>
         </table>
         </div>
-        <div class="filter">
+        <div class="filter" style="display:inline-block;">
           <table class="ntable">
           </table>
         </div>
@@ -244,7 +244,5 @@
           </table>
      </div>
       </div>
-      
-
     </body>
 </html>

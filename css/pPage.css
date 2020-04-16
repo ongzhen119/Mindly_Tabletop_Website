@@ -7,6 +7,7 @@
     margin-left:10px;
 }
 
+
 .slide img{
     width:450px;
     height:450px;
@@ -77,8 +78,9 @@
 /*summary section*/
 
 .summary{
-    position:absolute;
+    position:relative;
     display:inline-block;
+    top:-400px;
     width:750px;
     height:475px;
     margin-top:0%;
@@ -90,7 +92,7 @@
     padding:40px 0px 15px 125px;
 }
 
-div.name:after {
+.name:after {
     content: "";
     border-bottom: 1px solid lightgray;
     position: absolute;
@@ -245,16 +247,18 @@ button.addfav{
 /*description*/
 
 .description{
-    position:absolute;
+    position:relative;
+    display:inline-block;
     width:1150px;
     left:30px;
-    
+    top:-350px;
 }
 
 .description h2{
     position:relative;
     color:red;
     padding:25px 0px 25px 0px;
+
     
 }
 
@@ -263,10 +267,10 @@ button.addfav{
     border-bottom: 1px solid gray;
     position: absolute;
     top: 0;
-    padding:15px 0px 0px 10px;
-    left: -16px;
+    padding:15px 0px 0px 15px;
+    left: -10px;
     height: 1px;
-    width: 1150px;
+    width: 1175px;
 }
 
 .description p {
@@ -276,22 +280,24 @@ button.addfav{
 
 /*table*/
 .recommended{
-    position:absolute;
+    position:relative;
     display:inline-block; 
-    height:900px;
-    right:0px;
+    height:950px;
+    float:right;
     width:350px;
+    top:-868px;
     overflow-y: scroll;
     overflow-x: hidden;
+    box-shadow:3px -2px 5px 2px lightgray;
     border-left: 1px gray solid;
 }
 
 .recommended table{
-    position:relative;
     border-collapse:separate;
     text-decoration:none;
     min-width: 500px;
     min-height: 350px;
+    top:0px;
     text-align:center;
     padding:0px 150px 300px 0px;
 }

@@ -97,6 +97,7 @@
         function filter(n){
           var table = document.getElementsByClassName("product");
           var ntable = document.getElementsByClassName("ntable");
+          var div = document.getElementsByClassName("filter");
           var cell = 0;
           var content = "";
           var counter = 0;
@@ -105,10 +106,11 @@
           }
           ntable[0].innerHTML = "";
           if(n==0){
-          
+            div[0].style.zIndex = "-1";
           for (i=0; i<table.length; i++){
             table[i].style.display = "table-cell"
           }
+          return;
           }
         
           for(i = 0; i < table.length; i++){
@@ -154,6 +156,7 @@
           }
           else{
           ntable[0].innerHTML += content;
+          div[0].style.zIndex = "2";
           }
           document.body.scrollTop = 0;
           document.documentElement.scrollTop = 0;
@@ -220,29 +223,27 @@
             </tr>
         </table>
         </div>
-        <div class="filter" style="display:inline-block;">
+        <div class="filter">
           <table class="ntable">
           </table>
         </div>
+        
         <div id="index">
           <div class="text"></div>
-     <div>
-    
-          <table> 
+          <table>
             <tr>
               <td><a href="" ><div class="ibutton"><<</div></a></td>
               <td><a href="" ><div class="ibutton"><</div></a></td>
               <td class ="current"><a href="" ><div class="ibutton">1</div></a></td>
               <td><a href="" ><div class="ibutton">2</div></a></td>
               <td><a href="" ><div class="ibutton">3</div></a></td>
-              <td><a href="" ><div class="ibutton">4</div></a></td>
-              <td><a href="" ><div class="ibutton">5</div></a></td>
-              <td><a href="" ><div class="ibutton">6</div></a></td>
+              <td><a href="" ><div class="ibutton">4</div></a></td> 
+              <td><a href="" ><div class="ibutton">5</div></a></td> 
+              <td><a href="" ><div class="ibutton">6</div></a></td> 
               <td><a href="" ><div class="ibutton">></div></a></td>
               <td><a href="" ><div class="ibutton">>></div></a></td>
             </tr>
           </table>
-     </div>
       </div>
 
 

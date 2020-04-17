@@ -1,3 +1,8 @@
+html, body{
+    height:500px;
+}
+
+
 .icontainer{
     max-width:500px;
     display:inline-block;
@@ -150,13 +155,11 @@ div.price p{
     left:525px;
     top:4px;
     font:1.3em roboto;
-    color:greenyellow;
-    text-shadow: green 1px 1px;
+    color:green;
     font-variant: small-caps;
 }
 
 .rating table td:not(.empty){
-    text-shadow: orange 1px 1px 6px;
     color:gold;
 
 }
@@ -176,24 +179,26 @@ div.price p{
 
 #result{
     position:absolute;
-    background-color:lightgray;
+    background-color:white;
     left:275px;
     width:100px;
     text-align:center;
     height:50px;
     line-height:50px;
     top:0;
+    z-index:-1;
     user-select: none;
-    border:1px rgb(100, 96, 96) double;
+    border:1px gray solid;
     border-right: lightgray;
     border-left:lightgray;
     box-shadow: 0px 0px 10px 3px lightgray;
 }
 .add, .minus{
-    border:1px rgb(100, 96, 96) double;
+    transition: all 0.2s linear;
+    border:1px gray double;
     font-size:2em;
-    color:white;
-    background-color:green;
+    color:black;
+    background-color:rgb(227, 227, 228);
     display:inline-block;
     width:50px;
     user-select: none;
@@ -205,7 +210,7 @@ div.price p{
 }
 
 .add:hover, .minus:hover{
-    color:red;
+    background-color:gray;
 }
 .minus {
     left:225px;
@@ -227,7 +232,6 @@ button.addcart{
     left:450px;
     cursor:pointer;
     user-select: none;
-    border:black 1px dotted;
 }
 
 button.addfav{
@@ -241,7 +245,10 @@ button.addfav{
     left:225px;
     cursor:pointer;
     user-select: none;
+}
 
+.addcart:hover, .addfav:hover{
+    color:lightgray;
 }
 
 /*description*/
@@ -249,7 +256,7 @@ button.addfav{
 .description{
     position:relative;
     display:inline-block;
-    width:1150px;
+    width:1050px;
     left:30px;
     top:-350px;
 }
@@ -303,7 +310,7 @@ button.addfav{
 }
 
 .recommended th{
-    color:lightgray;
+    color:gray;
     font-size:1.5em;
     text-decoration: underline;
     font-family: "Trebuchet MS", Helvetica, sans-serif;

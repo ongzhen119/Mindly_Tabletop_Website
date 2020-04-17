@@ -342,9 +342,10 @@ footer#page a:hover {
 
 div#index {
     position: relative;
-    display:block;
+    display:inline-block;
     width: 100%;
     height:50px;
+    bottom:-103px;
     background-color:rgb(104, 101, 101);
 
 }

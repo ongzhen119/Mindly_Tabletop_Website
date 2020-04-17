@@ -3,116 +3,73 @@
 <head>
     <title>Checkout</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css/style.css" type="text/css">
+<link rel="stylesheet" href="../css/checkout.css">
+<script src="https://kit.fontawesome.com/979e56d4a3.js" crossorigin="anonymous" rel="stylesheet"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {
-  font-family: Arial;
-  font-size: 17px;
-  padding: 8px;
-}
 
-* {
-  box-sizing: border-box;
-}
-
-.row {
-  display: -ms-flexbox; 
-  display: flex;
-  -ms-flex-wrap: wrap; 
-  flex-wrap: wrap;
-  margin: 0 -16px;
-}
-
-.col-25 {
-  -ms-flex: 25%;
-  flex: 25%;
-}
-
-.col-50 {
-  -ms-flex: 50%; 
-  flex: 50%;
-}
-
-.col-75 {
-  -ms-flex: 75%; 
-  flex: 75%;
-}
-
-.col-25,
-.col-50,
-.col-75 {
-  padding: 0 16px;
-}
-
-.container {
-  background-color: #f2f2f2;
-  padding: 5px 20px 15px 20px;
-  border: 1px solid lightgrey;
-  border-radius: 3px;
-}
-
-input[type=text] {
-  width: 100%;
-  margin-bottom: 20px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-label {
-  margin-bottom: 10px;
-  display: block;
-}
-
-.icon-container {
-  margin-bottom: 20px;
-  padding: 7px 0;
-  font-size: 24px;
-}
-
-.btn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
-  width: 100%;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 17px;
-}
-
-.btn:hover {
-  background-color: #45a049;
-}
-
-a {
-  color: #2196F3;
-}
-
-hr {
-  border: 1px solid lightgrey;
-}
-
-span.price {
-  float: right;
-  color: grey;
-}
-
-
-@media (max-width: 800px) {
-  .row {
-    flex-direction: column-reverse;
-  }
-  .col-25 {
-    margin-bottom: 20px;
-  }
-}
-</style>
 </head>
 <body>
+  <div class ="header">
+    <div class="inner-header">
+    <h>MINDLY TABLETOP Cafe and Store in Penang , Malaysia</h>
+      <ul>
+        <li><a href="">Game Request</a></li>
+        <li><a href="">Cafe</a></li>
+        <li><a href="">FAQ</a></li>
+        <li><a href="">Contact Us</a></li>
+        <li><a href="https://www.facebook.com/pg/Mindly-Tabletop-cafe-and-store-100484604971735/posts/?ref=page_internal" target="_blank" title="Follow on Facebook"><i class="fab fa-facebook-square fa-lg"></i></a></li>
+        <li><a href="mailto:ongzc-pm19@student.tarc.edu.my" title="Send us an email"><i class="fas fa-envelope fa-lg"></i></a></li>
+        <li><a href="tel:017-5751954" title="Call us"><i class="fas fa-phone"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="sticky-top">
 
-<h1>Checkout</h1>
+    <div class="inner-header" >
+      <img src="../image/component/mindly_logo.png"width="100px"height="95px"/>
+      <div class="search-box" >
+        <input class="search-txt" type="text" name="" placeholder="Type to search">
+        <a class="search-btn" href="#">
+          <i class="fas fa-search"></i>
+        </a>
+      </div>
+      <div class="profile-btn">
+        <i class="fas fa-user fa-3x" ></i>
+      </div><div class="cart-btn">
+        <i class="fas fa-shopping-cart fa-3x"></i> 
+        <span style="font-size: 25px;">/ RM0.00</span>            
+  </div>
+
+  <div style="background-color: rgb(227, 227, 228)">
+      <div class="inner-header" >
+        
+        <div class="main-nav" >
+          <a href="homepage.htm">HOME <i class="fas fa-home fa-lg"></i></a>
+          <div class="dropdown">
+            <button class="dropbtn" > DEALS <i class="fas fa-caret-down fa-lg"></i></button>
+            <div class="dropdown-content">
+              <a href="#">Hot Selling</a>
+              <a href="#">New Arrival</a>
+              <a href="#">All Games</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn"> CATEGORY <i class="fas fa-caret-down fa-lg"></i></button>
+            <div class="dropdown-content">
+              <a href="#">Board Games</a>
+              <a href="#">Strategy Games</a>
+              <a href="#">Tile-based Games</a>
+              <a href="#">Accessories</a>
+            </div>
+          </div>
+          <a href=""> CAFE <i class="fas fa-coffee fa-lg"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+<div style="position: relative;top:0px;">
+  <h1>Checkout</h1>
 <div class="row">
   <div class="col-75">
     <div class="container">
@@ -192,6 +149,8 @@ span.price {
     </div>
   </div>
 </div>
+</div>
+
 
 </body>
 </html>

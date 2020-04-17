@@ -143,8 +143,9 @@ html,body{
 .swiper-container {
   position: relative;
   top: 0px;
+  left: 10px;
   width: 100%;
-  height: 300px;
+  height: 400px;
 }
 .swiper-slide {
 text-align: center;
@@ -165,11 +166,11 @@ justify-content: center;
 align-items: center;
 }
 .slider-box{
-  height: 280px;
+  height: 350px;
   width: 450px;
   position: relative;
   background-color: #ffffff;
-  border-radius: 5px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -206,13 +207,14 @@ align-items: center;
   bottom: 0px;
 }
 .price{
+  cursor: pointer;
   color:#ffffff;
   background-color: #C60021;
   line-height: 20px;
 }
 .view{
   position: absolute;
-  bottom: 35px;
+  bottom: 70px;
   height: 30px;
   background-color: #e3e3e3;
   width: 100%;
@@ -232,7 +234,7 @@ align-items: center;
 }
 .view:hover{
   cursor: pointer;
-  transform: scale(1.1);
+  transform: scale(1.05);
   background-color: #C60021;
   box-shadow: 2px 2px 12px rgba(47, 47, 47, 0.40);
   transition: all ease 0.1s;
@@ -247,5 +249,51 @@ align-items: center;
 .grabbable:active{
   cursor: grabbing;
   cursor: -webkit-grabbing;
+}
+.cart , .fav{
+  bottom:120px;
+  left:20px;
+  width:60px;
+  height: 40px;
+  visibility: hidden;
+  background-color:black;
+  opacity:75%;
+  color:#fff;
+  padding:5px 0;
+  border-radius: 50%;
+  position:absolute;
+  z-index:2;
+  align-items: center;
+  font-size: 33px;
+} 
+.fav{
+  left: 360px !important;
+}
+.cart:hover , .fav:hover{
+  transform:scale(1.05);
+}
+div.slider-box .cart a ,div.slider-box .fav a {
+  color: #f6f6f8;
+}
+div.slider-box:hover .cart ,div.slider-box:hover .fav{
+  display:block;
+  animation: fadeIn 0.5s normal;
+  visibility: visible;
+}
+div.slider-box .cart a:hover {
+  color:rgb(112, 223, 168);
+}
+div.slider-box .fav a:hover {
+  color:#C60021;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 0.75;
+  }
 }
 

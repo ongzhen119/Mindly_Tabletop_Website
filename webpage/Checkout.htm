@@ -116,28 +116,28 @@ span.price {
 <div class="row">
   <div class="col-75">
     <div class="container">
-      <form action="/action_page.php">
+      <form action="../webpage/TQ.htm">
       
         <div class="row">
           <div class="col-50">
             <h3>Billing Address</h3>
             <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-            <input type="text" id="fname" name="surname" placeholder="Tan Ah Kao">
+            <input type="text" id="fname" name="fname" placeholder="Tan Ah Kao" required autofocus>
             <label for="email"><i class="fa fa-envelope"></i> Email</label>
-            <input type="text" id="email" name="email" placeholder="john@example.com">
+            <input type="text" id="email" name="email" placeholder="john@example.com" required>
             <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-            <input type="text" id="adr" name="address" placeholder="1-2-3 Taman Indah">
+            <input type="text" id="adr" name="address" placeholder="1-2-3 Taman Indah" required>
             <label for="city"><i class="fa fa-institution"></i> Town</label>
-            <input type="text" id="town" name="town" placeholder="Georgetown">
+            <input type="text" id="town" name="town" placeholder="Georgetown" required>
 
             <div class="row">
               <div class="col-50">
                 <label for="state">State</label>
-                <input type="text" id="state" name="state" placeholder="Penang">
+                <input type="text" id="state" name="state" placeholder="Penang" required>
               </div>
               <div class="col-50">
                 <label for="postC">Post Code</label>
-                <input type="text" id="postC" name="postC" placeholder="11500">
+                <input type="text" id="postC" name="postC" placeholder="11500" required>
               </div>
             </div>
           </div>
@@ -147,35 +147,36 @@ span.price {
             <label for="fname">Accepted Cards</label>
             <div class="icon-container">
               <i class="fa fa-cc-visa" style="color:navy;"></i>
-              <i class="fa fa-cc-amex" style="color:blue;"></i>
               <i class="fa fa-cc-mastercard" style="color:red;"></i>
-              <i class="fa fa-cc-discover" style="color:orange;"></i>
             </div>
             <label for="cname">Name on Card</label>
-            <input type="text" id="cname" name="cardname" placeholder="Tan Ah Kao">
+            <input type="text" id="cname" name="cardname" placeholder="Tan Ah Kao" required>
             <label for="ccnum">Credit/Debit card number</label>
-            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" required>
             <label for="expmonth">Exp Month</label>
-            <input type="text" id="expmonth" name="expmonth" placeholder="September">
+            <input type="text" id="expmonth" name="expmonth" placeholder="September" required>
             <div class="row">
               <div class="col-50">
                 <label for="expyear">Exp Year</label>
-                <input type="text" id="expyear" name="expyear" placeholder="2025">
+                <input type="text" id="expyear" name="expyear" placeholder="2025" required>
               </div>
               <div class="col-50">
                 <label for="cvv">CVV</label>
-                <input type="text" id="cvv" name="cvv" placeholder="123">
+                <input type="text" id="cvv" name="cvv" placeholder="123" required>
               </div>
             </div>
           </div>
           
         </div>
         <label>
-          <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+         <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+         <div>
+        
+            <input type="submit" style="height: 80px; width: 180px; color: white; background-color: black; font-size: large;" value="Checkout" />
+        
+           
+         </div>
         </label>
-        <a href="TQ.htm">
-            <img src="Check+out - Copy.PNG" alt= style="width:42px;height:42px;border:0" >
-          </a>
         
       </form>
     </div>
@@ -183,11 +184,11 @@ span.price {
   <div class="col-25">
     <div class="container">
       <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>3</b></span></h4>
-      <p><a href="azul_1.jpeg">Azul</a> <span class="price">RM40</span></p>
-      <p><a href="cardSleeve_1.jpg">Card Sleeves</a> <span class="price">RM10</span></p>
-      <p><a href="chichess_1.jpg">Chinese Chess</a> <span class="price">RM50</span></p>
+      <p><a href="../image/product_pic/azul_1.jpeg">Azul</a> <span class="price">RM82.90</span></p>
+      <p><a href="../image/product_pic/cardSleeve_1.jpg">Card Sleeves</a> <span class="price">RM10</span></p>
+      <p><a href="../image/product_pic/domino_3.jpg">Domino Tiles</a> <span class="price">RM31.10</span></p>
       <hr>
-      <p>Total <span class="price" style="color:black"><b>RM100</b></span></p>
+      <p>Total <span class="price" style="color:black"><b>RM124</b></span></p>
     </div>
   </div>
 </div>

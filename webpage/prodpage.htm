@@ -83,6 +83,11 @@
       <a class="prev" onclick="changeSlides(-1);">&#10094;</a>
       <a class="next" onclick="changeSlides(1);">&#10095;</a>
     </div>
+    <div class = "darray" style="text-align:center">
+      <span class= "dot"></span>
+      <span class= "dot"></span>
+      <span class= "dot"></span>
+    </div>
     <script>
         var slideIndex = 1;
         showSlides(slideIndex);
@@ -94,21 +99,20 @@
         function showSlides(n) {
         var slides = document.getElementsByClassName("slide");
         var dots = document.getElementsByClassName("dot");
+       
         if (n > slides.length) {slideIndex = 1}
         if (n < 1) {slideIndex = slides.length}
-  
 
+          
         for ( var i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
          }
         for ( i = 0; i < dots.length; i++){
           dots[i].className = dots[i].className.replace(" active", "");
         }
-       
-
-        dots[slideIndex-1].className += " active";
-        slides[slideIndex-1].style.display = "block";
         
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
         }
 
         var QtyIndex = 1;
@@ -121,11 +125,7 @@
             document.getElementById("result").innerHTML = QtyIndex;
         }
     </script>
-    <div class = "darray" style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-      </div>
+    
     </div>
     <div class="summary">
         <div class="name">Azul : Stained Glass (Limited Edition)</div>

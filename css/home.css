@@ -229,7 +229,7 @@ align-items: center;
   box-shadow: 2px 2px 12px rgba(47, 47, 47, 0.40);
 }
 .slider-box:hover .img-box img{
-  transform: scale(1.46);
+  transform: scale(1.15);
   transition: all ease 0.3s;
 }
 .view:hover{
@@ -251,23 +251,24 @@ align-items: center;
   cursor: -webkit-grabbing;
 }
 .cart , .fav{
-  bottom:120px;
-  left:20px;
   width:60px;
   height: 40px;
   visibility: hidden;
   background-color:black;
   opacity:75%;
-  color:#fff;
   padding:5px 0;
   border-radius: 50%;
-  position:absolute;
+  position:relative;
   z-index:2;
-  align-items: center;
   font-size: 33px;
 } 
+.cart{
+  top: -10px!important;
+  right: 100px!important;
+}
 .fav{
-  left: 360px !important;
+  top: -60px!important;
+  left: 100px !important;
 }
 .cart:hover , .fav:hover{
   transform:scale(1.05);
@@ -296,4 +297,7 @@ div.slider-box .fav a:hover {
       opacity: 0.75;
   }
 }
-
+.deals-title{
+  text-align: center;
+  justify-items: center;
+}

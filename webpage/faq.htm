@@ -1,67 +1,216 @@
 <html>
   <head>
+    <script src="https://kit.fontawesome.com/979e56d4a3.js" crossorigin="anonymous" rel="stylesheet"></script>
+
     <link href="faq.css" rel="stylesheet" type="text/css"/>
     <title>Frequently Asked Question Page</title>
+    <link rel="stylesheet" href="../css/style.css"type="text/css">
   </head>
   <!-- Embeded style-->
   <style>
-.faq{ 
-    width: 1910px;
-    height: 40px;
+  .faq{ 
     position: relative;
-    top: 20px;
-}
-    body {
-  font-family: Arial;
-  font-size: 17px;
-  padding: 8px;
-}
+    top: 0px;
+  }    
+  .inner{
+     width: 1000px;
+     margin-left: auto;
+     margin-right: auto;
+   }
+   .active, .collapsible:hover {
+     background-color: #C60021;
+     }
+    .collapsible{
+    background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+    }
+    .content{
+      min-height: 40px;
+      color: black;
+      display: none;
+      overflow: hidden;
+      border: 1px solid black;
+      background-color: #e3e3e3;
+      font-size: 15;
+      padding-left: 10px;
+    }
+
+
   </style>
   <body>
-    <!--PARENT-->
-<div class="faq"> 
-  <!--child-->
-  <!--inline styling-->
+    <div class ="header" style="height: 30px !important;">
+      <div class="inner-header">
+      <h>MINDLY TABLETOP Cafe and Store in Penang , Malaysia</h>
+        <ul>
+          <li><a href="gamerequest.htm">Game Request</a></li>
+          <li><a href="cafemenu.htm">Cafe</a></li>
+          <li><a href="faq.htm">FAQ</a></li>
+          <li><a href="contactus.htm">Contact Us</a></li>
+          <li><a href="https://www.facebook.com/pg/Mindly-Tabletop-cafe-and-store-100484604971735/posts/?ref=page_internal" target="_blank" title="Follow on Facebook"><i class="fab fa-facebook-square fa-lg"></i></a></li>
+          <li><a href="mailto:ongzc-pm19@student.tarc.edu.my" title="Send us an email"><i class="fas fa-envelope fa-lg"></i></a></li>
+          <li><a href="tel:017-5751954" title="Call us"><i class="fas fa-phone"></i></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sticky-top" style="height: 100px !important;">
+      <div class="inner-header" >
+        <img src="../image/component/mindly_logo.png"width="100px"height="95px"/>
+        <div class="search-box" >
+          <input class="search-txt" type="text" name="" placeholder="Type to search">
+          <a class="search-btn" href="#">
+            <i class="fas fa-search"></i>
+          </a>
+        </div>
+        <div class="profile-btn">
+          <i class="fas fa-user fa-3x" ></i>
+        </div>
+        <div class="cart-btn">
+          <i class="fas fa-shopping-cart fa-3x"></i> 
+          <span style="font-size: 25px;">/ RM0.00</span>            
+        </div>
+      </div>
+      <div style="background-color: #e3e3e3;height: 40px !important;">
+        <div class="inner-header" >
+          <div class="main-nav" >
+            <a href="homepage.htm">HOME <i class="fas fa-home fa-lg"></i></a>
+            <div class="dropdown">
+              <button class="dropbtn" > DEALS <i class="fas fa-caret-down fa-lg"></i></button>
+              <div class="dropdown-content">
+                <a href="#">Hot Selling</a>
+                <a href="#">New Arrival</a>
+                <a href="#">Promotion</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn"> CATEGORY <i class="fas fa-caret-down fa-lg"></i></button>
+              <div class="dropdown-content">
+                <a href="#">Board Games</a>
+                <a href="#">Strategy Games</a>
+                <a href="#">Tile-based Games</a>
+                <a href="#">Accessories</a>
+              </div>
+            </div>
+            <a href="cafemenu.htm"> CAFE <i class="fas fa-coffee fa-lg"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div class="faq inner"> 
+  <br>
+  <br>
+  <br>
   <h1>Frequently Asked Question</h1>
+  <br>  <br> 
   <hr>
   <br>
   <h1>General Information</h1>
-<br>
-    <h2>What is mindlytabletop.com ?</h2>
-    <p1>The <strong>mindlytabletop.com</strong> is a online board game shop. It allows users to browse, search, as well as purchase games and find for tutorial. Our aim is to allow everyone to experience the joy of board games.</p1>
 
-    <h2>What is the difference between Mindly Tabletop Store and Cafe ?</h2>
-    <p1>The Mindly Tabletop Cafe is physical outlets whereby a customer makes his/her purchases over the counter; whereas Mindly Tabletop Store is a virtual bookstore whereby the customer makes his/her purchases online at their own comfort.</p1>
+    <button type="button" class="collapsible">What is mindlytabletop.com ?</button>
+    <div class="content"> <p> The<strong> mindlytabletop.com</strong> is a online board game shop.
+       It allows users to browse, search, as well as purchase games and find for tutorial.
+        Our aim is to allow everyone to experience the joy of board games.</p></div>
+
+    <button type="button" class="collapsible">What is the difference between Mindly Tabletop Store and Cafe ?</button>
+    <div class="content">The Mindly Tabletop Cafe is physical outlets whereby a customer makes his/her purchases over the counter; whereas Mindly Tabletop Store is a virtual bookstore whereby the customer makes his/her purchases online at their own comfort.</div>
 <br>
 <br>
     <h1>On Products And Services</h1>
 <br>
-    <h2>Are the prices displayed on the website different from that of the physical stores ?</h2>
-    <p1>There is no price difference. However, we do run different kinds of promotion from time to time.</p1>
+    <button type="button" class="collapsible">Are the prices displayed on the website different from that of the physical stores ?</button>
+    <div class="content">There is no price difference. However, we do run different kinds of promotion from time to time.</div>
 
-    <h2>What should I do if the product(s) I received is incorrect or damaged ?</h2>
-    <p1>Our Return Policy allows for a refund only if incorrect or defective product(s) delivered. However, the policy requires that the incorrect or damaged product be returned to the following address within 7 days from the date of receipt of the book.<br><br>Tanjung Tokong, 11200 Tanjung Bungah, Penang</p1>
+    <button type="button" class="collapsible">What should I do if the product(s) I received is incorrect or damaged ?</button>
+    <div class="content">Our Return Policy allows for a refund only if incorrect or defective product(s) delivered. However, the policy requires that the incorrect or damaged product be returned to the following address within 7 days from the date of receipt of the book.<br><br>Tanjung Tokong, 11200 Tanjung Bungah, Penang</div>
 
-    <h2>I can't find the product I want at Mindly Tabletop Cafe, how can I buy it ?</h2>
-    <p1>You can visit mindlytabletop.com to check the stock available or not. If not, you can pre-order and waiting for the stock refill.</p1>
+    <button type="button" class="collapsible">I can't find the product I want at Mindly Tabletop Cafe, how can I buy it ?</button>
+    <div class="content">You can visit mindlytabletop.com to check the stock available or not. If not, you can pre-order and waiting for the stock refill.</div>
 <br>
 <br>
     <h1>On Orders</h1>
 <br>
-    <h2>How do I place an order ?</h2>
-    <p1><strong>Step 1:</strong> Login in mindlytabletop.com</p1>
+    <button type="button" class="collapsible">How do I place an order ?</button>
+    <div class="content"><strong>Step 1:</strong> Login in mindlytabletop.com
    <br>
-    <p1><strong>Step 2:</strong> Pick the product(s) you want to buy</p1>
+    <strong>Step 2:</strong> Pick the product(s) you want to buy
    <br>
-    <p1><strong>Step 3:</strong> Check the carts for correct names and quantities</p1>
+    <strong>Step 3:</strong> Check the carts for correct names and quantities
    <br>
-    <p1><strong>Step 4:</strong> Press confirm to make an order</p1>
+    <strong>Step 4:</strong> Press confirm to make an order</div>
 
-    <h2>How do I know that my order has been successfully placed ?</h2>
-    <p1>An e-mail will be sent to you to confirm your order. Also, an Order ID will be given to you, which you can use to check your order status.</p1>
+    <button type="button" class="collapsible">How do I know that my order has been successfully placed ?</button>
+    <div class="content">An e-mail will be sent to you to confirm your order. Also, an Order ID will be given to you, which you can use to check your order status.</div>
 
-    <h2>Can I place my order over the phone calling ?</h2>
-    <p1>All orders must be placed on mindlytabletop.com . We do not accept any phone calling orders.</p1>
+    <button type="button" class="collapsible" >Can I place my order over the phone calling ?</button>
+    <div class="content">All orders must be placed on mindlytabletop.com . We do not accept any phone calling orders.</div>
   </div>
+</div>
+
+  <script>
+
+    var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+    </script>
+
+
+      <!--Footer-->
+      <div  class="footer card" >
+        <div class="inner-section" >
+          <div class="about-us" style="width: 50%; " >
+            <h1>About Mindly Tabletop</h1>
+            <img src="../image/component/trans_mindly_logo.png" width="240px"height="190px" style="left: 50px;">
+            <p style="position: absolute;top: 300px;left: 20px;width:450px;font-size: 25px;">
+              Board game cafe and store in Penang,<br>
+               Malaysia that sell original genuine  <br>
+               board games and provide shipping <br>
+               services across the whole country. </p>
+                <div class="social-icons" style="position: absolute; left: 250px;top: 450px;" >
+                  <a href="https://www.facebook.com/pg/Mindly-Tabletop-cafe-and-store-100484604971735/posts/?ref=page_internal"target="_blank" title="Follow on Facebook" class="facebook-icon"><i class="fab fa-facebook-square fa-lg"></i></a>
+                  <a href="mailto:ongzc-pm19@student.tarc.edu.my" title="Send us an email" class="envelope-icon"><i class="fas fa-envelope fa-lg"></i></a>
+                  <a href="tel:017-5751954" title="Call us" class="phone-icon"><i class="fas fa-phone"></i></a>
+                </div>
+          </div>
+          <div class="we-accept" style="position: absolute; left: 550px;">
+            <h1 style="text-align: center; ">We Accept </h1>
+           <img src="../image/component/payment-method.png"alt="" style="border-radius: 10%; width: 400px;position: absolute;left: 50px;top: 75px;"> 
+          </div>
+          <div class="shipping-service" style="position: absolute; left: 550px;top: 260px;">
+            <h1 style="text-align: center; ">Shipping-Service</h1>
+           <img src="../image/component/shipping-service.png"alt="" style="border-radius: 10%; width: 400px;position: absolute;left:  50px;top: 50px;"> 
+          </div>
+        </div>
+        <div style="background-color: #e3e3e3; height: 30px;">
+          <div class="inner-footer" >
+            <h>Copyright 2020 &#169 <b>Mindly Tabletop store</b> </h>
+              <ul>
+                <li><a href="">Condition of use</a> </li>|
+                <li><a href="contactus.htm">Contact Us </a></li>|
+                <li><a href="">Login </a></li>|
+                <li><a href="SignUp.htm">Sign Up </a></li>
+              </ul>
+          </div>
+        </div>
+   </div>
 </body>
+
 </html>

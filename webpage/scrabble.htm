@@ -7,9 +7,9 @@
     <link href="../css/style.css" rel="stylesheet" type="text/css"/>
     <link href="../css/pPage.css" rel="stylesheet" type="text/css"/>
     <title>Document</title>
-  
+ 
 </head>
-<body onload="qty(0);" style="height: inherit !important;">
+<body onload="qty(0); rating();" style="height: inherit !important;">
    
     <div class ="header">
         <div class="inner-header">
@@ -71,13 +71,13 @@
       </div>
       <div class = "icontainer">
       <div class = "slide fade">
-          <img src="../image/product_pic/azul_1.jpeg"/>
+          <img src="../image/product_pic/scrabble_1.png"/>
       </div>
       <div class="slide fade">
-        <img src="../image/product_pic/azul_2.jpg"/>
+        <img src="../image/product_pic/scrabble_2.png"/>
     </div>
     <div class="slide fade">
-        <img src="../image/product_pic/azul_3.jpg"/>
+        <img src="../image/product_pic/scrabble_3.png"/>
     </div>
     <div class="class">
       <a class="prev" onclick="changeSlides(-1);">&#10094;</a>
@@ -107,6 +107,7 @@
         for ( var i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
          }
+         
         for ( i = 0; i < dots.length; i++){
           dots[i].className = dots[i].className.replace(" active", "");
         }
@@ -121,28 +122,61 @@
         function qty(n){
             QtyIndex += n;
             if (QtyIndex < 1) {QtyIndex = 1};
-            if (QtyIndex > 19) {QtyIndex = 19};
+            if (QtyIndex > 21) {QtyIndex = 21};
             document.getElementById("result").innerHTML = QtyIndex;
         }
-    </script>
-    
+        
+
+      function rating(){
+      var rating = 4;
+      var star = document.getElementsByClassName("star");
+      for(var i = 0; i < rating; i++){
+        star[i].innerHTML += "&#9733";
+      } for(i; i < 5; i++){
+        star[i].innerHTML += "&#9734;";
+        star[i].className += " empty";
+      }
+      var thumb = document.getElementsByClassName("thumb");
+      var score = document.getElementsByClassName("empty");
+
+      if (score.length == 0){
+        thumb[0].className += " excellent"
+      }
+      else if(score.length == 1){
+        thumb[0].className += " good";
+      }
+      else if(score.length == 2){
+        thumb[0].className += " ok";
+      }
+      else if(score.length == 3){
+        thumb[0].className += " bad";
+      }
+      else {
+        thumb[0].className += " vbad";
+      }
+    }
+    alert(thumb[0].className);
+      </script>
     </div>
+
+
     <div class="summary">
-        <div class="name">Azul : Stained Glass (Limited Edition)</div>
-        <div class="price"><p>RM 82.90</p><div class="stock">19 in stock</div></div>
+        <div class="name">Scrabble Original (Australia Edition)</div>
+        <div class="price"><p>RM 69.70</p><div class="stock">12 in stock</div></div>
         <div class="rating">
-          <p>Customer's reviews</p>
+          <p>Customer's reviews <i class="fas fa-caret-right"></i></p>
           <table style="display:inline-block">
             <tr>
-              <td>&#9733;</td>
-              <td>&#9733;</td>
-              <td>&#9733;</td>
-              <td>&#9733;</td>
-              <td class="empty">&#9734;</td>
+              <td class="star"></td>
+              <td class="star"></td>
+              <td class="star"></td>
+              <td class="star"></td>
+              <td class="star"></td>
             </tr>
           </table>
-          <p style="display:inline-block">4.0/5 (Good)</p>
+          <p class="thumb"><i class="fas fa-thumbs-up"></i></p>
         </div>
+       
         <div class="b_quantity">
           <div class="add" onclick="qty(1);">
             <a>+</a>
@@ -159,8 +193,28 @@
     </div>
     <div class="description">
         <h2>Description</h2>
-        <p> Introduced by the Moors, azulejos (originally white and blue ceramic tiles) were fully embraced by the Portuguese when their king Manuel I, on a visit to the Alhambra palace in Southern Spain, was mesmerized by the stunning beauty of the Moorish decorative tiles. The king, awestruck by the interior beauty of the Alhambra, immediately ordered that his own palace in Portugal be decorated with similar wall tiles. As a tile-laying artist, you have been challenged to embellish the walls of the Royal Palace of Evora.</p>
-        <p> In the game Azul, players take turns drafting colored tiles from suppliers to their player board. Later in the round, players score points based on how they've placed their tiles to decorate the palace. Extra points are scored for specific patterns and completing sets; wasted supplies harm the player's score. The player with the most points at the end of the game wins.</p>
+        <p>Put letters together, build words, add up your points and win! This classic game features the classic Scrabble equipment for a big-time word-on-word showdown. Do you see a word your opponent hasn't seen. A double or triple letter or word space that will let you earn big points. Could the luck of the draw win you the game. Use your letters to score points and challenge your family and friends. It’s your word against theirs! Scrabble and all related characters are trademarks of Hasbro. For 2-4 players  </p>
+        <h2>Product Information</h2>
+        <table class="information" cellspacing="0" >
+          <colgroup>
+            <col style="background-color: rgb(243,243,243);">
+          </colgroup>
+          <tr>
+            <td>Product Dimensions</td>
+            <td>1.5 x 15.8 x 7.5 inches  </td>
+          </tr>
+          <tr>
+            <td>Item Weight</td>
+            <td>10.1 ounces </td>
+          </tr>
+          <tr>
+            <td>Shipping Weight</td>
+            <td>1.37 pounds </td>
+          </tr>
+        </table>
+        <h2><label for="textbox">Give us your feedback!</label></h2>
+        <textarea id="textbox" rows="6" cols="150" placeholder="&#x270E; Insert your feedback here..."></textarea>
+        <button>Submit feedback</button>
     </div>
     <div class="recommended">
       
@@ -171,7 +225,7 @@
           </th>
         </tr>
         <tr>
-          <td class="product"><div class="container"><a href = "azul.htm"><img src = "../image/product_pic/mahjong_1.jfif" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div><p>Chinese Mahjong Game Set</p><div class="containerp">RM<span class="price" >120.50</span></div></div></td>
+          <td class="product"><div class="container"><a href = "azul.htm"><img src = "../image/product_pic/azul_1.jpeg" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div><p>Azul: Stained Glass (Limited Edition)</p><div class="containerp">RM<span class="price" >42.90</span></div></div></td>
       </tr>
       <tr>
         <td class="product"><div class="container"><a href = "prodpage.htm"><img src = "../image/product_pic/domino_1.jfif" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div><p>Domino Squares Set</p><div class="containerp">RM<span class="price" >31.10</span></div></div></td>

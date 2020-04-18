@@ -1,8 +1,14 @@
 <html>
     <head>
         <title>Foroget password page</title>
+        <link rel="stylesheet" href="../css/style.css" type="text/css">
     </head>
     <style>
+        .inner{
+            width: 1000px!important;
+            margin-left: auto;
+            margin-right: auto;
+        }
 .forget{ 
     width: 1910px;
     height: 40px;
@@ -14,14 +20,27 @@
   font-size: 17px;
   padding: 8px;
 }
+.anchor{
+    color: black;
+}
+.anchor:hover{
+    color:#C60021;
+}
     </style>
+
+
     <body>
-    <div class="forget">
-    <h1>Forget password</h1>
-    Please enter your E-mail address and click the link inside your E-mail to reset your password.<br><br>
-    E-mail:&nbsp;<input name="email" type="email"><br><br>
-    <input type="submit" value="Send"><br><br>
-    <a href="" style="text-decoration:none" target="_blank">            Go Back to Sign In Page</a>
+
+        <!--Content-->
+    <div class="forget inner">
+    <h1>Forget password</h1><br>
+    <h4>Please enter your E-mail address and click the link inside your E-mail to reset your password.</h4><br><br>
+    <form action="homepage.htm">
+        <label for="email">Email</label><br><br>
+        <input name="email" id="email"type="email"required autofocus/><br><br>
+        <input type="submit" id="button" value="Send"><br><br>
+    </form>
+    <a class="anchor" href="Login.htm" style="text-decoration:none" > Back to Log In Page</a>
     </div>
     </body>
 </html>

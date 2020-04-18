@@ -1,7 +1,9 @@
 <html>
     <head>
         <title>Login page</title>
+        <link rel="stylesheet" href="../css/style.css" type="text/css">
     </head>
+     
     <style>
 .login{ 
     width: 1910px;
@@ -14,27 +16,32 @@
   font-size: 17px;
   padding: 8px;
 }
+     .inner{
+            width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .log-in-title{
+            border:5px solid #e3e3e3; width:600px; height: auto;border-radius: 15px; background-color: #E3E3E3;
+            text-align: center;
+        }
+        .anchor{ color: black;}
+        .anchor:hover{ color:#C60021;}
+
     </style>
     <body>
-        <div class="login">
-                <h1>LOG IN</h1>
-                Username:&nbsp;<input name="username" type="text">
-                <br>
-                Password:&nbsp;&nbsp;<input name="password" type="password">
-                <br><br><br>
-                <div>
-                    <a href="" style="margin-right:0px;font-size:13px;font-family:cursive" target="_blank">Forgot Password</a>
-                </div>
-                <input type="submit" value="LOG IN"><br><br>
-                <br><br><br>
-                Don't have account? <a href="" target="_blank"> Sign Up</a>
+        
+        <div class="login inner" >
+                <h1 class="log-in-title">Welcome to Mindly ! Please login.</h1> <br/>
+                <form action="homepage.htm">
+                    <label for=username"">Username</label> <br/>
+                    <input name="username" id ="username" type="text" size ="35" required autofocus><br/><br/>
+                    <label for="password">Password</label><br/>
+                    <input name="password"  id= "password" type="password"  size ="35" required><br/>
+                    <a href="forget.htm"class="anchor" style="margin-left:10px;font-size:15px;" >Forgot Password?</a><br/><br/>
+                    <input type="submit" id="button" class="card" value="LOG IN"><br><br><br/>
+                </form>
+                Don't have account? <a class= "anchor"href="SignUp.htm" > Sign Up</a>
             </div>
-
-
-
-
-
-
-
     </body>
 </html>

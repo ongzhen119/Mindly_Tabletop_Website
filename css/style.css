@@ -268,7 +268,7 @@ top: 70px;
     color :rgb(198,0,33);
     text-decoration: underline;
 }
-/* for the use of contact us and game request*/
+/* for the use of contact us , game request and login*/
 form label ,form input{
     font-size: 20px ;
     padding: 5px;

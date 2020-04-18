@@ -293,6 +293,8 @@ form label ,form input{
     font-family: sans-serif !important;
     background-color: #e3e3e3;
     border: 1px solid black;
+    padding: 14px 20px;
+    margin: 8px 0;
   }
   #button:hover{
     cursor: pointer;

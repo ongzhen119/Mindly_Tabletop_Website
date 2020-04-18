@@ -70,6 +70,11 @@ html, body{
     color:red;
     font-weight: bold;
 }
+.darray{
+    position:absolute;
+    right:190px;
+    bottom:0px;
+}
 .dot {
     cursor: pointer;
     height: 15px;
@@ -79,7 +84,12 @@ html, body{
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
+
   }
+
+.active{
+    background-color:gray;
+}
 /*summary section*/
 
 .summary{

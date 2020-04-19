@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" style="height: auto !important;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/979e56d4a3.js" crossorigin="anonymous" rel="stylesheet"></script>
+    <link href="../../css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="../../css/pPage.css" rel="stylesheet" type="text/css"/>
+    <title>Document</title>
+ 
+</head>
+<body onload="qty(0); rating();" style="height: inherit !important;">
+   
+    <div class ="header">
+        <div class="inner-header">
+        <h>MINDLY TABLETOP Cafe and Store in Penang , Malaysia</h>
+          <ul>
+            <li><a href="">Game Request</a></li>
+            <li><a href="">Cafe</a></li>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">Contact Us</a></li>
+            <li><a href="" title="Follow on Facebook"><i class="fab fa-facebook-square fa-lg"></i></a></li>
+            <li><a href="" title="Send us an email"><i class="fas fa-envelope fa-lg"></i></a></li>
+            <li><a href="" title="Call us"><i class="fas fa-phone"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="sticky-top">
+
+        <div class="inner-header" >
+          <img src="../../image/component/mindly_logo.png"width="100px"height="95px"/>
+          <div class="search-box" >
+            <input class="search-txt" type="text" name="" placeholder="Type to search">
+            <a class="search-btn" href="#">
+              <i class="fas fa-search"></i>
+            </a>
+          </div>
+          <div class="profile-btn">
+            <i class="fas fa-user fa-4x" ></i>
+          </div><div class="cart-btn">
+            <i class="fas fa-shopping-cart fa-4x"></i>
+          </div>
+        </div>
+  
+        <div style="background-color: rgb(227, 227, 228)">
+          <div class="inner-header" >
+            
+            <div class="main-nav" >
+              <a href="homepage.htm">HOME <i class="fas fa-home fa-lg"></i></a>
+              <div class="dropdown">
+                <button class="dropbtn" > DEALS <i class="fas fa-caret-down fa-lg"></i></button>
+                <div class="dropdown-content">
+                  <a href="#">Hot Selling</a>
+                  <a href="#">New Arrival</a>
+                  <a href="#">All Games</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">CATEGORY<i class="fas fa-caret-down fa-lg"></i></button>
+                <div class="dropdown-content">
+                  <a href="#">Board Games</a>
+                  <a href="#">Strategy Games</a>
+                  <a href="#">Tile-based Games</a>
+                  <a href="#">Accessories</a>
+                </div>
+              </div>
+              <a href=""> CAFE <i class="fas fa-coffee fa-lg"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-----------------------------------------------------SLIDE------------------------------------------->
+      <div class = "icontainer">
+      <div class = "slide fade">
+          <img src="../../image/product_pic/cardSleeve_1.jpg"/>
+      </div>
+      <div class="slide fade">
+        <img src="../../image/product_pic/cardSleeve_2.jpg"/>
+    </div>
+    <div class="slide fade">
+        <img src="../../image/product_pic/cardSleeve_3.jpg"/>
+    </div>
+    <div class="class">
+      <a class="prev" onclick="changeSlides(-1);">&#10094;</a>
+      <a class="next" onclick="changeSlides(1);">&#10095;</a>
+    </div>
+    <div class = "darray" style="text-align:center">
+      <span class= "dot"></span>
+      <span class= "dot"></span>
+      <span class= "dot"></span>
+    </div>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function changeSlides(n) {
+         showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+        var slides = document.getElementsByClassName("slide");
+        var dots = document.getElementsByClassName("dot");
+       
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+
+          
+        for ( var i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+         }
+         
+        for ( i = 0; i < dots.length; i++){
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        }
+
+        var QtyIndex = 1;
+        document.getElementById("result").innerHTML = QtyIndex;
+
+        function qty(n){
+            QtyIndex += n;
+            if (QtyIndex < 1) {QtyIndex = 1};
+            if (QtyIndex > 19) {QtyIndex = 19};
+            document.getElementById("result").innerHTML = QtyIndex;
+        }
+        
+
+      function rating(){
+      var rating = 4;
+      var star = document.getElementsByClassName("star");
+      for(var i = 0; i < rating; i++){
+        star[i].innerHTML += "&#9733";
+      } for(i; i < 5; i++){
+        star[i].innerHTML += "&#9734;";
+        star[i].className += " empty";
+      }
+      var thumb = document.getElementsByClassName("thumb");
+      var score = document.getElementsByClassName("empty");
+
+      if (score.length == 0){
+        thumb[0].className += " excellent"
+      }
+      else if(score.length == 1){
+        thumb[0].className += " good";
+      }
+      else if(score.length == 2){
+        thumb[0].className += " ok";
+      }
+      else if(score.length == 3){
+        thumb[0].className += " bad";
+      }
+      else {
+        thumb[0].className += " vbad";
+      }
+    }
+    alert(thumb[0].className);
+      </script>
+    </div>
+
+      <!-----------------------------------------------------DETAILS------------------------------------------->
+
+    <div class="summary">
+        <div class="name">UNO: Flip! - Card Game</div>
+        <div class="price"><p>RM 20.50</p><div class="stock">9 in stock</div></div>
+        <div class="rating">
+          <p>Customer's reviews <i class="fas fa-caret-right"></i></p>
+          <table style="display:inline-block">
+            <tr>
+              <td class="star"></td>
+              <td class="star"></td>
+              <td class="star"></td>
+              <td class="star"></td>
+              <td class="star"></td>
+            </tr>
+          </table>
+          <p class="thumb"><i class="fas fa-thumbs-up"></i></p>
+        </div>
+       
+        <div class="b_quantity">
+          <div class="add" onclick="qty(1);">
+            <a>+</a>
+          </div>
+          <div class="minus" onclick="qty(-1);">
+            <a>-</a>
+          </div>
+          <div id="result"></div>
+        <label for="quantity">Quantity</label>
+        </div>
+      <button class="addcart"><i class="fa fa-cart-plus"></i> Add to cart</button>
+      <button class="addfav"><i class="fa fa-heart"></i> Add to favourite</button>
+      </div>
+    </div>
+      <!-----------------------------------------------------DESCRIPTION------------------------------------------->
+
+    <div class="description">
+        <h2>Description</h2>
+        <p> Brace yourself for the next iteration of classic UNO: UNO FLIP!. It's the matching game you know, plus exciting new twists -like a double-sided deck, special FLIP card and tougher penalties -that give classic gameplay a competitive edge. There is a "Light Side" to the deck, which plays like classic UNO, and a "Dark Side" where penalties are super-tough. Play the FLIP card and all cards in your hand, the draw pile and draw deck are flipped over to reveal an entirely new set of numbers and colors on the opposite side! The holder of the FLIP card determines whether or not you play on the Light Side or Dark Side of the deck -and when you switch it back around. The Dark Side of the deck includes new action cards that really shake things up, like Draw Five and Skip Everyone cards. Strategize to rattle your competition and be the first to get rid of your cards to win. When you're down to one card, don't forget to shout "UNO!" Now card game-lovers can get UNO FLIP! in a sturdy tin that's great for storage and travel. This fun family card game is perfect for 7 year olds and up. Colors and decorations may vary.
+        </p>
+        <table class="information" cellspacing="0" >
+          <colgroup>
+            <col style="background-color: rgb(243,243,243);">
+          </colgroup>
+          <tr>
+            <td>Product Dimensions</td>
+            <td> 	2 x 9.1 x 14.5 cm  </td>
+          </tr>
+          <tr>
+            <td>Item Weight</td>
+            <td>2.4 pounds  </td>
+          </tr>
+          <tr>
+            <td>Shipping Weight</td>
+            <td>3 pounds</td>
+          </tr>
+        </table>
+        <h2><label for="textbox">Give us your feedback!</label></h2>
+        <textarea id="textbox" rows="6" cols="150" placeholder="&#x270E; Insert your feedback here..."></textarea>
+        <button>Submit feedback</button>
+    </div>
+    <div class="recommended">
+      
+      <table>
+        <tr>
+          <th>
+            Recommended Product
+          </th>
+        </tr>
+        <tr>
+          <td class="product"><div class="container"><a href = "mahjong.htm"><img src = "../../image/product_pic/mahjong_1.jfif" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div><p>Chinese Mahjong Game Set</p><div class="containerp">RM<span class="price" >120.50</span></div></div></td>
+      </tr>
+      <tr>
+        <td class="product"><div class="container"><a href = "domino.htm"><img src = "../../image/product_pic/domino_1.jfif" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div><p>Domino Squares Set</p><div class="containerp">RM<span class="price" >31.10</span></div></div></td>
+      </tr>
+      <tr>
+        <td class="product"><div class="container"><a href = "kingabbey.htm"><img src = "../../image/product_pic/kingsAbbey_1.jpg" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div><p>The King's Abbey (English First Edition)</p><div class="containerp">RM<span class="price" >324.40</span></div></div></td>
+      </tr>
+      <tr>
+        <td class="product"><div class="container"><a href = "tiles.htm"><img src = "../../image/product_pic/tiles_1.jpg" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div><p>Tiles (1995)</p><div class="containerp">RM<span class="price" >40.00</span></div></div></td>
+      </tr>
+      <tr>
+        <td class="product"><div class="container"><a href = "scrabble.htm"><img src = "../../image/product_pic/scrabble_1.png" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div><p>Scrabble Original (Australia Edition)</p><div class="containerp">RM<span class="price" >69.70</span></div></div></td>
+      </tr>
+      <tr>
+        <td class="product"><div class="container"><a href = "evo.htm"><img src = "../../image/product_pic/evo_1.jpg" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div><p>EVO (Second Edition)</p><div class="containerp">RM<span class="price" >412.30</span></div></div></td>
+      </tr>
+    </table>
+    </div>
+      <!--Footer-->
+      <div  class="footer card" >
+        <div class="inner-section" >
+          <div class="about-us" style="width: 50%; " >
+            <h1>About Mindly Tabletop</h1>
+            <img src="../../image/component/trans_mindly_logo.png" width="240px"height="190px" style="left: 50px;">
+            <p style="position: absolute;top: 300px;left: 20px;width:450px;font-size: 25px;">
+              Board game cafe and store in Penang,<br>
+               Malaysia that sell original genuine  <br>
+               board games and provide shipping <br>
+               services across the whole country. </p>
+                <div class="social-icons" style="position: absolute; left: 250px;top: 450px;" >
+                  <a href="https://www.facebook.com/pg/Mindly-Tabletop-cafe-and-store-100484604971735/posts/?ref=page_internal"target="_blank" title="Follow on Facebook" class="facebook-icon"><i class="fab fa-facebook-square fa-lg"></i></a>
+                  <a href="mailto:ongzc-pm19@student.tarc.edu.my" title="Send us an email" class="envelope-icon"><i class="fas fa-envelope fa-lg"></i></a>
+                  <a href="tel:017-5751954" title="Call us" class="phone-icon"><i class="fas fa-phone"></i></a>
+                </div>
+          </div>
+          <div class="we-accept" style="position: absolute; left: 550px;">
+            <h1 style="text-align: center; ">We Accept </h1>
+           <img src="../../image/component/payment-method.png"alt="" style="border-radius: 10%; width: 400px;position: absolute;left: 50px;top: 75px;"> 
+          </div>
+          <div class="shipping-service" style="position: absolute; left: 550px;top: 260px;">
+            <h1 style="text-align: center; ">Shipping-Service</h1>
+           <img src="../../image/component/shipping-service.png"alt="" style="border-radius: 10%; width: 400px;position: absolute;left:  50px;top: 50px;"> 
+          </div>
+        </div>
+        <div style="background-color: #e3e3e3; height: 30px;">
+          <div class="inner-footer" >
+            <h>Copyright 2020 &#169 <b>Mindly Tabletop store</b> </h>
+              <ul>
+                <li><a href="">Condition of use</a> </li>|
+                <li><a href="contactus.htm">Contact Us </a></li>|
+                <li><a href="">Login </a></li>|
+                <li><a href="SignUp.htm">Sign Up </a></li>
+              </ul>
+          </div>
+        </div>
+   </div>
+</body>
+</html>

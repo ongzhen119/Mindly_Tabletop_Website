@@ -14,12 +14,17 @@ function ready(){
 
 
 function addFlayout(event){
+  
     var addbtn = event.target;
-    var shopItem = document.getElementsByClassName("")
-    var price = shopItem.getElementsByClassName("price")[0].innerHTML;
-    var name = shopItem.getElementsByClassName("name")[0].innerHTML;
-    var image = shopItem.getElementsByClassName("image")[0].src;
+    var text = document.getElementsByClassName("icontainer")[0];
+    var shopItem = document.getElementsByClassName("summary")[0];
     
+    var price = shopItem.getElementsByClassName("rprice")[0].innerText;
+
+    price = price.replace("RM", "");
+
+    var name = shopItem.getElementsByClassName("name")[0].innerText;
+    var image = text.getElementsByClassName("image")[0].src;
     for(var i=0; i < localStorage.length; i++){
     var check = JSON.parse(localStorage.getItem(i));
         if(check.name == name){
@@ -28,7 +33,7 @@ function addFlayout(event){
         }
     }
     var number = localStorage.length;
-    var quantity = 1;
+    var quantity = document.getElementById("result").innerText;
     let productInfo = {
         price, name, image, quantity
     };

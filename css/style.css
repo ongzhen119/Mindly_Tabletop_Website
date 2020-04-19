@@ -3,7 +3,7 @@
     margin:0;
     padding:0;
     text-decoration: none;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif  
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
 }
 /*TOP*/
 body{
@@ -297,6 +297,7 @@ form label ,form input{
     margin: 8px 0;
   }
   #button:hover{
+      opacity: 0.8;
     cursor: pointer;
     color: #C60021;
     border: 1px solid black;

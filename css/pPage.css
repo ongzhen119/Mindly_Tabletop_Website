@@ -67,7 +67,7 @@ html, body{
     bottom:0;
     margin-left: 50%;
     user-select: none;
-    color:red;
+    color:#C60021;
     font-weight: bold;
 }
 .darray{
@@ -210,7 +210,7 @@ div.price p{
 
 .vbad{
     transform:rotate(180deg);
-    background-color:red;
+    background-color:#C60021;
 }
 
 
@@ -278,33 +278,49 @@ div.price p{
 
 
 button.addcart{
-    background-color:green;
-    color:white;
+    background-color:#E3E3E3;
+    color:black;
     position:absolute;
     width:200px;
     height:50px;
     font-size:1.5em;
-    bottom:131px;
     left:450px;
     cursor:pointer;
     user-select: none;
+    border: 1px solid black;
+    padding: 1px 1px;
+    margin: 1px 0;
+    border-radius: 5px;
+
 }
 
 button.addfav{
-    background-color:red;
-    color:white;
+    background-color: #E3E3E3;
+    color:black;
     position:absolute;
     width:200px;
     height:50px;
     font-size:1.5em;
-    bottom:50px;
-    left:225px;
+    top:395px;
+    left:450px;
     cursor:pointer;
     user-select: none;
+    border: 1px solid black;
+    padding: 1px 1px;
+    margin: 1px 0;
+    border-radius: 5px;
 }
 
-.addcart:hover, .addfav:hover{
+.addcart:hover{
+    box-shadow: 1px 5px 10px 0 rgba(0,0,0,0.16), 0 2px 15px 0 rgba(0,0,0,0.12);
     color:lightgray;
+    background-color:green; 
+}
+.addfav:hover{
+    box-shadow: 1px 5px 10px 0 rgba(0,0,0,0.16), 0 2px 15px 0 rgba(0,0,0,0.12);
+    color:lightgray;
+    background-color:#C60021; 
+
 }
 
 /*description*/
@@ -319,7 +335,7 @@ button.addfav{
 
 .description h2{
     position:relative;
-    color:red;
+    color:#C60021;
     padding:25px 0px 25px 0px;
 
     

@@ -42,7 +42,8 @@
         var buttonClicked = event.target;
         var item = buttonClicked.parentElement.parentElement;
         var name = item.getElementsByClassName("item-quantity")[0].innerHTML;
-       
+        item.remove();
+        updateTotal();
         for(var i = 0; i < 50; i++){
             if (localStorage.getItem(i) == null){
                 continue;
@@ -53,8 +54,8 @@
                 return;
             }
         }
-        item.remove();
-        updateTotal();
+       
+        
     }
 
     function priceChange(event){
@@ -63,6 +64,7 @@
         if(numberChanged.value == ""){
             numberChanged.value = 1;
         }
+        updateTotal();
         var item = numberChanged.parentElement.parentElement;
         var name = item.getElementsByClassName("item-quantity")[0].innerHTML;
         for(var i = 0; i < 50; i++){
@@ -81,7 +83,7 @@
                 localStorage.setItem(i, JSON.stringify(productInfo));
             }
         }
-        updateTotal();
+        
 
     }
 

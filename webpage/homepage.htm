@@ -28,14 +28,24 @@
         <div class="inner-header" >
           <img src="../image/component/mindly_logo.png"width="100px"height="95px"/>
           <div class="search-box" >
-            <input class="search-txt" type="text" name="" placeholder="Type to search">
+            <input class="search-txt" type="text" name="" placeholder="search board games">
             <a class="search-btn" href="#">
               <i class="fas fa-search"></i>
             </a>
           </div>
-          <div class="profile-btn">
-            <i class="fas fa-user fa-3x" ></i>
+
+          <div class=" profile dropdown " >
+            <button class="dropbtn profile-btn"><i class="fas fa-user fa-3x" ></i></button>
+            <br><br>
+              <div class="dropdown-content" style="top: 70px;">
+                <a href="Login.htm">Login <i class="fas fa-sign-in-alt fa-lg"></i></a>
+                <a href="ProfileTest.htm">Profile<i class="fas fa-user fa-lg" ></i></a>
+                
+              </div>
+            
           </div>
+
+
           <div class="cart-btn">
             <i class="fas fa-shopping-cart fa-3x"></i> 
             <span style="font-size: 25px;">/ RM0.00</span>            
@@ -526,9 +536,8 @@
           <div class="swiper-pagination" ></div>
         </div>
 
-      <!-- Swiper JS -->
-      <script type="text/javascript" src="../js/swiper.min.js"></script>
-      <script src="../js/script.js"></script>
+
+
 
 
       <!--Footer-->
@@ -572,7 +581,11 @@
 
 
   </body>
+      <!-- Swiper JS -->
+      <script type="text/javascript" src="../js/swiper.min.js"></script>
+      <script type="text/javascript"src="../js/script.js"></script>
 
+      
 </html>
 
 

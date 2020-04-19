@@ -101,15 +101,23 @@ body{
     line-height: 40px;
     width: 500px;
 }
-.profile-btn{
+.profile{
     position: absolute;
-    top: 12%;
-    left: 73%
+    top: 0%;
+    left: 71%
+}
+.profile-btn:hover{
+    background-color: #ffffff !important;
 }
 .cart-btn{
     position: absolute;
     top: 12%;
     left:83%
+}
+
+.profile-btn:hover, .cart-btn:hover{
+    color: #C60021;
+    cursor: pointer;
 }
 .main-nav{
     height: 40px;
@@ -155,7 +163,6 @@ body{
     margin: 0;}
 .main-nav a:hover, .dropdown:hover .dropbtn {
     color: rgb(198,0,33);
-    background-color: #a5a5a548;
 }
     
 .dropdown-content {

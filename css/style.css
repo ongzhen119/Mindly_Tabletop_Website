@@ -112,7 +112,7 @@ body{
 .cart-btn{
     position: absolute;
     top: 12%;
-    left:83%
+    left:80%;
 }
 
 .profile-btn:hover, .cart-btn:hover{

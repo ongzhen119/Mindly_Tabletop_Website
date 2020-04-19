@@ -50,6 +50,7 @@
             var list = JSON.parse(localStorage.getItem(i));
             if(name == list.name){
                 localStorage.removeItem(i);
+                return;
             }
         }
         item.remove();
@@ -58,8 +59,27 @@
 
     function priceChange(event){
         var numberChanged = event.target;
+
         if(numberChanged.value == ""){
             numberChanged.value = 1;
+        }
+        var item = numberChanged.parentElement.parentElement;
+        var name = item.getElementsByClassName("item-quantity")[0].innerHTML;
+        for(var i = 0; i < 50; i++){
+            if (localStorage.getItem(i) == null){
+                continue;
+            }
+            var list = JSON.parse(localStorage.getItem(i));
+            
+            if(name == list.name){
+                var price = list.price;
+                var quantity = numberChanged.value;
+                var image = list.image;
+                let productInfo = {
+                    price, name, image, quantity
+                };
+                localStorage.setItem(i, JSON.stringify(productInfo));
+            }
         }
         updateTotal();
 

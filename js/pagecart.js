@@ -6,7 +6,7 @@ if(document.readyState == "loading"){
     }
     
 function ready(){
-  var addflayout = document.getElementsByClassName("cart");
+  var addflayout = document.getElementsByClassName("addcart");
   for(i=0; i< addflayout.length; i++){
       addflayout[i].addEventListener('click', addFlayout);
   }
@@ -15,7 +15,7 @@ function ready(){
 
 function addFlayout(event){
     var addbtn = event.target;
-    var shopItem = addbtn.parentElement.parentElement.parentElement;
+    var shopItem = document.getElementsByClassName("")
     var price = shopItem.getElementsByClassName("price")[0].innerHTML;
     var name = shopItem.getElementsByClassName("name")[0].innerHTML;
     var image = shopItem.getElementsByClassName("image")[0].src;

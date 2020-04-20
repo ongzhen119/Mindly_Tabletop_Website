@@ -83,7 +83,6 @@
                 localStorage.setItem(i, JSON.stringify(productInfo));
             }
         }
-        
 
     }
 
@@ -113,9 +112,10 @@
         var name = list.name;
         var price = list.price;
         var quantity = list.quantity;
-        var newContent = `<div class="basket-product"> <div class="item"> <div class="product-image"> <img src="${image}" alt="Placholder Image 2" class="product-frame"> </div> <div class="product-details"> <h1><strong><span class="item-quantity">${name}</span></strong></h1> <p><strong>⭐⭐⭐⭐⭐</strong></p> </div> </div> <div class="price">${price}</div> <div class="quantity"> <input type="number" value="${quantity}" min="1" class="quantity-field"> </div> <div class="subtotal">31.10</div> <div class="remove"> <button>Remove</button> </div> `;
+        var newContent = `<div class="basket-product"> <div class="item"> <div class="product-image"> <img src="${image}" alt="Placholder Image 2" class="product-frame"> </div> <div class="product-details"> <h1><strong><span class="item-quantity">${name}</span></strong></h1> <p><strong>⭐⭐⭐⭐⭐</strong></p> </div> </div> <div class="price">${price}</div> <div class="quantity"> <input onclick="topCart()" type="number" value="${quantity}" min="1" class="quantity-field"> </div> <div class="subtotal">31.10</div> <div class="remove"> <button>Remove</button> </div> `;
         basket.innerHTML += newContent;
-    }
+        }
+    
         var remove = document.getElementsByClassName("remove");
         for(var i=0; i< remove.length;i++){
         var button = remove[i];
@@ -160,4 +160,14 @@
             postCharge = 0;
         }
         document.getElementsByClassName("final-value")[1].innerHTML = (total + postCharge).toFixed(2); 
+    }
+
+    function check(){
+        var target = event.target;
+        if (localStorage.length == 0){
+            alert("There is no item in your cart!")
+        }
+        else{
+            location.href = "Checkout.htm";
+        }
     }

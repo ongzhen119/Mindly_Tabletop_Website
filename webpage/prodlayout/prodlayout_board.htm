@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mindly Tabletop cafe and store</title>
+        <meta charset="utf-8"/>
+        <script src="https://kit.fontawesome.com/979e56d4a3.js" crossorigin="anonymous"></script>
+        <link href="../../css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="../../css/pLayout.css" rel="stylesheet"/>
+        <script src="../../js/layoutcart.js" async></script>
+    </head>
+    <style>
+
+      </style>
+    <body>
+      <div class ="header">
+        <div class="inner-header">
+        <h>MINDLY TABLETOP Cafe and Store in Penang , Malaysia</h>
+          <ul>
+            <li><a href="">Game Request</a></li>
+            <li><a href="">Cafe</a></li>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">Contact Us</a></li>
+            <li><a href="" title="Follow on Facebook"><i class="fab fa-facebook-square fa-lg"></i></a></li>
+            <li><a href="" title="Send us an email"><i class="fas fa-envelope fa-lg"></i></a></li>
+            <li><a href="" title="Call us"><i class="fas fa-phone"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      
+    <div class="sticky-top">
+
+      <div class="inner-header" >
+        <img src="../../image/component/mindly_logo.png"width="100px"height="95px"/>
+        <div class="search-box" >
+          <input class="search-txt" type="text" name="" placeholder="Type to search">
+          <a class="search-btn" href="#">
+            <i class="fas fa-search"></i>
+          </a>
+        </div>
+        <div class="profile-btn">
+          <i class="fas fa-user fa-4x" ></i>
+        </div><div class="cart-btn">
+          <i class="fas fa-shopping-cart fa-4x"></i>
+        </div>
+      </div>
+
+      <div style="background-color: rgb(227, 227, 228)">
+        <div class="inner-header" >
+          
+          <div class="main-nav" >
+            <a href="../homepage.htm">HOME <i class="fas fa-home fa-lg"></i></a>
+            <div class="dropdown">
+              <button class="dropbtn" > DEALS <i class="fas fa-caret-down fa-lg"></i></button>
+              <div class="dropdown-content">
+                <a href="#">Hot Selling</a>
+                <a href="#">New Arrival</a>
+                <a href="#">All Games</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">CATEGORY<i class="fas fa-caret-down fa-lg"></i></button>
+              <div class="dropdown-content">
+                <a href="#">Board Games</a>
+                <a href="#">Strategy Games</a>
+                <a href="#">Tile-based Games</a>
+                <a href="#">Accessories</a>
+              </div>
+            </div>
+            <a href=""> CAFE <i class="fas fa-coffee fa-lg"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Categories block-->
+    <div id="categories">
+ 
+      <h2><a href = "../homepage.htm">HOME</a> / <b>TILES GAMES</b></h2>
+      <b class="tag1" style="margin-left: 60px;">PRODUCT CATEGORIES</b><br><br>
+      <ul>
+        <li><a href="../prodlayout/prodlayout_accesories.htm" >ACCESORIES</a><hr></li>
+        <li><a href="../prodlayout/prodlayout_cards.htm">CARD GAMES</a><hr></li>
+        <li><a href="prodlayout.htm" id="cpage">BOARD GAMES</a><hr></li>
+        <li><a href="../prodlayout/prodlayout_tiles.htm">TILES GAMES</a><hr></li>
+        <li><a href="prodlayout.htm">HOT SELLING</a><hr></li>
+        <li><a href="prodlayout.htm">NEW ARRIVAL</a><hr></li>
+        <li><a href="prodlayout.htm">PROMOTIONS</a><hr></li>
+      </ul>
+      <b class="tag1" style="line-height: 4; margin-left: 80px;">FILTER BY PRICE</b>
+      <!--cfilter stands for filter price-->
+      <script>
+        var priceF = 0;
+    
+        function filterIndex(n){
+            priceF = n;
+        }
+        function filter(n){
+          var table = document.getElementsByClassName("product");
+          var ntable = document.getElementsByClassName("ntable");
+          var div = document.getElementsByClassName("filter");
+          var cell = 0;
+          var content = "";
+          var counter = 0;
+          for(i=0; i<table.length; i++){
+            table[i].style.display = "none";
+          }
+          ntable[0].innerHTML = "";
+          if(n==0){
+            div[0].style.zIndex = "-1";
+          for (i=0; i<table.length; i++){
+            table[i].style.display = "table-cell"
+          }
+          return;
+          }
+        
+          for(i = 0; i < table.length; i++){
+            var exist = 1;
+            
+            var dummy = parseFloat(table[i].getElementsByClassName("price")[0].innerHTML);
+            if(n==1){
+              if( dummy > 50)  {table[i].style.display = "none"; exist=0;}
+            }
+            if(n==2){
+              if(dummy < 50 || dummy > 100) {table[i].style.display = "none"; exist=0;}
+            }
+            if(n==3){
+              if(dummy < 100 || dummy > 150) {table[i].style.display = "none"; exist=0;}
+            }
+            if(n==4){
+              if(dummy < 150 || dummy > 200) {table[i].style.display = "none"; exist=0;}
+            }
+            if(n==5){
+              if(dummy < 200) {table[i].style.display = "none"; exist=0;}
+            }
+            
+            
+            if(exist == 1 && n != 0){
+              counter = 1;
+                 if(cell == 0){
+                  content += "<tr>";
+                }
+                  content += "<td class='product'>" + table[i].innerHTML + "</td>";
+                cell++;
+                 if(cell == 4){
+                   content += "</tr>";
+                   cell = 0;
+                 }
+            }
+            if(cell > 0 && i == table.length - 1){
+              content += "</tr>";
+            }
+          }
+          
+          if (counter == 0 && n != 0){
+            ntable[0].innerHTML = "<div class='nresult'><i class='fa fa-search'></i><h2>We couldn't find a product matching the price range</h2><p>You can try selecting other price range.</div>"
+          }
+          else{
+          ntable[0].innerHTML += content;
+          div[0].style.zIndex = "2";
+          }
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+          
+    
+  
+        
+      </script>
+        <div class="cfilter">
+        <div>
+        <input type="radio" id="price0" name="price" checked onclick="filterIndex(0);"/>
+        <label for="price0">NONE</label></div>
+        <input type="radio" id="price1" name="price" onclick="filterIndex(1);"/>
+        <label for="price1">RM0 - RM50</label>
+        <div>
+        <input type="radio" id="price2" name="price" onclick="filterIndex(2);"/>
+        <label for="price2">RM50 - RM100</label></div>
+        <div>
+        <input type="radio" id="price3" name="price" onclick="filterIndex(3);"/>
+        <label for="price3">RM100 - RM150</label></div>
+        <div>
+        <input type="radio" id="price4" name="price" onclick="filterIndex(4);"/>
+        <label for="price4">RM150 - RM200</label></div>
+        <div>
+        <input type="radio" id="price5" name="price" onclick="filterIndex(5)"/>
+        <label for="price5">RM200+</label></div>
+        <div>
+        <input type="submit" id="submit" value="filter" onclick="filter(priceF);"/></div>
+      </div>
+  </div>
+  <!--prod table-->
+    
+    <div class="prodpic">
+        <table>
+            <tr>
+              <!--td div img div -->
+                <td class="product"><div class="container"><a href = "../prodpage/gameoflife.htm"><img class="image" src = "../../image/product_pic/gameofLife_1.jfif" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div><p class="name">Game of Life</p><div class="containerp">RM<span class="price" >125.50</span></div></div></td>
+
+                <td class="product"><div class="container"><a href = "../prodpage/monopoly.htm"><img class="image" src = "../../image/product_pic/monopolyO_1.jfif" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div><p class="name">Monopoly Classic Game</p><div class="containerp">RM<span class="price" >75.50</span></div></div></td>
+
+
+
+            </tr>
+            
+        </table>
+        </div>
+        <div class="filter">
+          <table class="ntable">
+          </table>
+        </div>
+        
+        <div id="index">
+          <div class="text"></div>
+          <table>
+            <tr>
+              <td><a href="" ><div class="ibutton"><<</div></a></td>
+              <td><a href="" ><div class="ibutton"><</div></a></td>
+              <td class ="current"><a href="" ><div class="ibutton">1</div></a></td>
+              <td><a href="" ><div class="ibutton">2</div></a></td>
+              <td><a href="" ><div class="ibutton">3</div></a></td>
+              <td><a href="" ><div class="ibutton">4</div></a></td> 
+              <td><a href="" ><div class="ibutton">5</div></a></td> 
+              <td><a href="" ><div class="ibutton">6</div></a></td> 
+              <td><a href="" ><div class="ibutton">></div></a></td>
+              <td><a href="" ><div class="ibutton">>></div></a></td>
+            </tr>
+          </table>
+      </div>
+
+
+
+               <!--Footer-->
+      <div  class="footer card" >
+        <div class="inner-section" >
+          <div class="about-us" style="width: 50%; " >
+            <h1>About Mindly Tabletop</h1>
+            <img src="../../image/component/trans_mindly_logo.png" width="240px"height="190px" style="left: 50px;">
+            <p style="position: absolute;top: 300px;left: 20px;width:450px;font-size: 25px;">
+              Board game cafe and store in Penang,<br>
+               Malaysia that sell original genuine  <br>
+               board games and provide shipping <br>
+               services across the whole country. </p>
+                <div class="social-icons" style="position: absolute; left: 250px;top: 450px;" >
+                  <a href="https://www.facebook.com/pg/Mindly-Tabletop-cafe-and-store-100484604971735/posts/?ref=page_internal"target="_blank" title="Follow on Facebook" class="facebook-icon"><i class="fab fa-facebook-square fa-lg"></i></a>
+                  <a href="mailto:ongzc-pm19@student.tarc.edu.my" title="Send us an email" class="envelope-icon"><i class="fas fa-envelope fa-lg"></i></a>
+                  <a href="tel:017-5751954" title="Call us" class="phone-icon"><i class="fas fa-phone"></i></a>
+                </div>
+          </div>
+          <div class="we-accept" style="position: absolute; left: 550px;">
+            <h1 style="text-align: center; ">We Accept </h1>
+           <img src="../../image/component/payment-method.png"alt="" style="border-radius: 10%; width: 400px;position: absolute;left: 50px;top: 75px;"> 
+          </div>
+          <div class="shipping-service" style="position: absolute; left: 550px;top: 260px;">
+            <h1 style="text-align: center; ">Shipping-Service</h1>
+           <img src="../../image/component/shipping-service.png"alt="" style="border-radius: 10%; width: 400px;position: absolute;left:  50px;top: 50px;"> 
+          </div>
+        </div>
+        <div style="background-color: #e3e3e3; height: 30px;">
+          <div class="inner-footer" >
+            <h>Copyright 2020 &#169 <b>Mindly Tabletop store</b> </h>
+              <ul>
+                <li><a href="">Condition of use</a> </li>|
+                <li><a href="contactus.htm">Contact Us </a></li>|
+                <li><a href="">Login </a></li>|
+                <li><a href="SignUp.htm">Sign Up </a></li>
+              </ul>
+          </div>
+        </div>
+   </div>
+    </body>
+</html>

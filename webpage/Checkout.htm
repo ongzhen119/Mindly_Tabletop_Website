@@ -9,22 +9,22 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
-<body>
+<body onload="printcart();">
   
-<div style="position: relative;top:0px;">
+<div class= "card "style="position: relative;top:0px;min-height:900px;">
   <h1>Checkout</h1>
 <div class="row">
   <div class="col-75">
     <div class="container">
       <form action="../webpage/TQ.htm">
       
-        <div class="row">
-          <div class="col-50">
+        <div class="row" style="position: relative;">
+          <div class="col-50" style="position: absolute; top: 0px;">
             <h3>Billing Address</h3>
             <label for="fname"><i class="fa fa-user"></i> Full Name</label>
             <input type="text" id="fname" name="fname" placeholder="Tan Ah Kao" required autofocus>
             <label for="email"><i class="fa fa-envelope"></i> Email</label>
-            <input type="text" id="email" name="email" placeholder="john@example.com" required>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required>
             <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
             <input type="text" id="adr" name="address" placeholder="1-2-3 Taman Indah" required>
             <label for="city"><i class="fa fa-institution"></i> Town</label>
@@ -42,7 +42,7 @@
             </div>
           </div>
 
-          <div class="col-50">
+          <div class="col-50" style="position: absolute; top: 0px; left: 500px;" >
             <h3>Payment</h3>
             <label for="fname">Accepted Cards</label>
             <div class="icon-container">
@@ -50,9 +50,9 @@
               <i class="fa fa-cc-mastercard" style="color:red;"></i>
             </div>
             <label for="cname">Name on Card</label>
-            <input type="text" id="cname" name="cardname" placeholder="Tan Ah Kao" required>
+            <input type="text" id="cname" name="cardname" placeholder="Tan Ah Kao" required pattern="[a-zA-Z]*" oninvalid="setCustomValidity('Please enter alphabets only.')">
             <label for="ccnum">Credit/Debit card number</label>
-            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" required>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" required >
             <label for="expmonth">Exp Month</label>
             <input type="text" id="expmonth" name="expmonth" placeholder="September" required>
             <div class="row">
@@ -62,38 +62,58 @@
               </div>
               <div class="col-50">
                 <label for="cvv">CVV</label>
-                <input type="text" id="cvv" name="cvv" placeholder="123" required>
+                <input type="text" id="cvv" name="cvv" placeholder="123" required pattern="[a-zA-Z]+" oninvalid="setCustomValidity('Please enter 3-4 digits only. ')"> <br>
+                <input type="checkbox" checked="checked" name="sameadr"/> <span> Shipping address same as billing</span>
+
               </div>
             </div>
           </div>
           
         </div>
-        <label>
-         <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
-         <div>
-        
-            <input type="submit" style="height: 80px; width: 180px; color: white; background-color: black; font-size: large;" value="Checkout" />
-        
-           
+      
+         <div style="position: absolute; top: 750px;">
+            <input type="submit" style="height: 80px; width: 180px; color: white; background-color: black; font-size: large;" value="Checkout" onclick = "removeAll();" />
          </div>
-        </label>
+      
         
       </form>
     </div>
   </div>
   <div class="col-25">
-    <div class="container">
-      <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>3</b></span></h4>
-      <p><a href="../image/product_pic/azul_1.jpeg">Azul</a> <span class="price">RM82.90</span></p>
-      <p><a href="../image/product_pic/cardSleeve_1.jpg">Card Sleeves</a> <span class="price">RM10</span></p>
-      <p><a href="../image/product_pic/domino_3.jpg">Domino Tiles</a> <span class="price">RM31.10</span></p>
-      <hr>
-      <p>Total <span class="price" style="color:black"><b>RM124</b></span></p>
+    <div class="list-container">
+      <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b><span id="typeQuantity">3</span></b></span></h4>
     </div>
   </div>
 </div>
 </div>
-
+<script>
+  function printcart(){
+  var cartrow = document.getElementsByClassName("list-container")[0];
+  var total = 0;
+  var Tquantity = 0;
+    for(var i = 0; i < 50; i++){
+    if (localStorage.getItem(i) == null){
+          continue;
+      }  
+    var list = JSON.parse(localStorage.getItem(i));
+    Tquantity++;
+    var name = list.name;
+    var price = list.price;
+    var quantity = list.quantity;
+    var image = list.image;
+    var subtotal = price * quantity;
+  
+    total += subtotal;
+    cartrow.innerHTML += `<p><a href="${image}" target="_blank">${name}</a> <span class="price">${subtotal.toFixed(2)}</span></p>`
+  }
+ 
+  document.getElementById("typeQuantity").innerHTML = Tquantity;
+  cartrow.innerHTML += `<hr><p>Total <span class="price" style="color:black"><b>${total.toFixed(2)}</b></span></p>`
+}
+function removeAll(){
+  localStorage.clear();
+}
+</script>
 
 </body>
 </html>

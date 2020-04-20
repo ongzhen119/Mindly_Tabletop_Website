@@ -10,66 +10,89 @@
     <title>Document</title>
  
 </head>
-<body onload="qty(0); rating();" style="height: inherit !important;">
+<body onload="qty(0); rating();  topCart();" style="height: inherit !important;">
    
-    <div class ="header">
-        <div class="inner-header">
-        <h>MINDLY TABLETOP Cafe and Store in Penang , Malaysia</h>
-          <ul>
-            <li><a href="">Game Request</a></li>
-            <li><a href="">Cafe</a></li>
-            <li><a href="">FAQ</a></li>
-            <li><a href="">Contact Us</a></li>
-            <li><a href="" title="Follow on Facebook"><i class="fab fa-facebook-square fa-lg"></i></a></li>
-            <li><a href="" title="Send us an email"><i class="fas fa-envelope fa-lg"></i></a></li>
-            <li><a href="" title="Call us"><i class="fas fa-phone"></i></a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="sticky-top">
+  <div class ="header">
+    <div class="inner-header">
+    <h>MINDLY TABLETOP Cafe and Store in Penang , Malaysia</h>
+      <ul>
+        <li><a href="../gamerequest.htm">Game Request</a></li>
+        <li><a href="../cafemenu.htm">Cafe</a></li>
+        <li><a href="../faq.htm">FAQ</a></li>
+        <li><a href="../contactus.htm">Contact Us</a></li>
+        <li><a href="https://www.facebook.com/pg/Mindly-Tabletop-cafe-and-store-100484604971735/posts/?ref=page_internal" target="_blank" title="Follow on Facebook"><i class="fab fa-facebook-square fa-lg"></i></a></li>
+        <li><a href="mailto:ongzc-pm19@student.tarc.edu.my" title="Send us an email"><i class="fas fa-envelope fa-lg"></i></a></li>
+        <li><a href="tel:017-5751954" title="Call us"><i class="fas fa-phone"></i></a></li>
+      </ul>
+    </div>
+  </div>
 
-        <div class="inner-header" >
-          <img src="../../image/component/mindly_logo.png"width="100px"height="95px"/>
-          <div class="search-box" >
-            <input class="search-txt" type="text" name="" placeholder="Type to search">
-            <a class="search-btn" href="#">
-              <i class="fas fa-search"></i>
-            </a>
-          </div>
-          <div class="profile-btn">
-            <i class="fas fa-user fa-4x" ></i>
-          </div><div class="cart-btn">
-            <i class="fas fa-shopping-cart fa-4x"></i>
-          </div>
-        </div>
-  
-        <div style="background-color: rgb(227, 227, 228)">
-          <div class="inner-header" >
+  <div class="sticky-top" >
+    <div class="inner-header" >
+      <img src="../../image/component/mindly_logo.png"width="100px"height="95px"/>
+      <div class="search-box" >
+        <input class="search-txt" type="text" name="" placeholder="search board games">
+        <a class="search-btn" href="#">
+          <i class="fas fa-search"></i>
+        </a>
+      </div>
+
+      <div class=" profile dropdown " >
+        <button class="dropbtn profile-btn"><i class="fas fa-user fa-3x" ></i></button>
+        <br><br>
+          <div class="dropdown-content" style="top: 70px;">
+            <a href="../Login.htm">Login <i class="fas fa-sign-in-alt fa-lg"></i></a>
+            <a href="../ProfileTest.htm">Profile<i class="fas fa-user fa-lg" ></i></a>
             
-            <div class="main-nav" >
-              <a href="homepage.htm">HOME <i class="fas fa-home fa-lg"></i></a>
-              <div class="dropdown">
-                <button class="dropbtn" > DEALS <i class="fas fa-caret-down fa-lg"></i></button>
-                <div class="dropdown-content">
-                  <a href="#">Hot Selling</a>
-                  <a href="#">New Arrival</a>
-                  <a href="#">All Games</a>
-                </div>
-              </div>
-              <div class="dropdown">
-                <button class="dropbtn">CATEGORY<i class="fas fa-caret-down fa-lg"></i></button>
-                <div class="dropdown-content">
-                  <a href="#">Board Games</a>
-                  <a href="#">Strategy Games</a>
-                  <a href="#">Tile-based Games</a>
-                  <a href="#">Accessories</a>
-                </div>
-              </div>
-              <a href=""> CAFE <i class="fas fa-coffee fa-lg"></i></a>
+          </div>
+        
+      </div>
+
+
+      <div class="cart-btn">
+        <i class="fas fa-shopping-cart fa-3x" onclick="location.href= '../AddToCart.htm';"></i> 
+        <script>
+          function topCart(){
+          var price = 0;
+          for(var i =0; i< 50; i++){
+            if (localStorage.getItem(i) == null){
+          continue;
+           }
+          var list = JSON.parse(localStorage.getItem(i));
+          price += list.price * list.quantity;
+          }
+          document.getElementById("cprice").innerHTML = "/ RM " + price.toFixed(2);
+        }
+        </script>
+        <span style="font-size: 25px;" id="cprice">/ RM 0.00</span>            
+      </div>
+    </div>
+    <div style="background-color: #e3e3e3;">
+      <div class="inner-header" >
+        <div class="main-nav" >
+          <a href="../homepage.htm">HOME <i class="fas fa-home fa-lg"></i></a>
+          <div class="dropdown">
+            <button class="dropbtn" > DEALS <i class="fas fa-caret-down fa-lg"></i></button>
+            <div class="dropdown-content">
+              <a href="../prodlayout/prodlayout_hot.htm">Hot Selling</a>
+              <a href="../prodlayout/prodlayout_new.htm">New Arrival</a>
+              <a href="../prodlayout/prodlayout_promotion.htm">Promotion</a>
             </div>
           </div>
+          <div class="dropdown">
+            <button class="dropbtn"> CATEGORY <i class="fas fa-caret-down fa-lg"></i></button>
+            <div class="dropdown-content">
+              <a href="../prodlayout/prodlayout_board.htm">Board Games</a>
+              <a href="../prodlayout/prodlayout_cards.htm">Card Games</a>
+              <a href="../prodlayout/prodlayout_tiles.htm">Tile-based Games</a>
+              <a href="../prodlayout/prodlayout_accesories.htm">Accessories</a>
+            </div>
+          </div>
+          <a href="../cafemenu.htm"> CAFE <i class="fas fa-coffee fa-lg"></i></a>
         </div>
       </div>
+    </div>
+  </div>
       <div class = "icontainer">
       <div class = "slide fade">
           <img class="image" src="../../image/product_pic/mahjong_1.jfif"/>
@@ -226,22 +249,22 @@
           </th>
         </tr>
         <tr>
-          <td class="product"><div class="container"><a href = "azul.htm"><img src = "../../image/product_pic/azul_1.jpeg" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div><p>Azul: Stained Glass (Limited Edition)</p><div class="containerp">RM<span class="price" >42.90</span></div></div></td>
+          <td class="product"><div class="container"><a href = "forbidden.htm"><img src = "../../image/product_pic/forbiddenisland_1.jpg" ><div class="view">View More</div></a><p>Forbidden Island</p><div class="containerp">RM<span class="price" >210.40</span></div></div></td>
       </tr>
       <tr>
-        <td class="product"><div class="container"><a href = "prodpage.htm"><img src = "../../image/product_pic/domino_1.jfif" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div><p>Domino Squares Set</p><div class="containerp">RM<span class="price" >31.10</span></div></div></td>
+        <td class="product"><div class="container"><a href = "domino.htm"><img src = "../../image/product_pic/domino_1.jfif" ><div class="view">View More</div></a><p>Domino Squares Set</p><div class="containerp">RM<span class="price" >31.10</span></div></div></td>
       </tr>
       <tr>
-        <td class="product"><div class="container"><a href = "prodpage.htm"><img src = "../../image/product_pic/kingsAbbey_1.jpg" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div><p>The King's Abbey (English First Edition)</p><div class="containerp">RM<span class="price" >324.40</span></div></div></td>
+        <td class="product"><div class="container"><a href = "kingabbey.htm"><img src = "../../image/product_pic/kingsAbbey_1.jpg" ><div class="view">View More</div></a><p>The King's Abbey (English First Edition)</p><div class="containerp">RM<span class="price" >324.40</span></div></div></td>
       </tr>
       <tr>
-        <td class="product"><div class="container"><a href = "prodpage.htm"><img src = "../../image/product_pic/tiles_1.jpg" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div><p>Tiles (1995)</p><div class="containerp">RM<span class="price" >40.00</span></div></div></td>
+        <td class="product"><div class="container"><a href = "tiles.htm"><img src = "../../image/product_pic/tiles_1.jpg" ><div class="view">View More</div></a><p>Tiles (1995)</p><div class="containerp">RM<span class="price" >40.00</span></div></div></td>
       </tr>
       <tr>
-        <td class="product"><div class="container"><a href = "prodpage.htm"><img src = "../../image/product_pic/scrabble_1.png" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div><p>Scrabble Original (Australia Edition)</p><div class="containerp">RM<span class="price" >69.70</span></div></div></td>
+        <td class="product"><div class="container"><a href = "scrabble.htm"><img src = "../../image/product_pic/scrabble_1.png" ><div class="view">View More</div></a><p>Scrabble Original (Australia Edition)</p><div class="containerp">RM<span class="price" >69.70</span></div></div></td>
       </tr>
       <tr>
-        <td class="product"><div class="container"><a href = "prodpage.htm"><img src = "../../image/product_pic/evo_1.jpg" ><div class="view">View More</div></a><div class="cart"><a href=""><i class="fa fa-cart-plus"></i></a><span class="cart-ttp">Add to cart</span></div><div class="fav"><a href=""><i class="fa fa-heart"></i></a><span class="fav-ttp">Add to favourite</span></div><p>EVO (Second Edition)</p><div class="containerp">RM<span class="price" >412.30</span></div></div></td>
+        <td class="product"><div class="container"><a href = "evo.htm"><img src = "../../image/product_pic/evo_1.jpg" ><div class="view">View More</div></a><p>EVO (Second Edition)</p><div class="containerp">RM<span class="price" >412.30</span></div></div></td>
       </tr>
     </table>
     </div>

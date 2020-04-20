@@ -152,7 +152,7 @@ td.product{
     background-color: rgb(227, 227, 228);   
     position:absolute;
     width:1235px;
-    left:-100px;
+    left:0px;
     top:20px;
     padding:50px 0px 50px 0px;
     font-family: Arial, Helvetica, sans-serif;
@@ -347,7 +347,7 @@ div#index {
     display:inline-block;
     width: 100%;
     height:50px;
-    bottom:-103px;
+    bottom:-105px;
     background-color:rgb(104, 101, 101);
 
 }

@@ -80,10 +80,13 @@ button,
 main {
   top: 80px;
   position: relative;
-  min-height: 800px;
+  height: 600px;
+  background-color:white;
   margin: 0 auto;
   padding: 1rem 0;
   width: 960px;
+  overflow:scroll;
+  overflow-x: hidden;
 }
 
 .basket,
@@ -212,7 +215,9 @@ aside {
   background-color: #eee;
   border: 1px solid #aaa;
   padding: 1rem;
-  position: fixed;
+  position: sticky;
+  height:430px;
+  top:250px;
   width: 250px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -265,6 +270,11 @@ aside {
   width: 30%;
 }
 
+#btt{
+  position:absolute;
+  color:red;
+  bottom:-500px;
+}
 .summary-delivery {
   padding-bottom: 3rem;
 }

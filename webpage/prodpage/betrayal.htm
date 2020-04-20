@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" style="height: auto !important;">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +11,7 @@
     <title>Document</title>
  
 </head>
-<body onload="qty(0); rating(); topCart();" style="height: inherit !important;">
+<body onload="qty(0); rating();  topCart();" style="height: inherit !important;">
    
   <div class ="header">
     <div class="inner-header">
@@ -95,7 +96,7 @@
   </div>
       <div class = "icontainer">
       <div class = "slide fade">
-          <img src="../../image/product_pic/betrayalathouse_1.jpg"/>
+          <img class="image" src="../../image/product_pic/betrayalathouse_1.jpg"/>
       </div>
       <div class="slide fade">
         <img src="../../image/product_pic/betrayalathouse_2.jpg"/>
@@ -146,13 +147,13 @@
         function qty(n){
             QtyIndex += n;
             if (QtyIndex < 1) {QtyIndex = 1};
-            if (QtyIndex > 11) {QtyIndex = 11};
+            if (QtyIndex > 12) {QtyIndex = 12};
             document.getElementById("result").innerHTML = QtyIndex;
         }
         
 
       function rating(){
-      var rating = 4;
+      var rating = 5;
       var star = document.getElementsByClassName("star");
       for(var i = 0; i < rating; i++){
         star[i].innerHTML += "&#9733";
@@ -186,7 +187,7 @@
 
     <div class="summary">
         <div class="name">Betrayal at House on the Hill</div>
-        <div class="price"><p class="rprice">RM 102.30</p><div class="stock">11 in stock</div></div>
+        <div class="price"><p class="rprice">RM 102.30</p><div class="stock">12 in stock</div></div>
         <div class="rating">
           <p>Customer's reviews <i class="fas fa-caret-right"></i></p>
           <table style="display:inline-block">
@@ -249,7 +250,7 @@
           </th>
         </tr>
         <tr>
-          <td class="product"><div class="container"><a href = "mahjong.htm"><img src = "../../image/product_pic/mahjong_1.jfif" ><div class="view">View More</div></a><p>Chinese Mahjong Game Set</p><div class="containerp">RM<span class="price" >120.50</span></div></div></td>
+          <td class="product"><div class="container"><a href = "forbidden.htm"><img src = "../../image/product_pic/forbiddenisland_1.jpg" ><div class="view">View More</div></a><p>Forbidden Island</p><div class="containerp">RM<span class="price" >210.40</span></div></div></td>
       </tr>
       <tr>
         <td class="product"><div class="container"><a href = "domino.htm"><img src = "../../image/product_pic/domino_1.jfif" ><div class="view">View More</div></a><p>Domino Squares Set</p><div class="containerp">RM<span class="price" >31.10</span></div></div></td>

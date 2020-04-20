@@ -14,7 +14,6 @@ function ready(){
 
 
 function addFlayout(event){
-  
     var addbtn = event.target;
     var text = document.getElementsByClassName("icontainer")[0];
     var shopItem = document.getElementsByClassName("summary")[0];

@@ -123,13 +123,13 @@
         function qty(n){
             QtyIndex += n;
             if (QtyIndex < 1) {QtyIndex = 1};
-            if (QtyIndex > 19) {QtyIndex = 19};
+            if (QtyIndex > 10) {QtyIndex = 10};
             document.getElementById("result").innerHTML = QtyIndex;
         }
         
 
       function rating(){
-      var rating = 5;
+      var rating = 4;
       var star = document.getElementsByClassName("star");
       for(var i = 0; i < rating; i++){
         star[i].innerHTML += "&#9733";

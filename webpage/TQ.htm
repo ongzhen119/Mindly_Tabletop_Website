@@ -19,7 +19,88 @@
 
     </style>
     <body>
+        <body onload = "topCart()">
+            <div class ="header" style="height: 30px !important;">
+                <div class="inner-header">
+                <h>MINDLY TABLETOP Cafe and Store in Penang , Malaysia</h>
+                  <ul>
+                    <li><a href="gamerequest.htm">Game Request</a></li>
+                    <li><a href="cafemenu.htm">Cafe</a></li>
+                    <li><a href="faq.htm">FAQ</a></li>
+                    <li><a href="contactus.htm">Contact Us</a></li>
+                    <li><a href="https://www.facebook.com/pg/Mindly-Tabletop-cafe-and-store-100484604971735/posts/?ref=page_internal" target="_blank" title="Follow on Facebook"><i class="fab fa-facebook-square fa-lg"></i></a></li>
+                    <li><a href="mailto:ongzc-pm19@student.tarc.edu.my" title="Send us an email"><i class="fas fa-envelope fa-lg"></i></a></li>
+                    <li><a href="tel:017-5751954" title="Call us"><i class="fas fa-phone"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+          
+              <div class="sticky-top" style="height: 100px !important;">
+                <div class="inner-header" >
+                  <img src="../image/component/mindly_logo.png"width="100px"height="95px"/>
+                  <div class="search-box" >
+                    <input class="search-txt" type="text" name="" placeholder="search board games">
+                    <a class="search-btn" href="#">
+                      <i class="fas fa-search"></i>
+                    </a>
+                  </div>
         
+                  <div class=" profile dropdown " >
+                    <button class="dropbtn profile-btn"><i class="fas fa-user fa-3x" ></i></button>
+                    <br><br>
+                      <div class="dropdown-content" style="top: 70px;">
+                        <a href="Login.htm">Login <i class="fas fa-sign-in-alt fa-lg"></i></a>
+                        <a href="ProfileTest.htm">Profile<i class="fas fa-user fa-lg" ></i></a>
+                        
+                      </div>
+                    
+                  </div>
+        
+        
+                  <div class="cart-btn">
+                    <i class="fas fa-shopping-cart fa-3x" onclick="location.href= 'AddToCart.htm';"></i> 
+                    <script>
+                      function topCart(){
+                      var price = 0;
+                      for(var i =0; i< 50; i++){
+                        if (localStorage.getItem(i) == null){
+                      continue;
+                       }
+                      var list = JSON.parse(localStorage.getItem(i));
+                      price += list.price * list.quantity;
+                      }
+                      document.getElementById("cprice").innerHTML = "/ RM" + price.toFixed(2);
+                    }
+                    </script>
+                    <span style="font-size: 25px;" id="cprice"></span>            
+                  </div>
+                </div>
+                <div style="background-color: #e3e3e3;height: 40px !important;">
+                  <div class="inner-header" >
+                    <div class="main-nav" >
+                      <a href="homepage.htm">HOME <i class="fas fa-home fa-lg"></i></a>
+                      <div class="dropdown">
+                        <button class="dropbtn" > DEALS <i class="fas fa-caret-down fa-lg"></i></button>
+                        <div class="dropdown-content">
+                          <a href="prodlayout/prodlayout_hot.htm">Hot Selling</a>
+                          <a href="prodlayout/prodlayout_new.htm">New Arrival</a>
+                          <a href="prodlayout/prodlayout_promotion.htm">Promotion</a>
+                        </div>
+                      </div>
+                      <div class="dropdown">
+                        <button class="dropbtn"> CATEGORY <i class="fas fa-caret-down fa-lg"></i></button>
+                        <div class="dropdown-content">
+                          <a href="prodlayout/prodlayout_board.htm">Board Games</a>
+                          <a href="prodlayout/prodlayout_cards.htm">Card Games</a>
+                          <a href="prodlayout/prodlayout_tiles.htm">Tile-based Games</a>
+                          <a href="prodlayout/prodlayout_accesories.htm">Accessories</a>
+                        </div>
+                      </div>
+                      <a href="cafemenu.htm"> CAFE <i class="fas fa-coffee fa-lg"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
         <div class="inner card">
             <br> <br>
         <h1>Your Order has been confirmed, Thank You!!!</h1> <br> <br>
@@ -27,5 +108,44 @@
             <input type="submit" id="button"style="height: 50px;  color: white; background-color: black;" value="Back to Homepage">
         </form>
        </div>
+
+             <!--Footer-->
+      <div  class="footer card" >
+        <div class="inner-section" >
+          <div class="about-us" style="width: 50%; " >
+            <h1>About Mindly Tabletop</h1>
+            <img src="../image/component/trans_mindly_logo.png" width="240px"height="190px" style="left: 50px;">
+            <p style="position: absolute;top: 300px;left: 20px;width:450px;font-size: 25px;">
+              Board game cafe and store in Penang,<br>
+               Malaysia that sell original genuine  <br>
+               board games and provide shipping <br>
+               services across the whole country. </p>
+                <div class="social-icons" style="position: absolute; left: 250px;top: 450px;" >
+                  <a href="https://www.facebook.com/pg/Mindly-Tabletop-cafe-and-store-100484604971735/posts/?ref=page_internal"target="_blank" title="Follow on Facebook" class="facebook-icon"><i class="fab fa-facebook-square fa-lg"></i></a>
+                  <a href="mailto:ongzc-pm19@student.tarc.edu.my" title="Send us an email" class="envelope-icon"><i class="fas fa-envelope fa-lg"></i></a>
+                  <a href="tel:017-5751954" title="Call us" class="phone-icon"><i class="fas fa-phone"></i></a>
+                </div>
+          </div>
+          <div class="we-accept" style="position: absolute; left: 550px;">
+            <h1 style="text-align: center; ">We Accept </h1>
+           <img src="../image/component/payment-method.png"alt="" style="border-radius: 10%; width: 400px;position: absolute;left: 50px;top: 75px;"> 
+          </div>
+          <div class="shipping-service" style="position: absolute; left: 550px;top: 260px;">
+            <h1 style="text-align: center; ">Shipping-Service</h1>
+           <img src="../image/component/shipping-service.png"alt="" style="border-radius: 10%; width: 400px;position: absolute;left:  50px;top: 50px;"> 
+          </div>
+        </div>
+        <div style="background-color: #e3e3e3; height: 30px;">
+          <div class="inner-footer" >
+            <h>Copyright 2020 &#169 <b>Mindly Tabletop store</b> </h>
+              <ul>
+                <li><a href="cou.htm">Condition of use</a> </li>|
+                <li><a href="contactus.htm">Contact Us </a></li>|
+                <li><a href="Login.htm">Login </a></li>|
+                <li><a href="SignUp.htm">Sign Up </a></li>
+              </ul>
+          </div>
+        </div>
+   </div>
     </body>
 </html>

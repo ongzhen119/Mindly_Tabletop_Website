@@ -1,7 +1,4 @@
-body {
-  font-size: 17px;
-  padding: 8px;
-}
+
 
 
 .row {
@@ -41,7 +38,7 @@ body {
   display:block;
 }
 
-input[type=text] , input[type=email] {
+form input[type=text] , form input[type=email] {
   margin-bottom: 20px;
   padding: 12px;
   border: 1px solid #ccc;

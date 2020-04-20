@@ -1,21 +1,25 @@
 <html>
   <head>
     <script src="https://kit.fontawesome.com/979e56d4a3.js" crossorigin="anonymous" rel="stylesheet"></script>
-
-    <link href="faq.css" rel="stylesheet" type="text/css"/>
     <title>Frequently Asked Question Page</title>
     <link rel="stylesheet" href="../css/style.css"type="text/css">
+    
   </head>
   <!-- Embeded style-->
   <style>
   .faq{ 
     position: relative;
-    top: 0px;
+    top: 80px;
   }    
+  hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
   .inner{
      width: 1000px;
      margin-left: auto;
      margin-right: auto;
+     padding:16px;
    }
    .active, .collapsible:hover {
      background-color: #C60021;
@@ -44,7 +48,7 @@
 
 
   </style>
-  <body>
+  <body onload = "topCart()">
     <div class ="header" style="height: 30px !important;">
       <div class="inner-header">
       <h>MINDLY TABLETOP Cafe and Store in Penang , Malaysia</h>
@@ -59,22 +63,44 @@
         </ul>
       </div>
     </div>
-
     <div class="sticky-top" style="height: 100px !important;">
       <div class="inner-header" >
         <img src="../image/component/mindly_logo.png"width="100px"height="95px"/>
         <div class="search-box" >
-          <input class="search-txt" type="text" name="" placeholder="Type to search">
+          <input class="search-txt" type="text" name="" placeholder="search board games">
           <a class="search-btn" href="#">
             <i class="fas fa-search"></i>
           </a>
         </div>
-        <div class="profile-btn">
-          <i class="fas fa-user fa-3x" ></i>
+
+        <div class=" profile dropdown " >
+          <button class="dropbtn profile-btn"><i class="fas fa-user fa-3x" ></i></button>
+          <br><br>
+            <div class="dropdown-content" style="top: 70px;">
+              <a href="Login.htm">Login <i class="fas fa-sign-in-alt fa-lg"></i></a>
+              <a href="ProfileTest.htm">Profile<i class="fas fa-user fa-lg" ></i></a>
+              
+            </div>
+          
         </div>
+
+
         <div class="cart-btn">
-          <i class="fas fa-shopping-cart fa-3x"></i> 
-          <span style="font-size: 25px;">/ RM0.00</span>            
+          <i class="fas fa-shopping-cart fa-3x" onclick="location.href= 'AddToCart.htm';"></i> 
+          <script>
+            function topCart(){
+            var price = 0;
+            for(var i =0; i< 50; i++){
+              if (localStorage.getItem(i) == null){
+            continue;
+             }
+            var list = JSON.parse(localStorage.getItem(i));
+            price += list.price * list.quantity;
+            }
+            document.getElementById("cprice").innerHTML = "/ RM " + price.toFixed(2);
+          }
+          </script>
+          <span style="font-size: 25px;" id="cprice">/ RM 0.00</span>            
         </div>
       </div>
       <div style="background-color: #e3e3e3;height: 40px !important;">
@@ -104,12 +130,11 @@
       </div>
     </div>
 
-<div class="faq inner"> 
-  <br>
-  <br>
+<div class="faq inner card"> 
+
   <br>
   <h1>Frequently Asked Question</h1>
-  <br>  <br> 
+  <br> 
   <hr>
   <br>
   <h1>General Information</h1>

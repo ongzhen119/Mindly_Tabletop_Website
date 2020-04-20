@@ -35,7 +35,7 @@
     </style>
 
 
-    <body>
+    <body onload = "topCart()">
         <div class ="header" style="height: 30px !important;">
             <div class="inner-header">
             <h>MINDLY TABLETOP Cafe and Store in Penang , Malaysia</h>
@@ -55,17 +55,40 @@
             <div class="inner-header" >
               <img src="../image/component/mindly_logo.png"width="100px"height="95px"/>
               <div class="search-box" >
-                <input class="search-txt" type="text" name="" placeholder="Type to search">
+                <input class="search-txt" type="text" name="" placeholder="search board games">
                 <a class="search-btn" href="#">
                   <i class="fas fa-search"></i>
                 </a>
               </div>
-              <div class="profile-btn">
-                <i class="fas fa-user fa-3x" ></i>
+    
+              <div class=" profile dropdown " >
+                <button class="dropbtn profile-btn"><i class="fas fa-user fa-3x" ></i></button>
+                <br><br>
+                  <div class="dropdown-content" style="top: 70px;">
+                    <a href="Login.htm">Login <i class="fas fa-sign-in-alt fa-lg"></i></a>
+                    <a href="ProfileTest.htm">Profile<i class="fas fa-user fa-lg" ></i></a>
+                    
+                  </div>
+                
               </div>
+    
+    
               <div class="cart-btn">
-                <i class="fas fa-shopping-cart fa-3x"></i> 
-                <span style="font-size: 25px;">/ RM0.00</span>            
+                <i class="fas fa-shopping-cart fa-3x" onclick="location.href= 'AddToCart.htm';"></i> 
+                <script>
+                  function topCart(){
+                  var price = 0;
+                  for(var i =0; i< 50; i++){
+                    if (localStorage.getItem(i) == null){
+                  continue;
+                   }
+                  var list = JSON.parse(localStorage.getItem(i));
+                  price += list.price * list.quantity;
+                  }
+                  document.getElementById("cprice").innerHTML = "/ RM" + price.toFixed(2);
+                }
+                </script>
+                <span style="font-size: 25px;" id="cprice"></span>            
               </div>
             </div>
             <div style="background-color: #e3e3e3;height: 40px !important;">

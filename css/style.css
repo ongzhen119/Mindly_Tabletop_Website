@@ -1,9 +1,10 @@
-*
-{
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+*{
     margin:0;
     padding:0;
     text-decoration: none;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-family: 'Josefin Sans', sans-serif;
 }
 /*TOP*/
 body{
@@ -35,7 +36,6 @@ body{
     text-decoration: none;
     color:black;
     font-size: 13px;
-    font-family: "Roboto",sans-serif;
 }
 .header li a:hover{
     color :rgb(198,0,33);
@@ -56,7 +56,6 @@ body{
     margin-top:  9px;
     color:black;
     font-weight: bold;
-    font-family: "Roboto",sans-serif;
 }
 .search-box{
     position: absolute;
@@ -259,17 +258,15 @@ top: 70px;
     font-size: 12px;
     float: left;
     margin-left: 10px;
-    margin-top:  9px;
+    margin-top: 20px;
     color:black;
     font-weight: bold;
-    font-family: "Roboto",sans-serif;
 }
 .footer li a{
     padding: 4px 10px;
     text-decoration: none;
     color:black;
     font-size: 13px;
-    font-family: "Roboto",sans-serif;
 }
 .footer li a:hover{
     color :rgb(198,0,33);
@@ -284,10 +281,8 @@ form label ,form input{
   }
   input{
     font-size: 16px;
-    font-family:  serif;
   }
   form textarea{
-    font-family:  serif;
     font-size: 20px;
     padding: 3px 7px;
 
@@ -297,14 +292,13 @@ form label ,form input{
   }
   #button{
     font-weight: bold;
-    font-family: sans-serif !important;
     background-color: #e3e3e3;
     border: 1px solid black;
     padding: 14px 20px;
     margin: 8px 0;
   }
   #button:hover{
-      opacity: 0.8;
+    opacity: 0.8;
     cursor: pointer;
     color: #C60021;
     border: 1px solid black;

@@ -59,10 +59,10 @@
               var list = JSON.parse(localStorage.getItem(i));
               price += list.price * list.quantity;
               }
-              document.getElementById("cprice").innerHTML = "/ RM" + price.toFixed(2);
+              document.getElementById("cprice").innerHTML = "/ RM " + price.toFixed(2);
             }
             </script>
-            <span style="font-size: 25px;" id="cprice"></span>            
+            <span style="font-size: 25px;" id="cprice">/ RM 0.00</span>            
           </div>
         </div>
         <div style="background-color: #e3e3e3;">

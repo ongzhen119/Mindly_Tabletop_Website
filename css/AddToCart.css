@@ -10,9 +10,7 @@ html a {
 
 body {
   background-color: #fff;
-  color: #666;
   font-family: 'Open Sans', sans-serif;
-  font-size: 62.5%;
   margin: 0 auto;
 }
 
@@ -31,7 +29,6 @@ p {
 }
 
 h1 {
-  font-size: 0.75rem;
   font-weight: normal;
   margin: 0;
   padding: 0;
@@ -42,15 +39,8 @@ button {
   border: 0 none;
   outline: 0 none;
 }
-
-button {
-  background-color: #666;
-  color: #fff;
-}
-
-button:hover,
-button:focus {
-  background-color: #555;
+#button:hover{
+  color:#C60021 !important;
 }
 
 img,
@@ -88,10 +78,10 @@ button,
 }
 
 main {
-  clear: both;
-  font-size: 0.75rem;
+  top: 80px;
+  position: relative;
+  min-height: 800px;
   margin: 0 auto;
-  overflow: hidden;
   padding: 1rem 0;
   width: 960px;
 }
@@ -146,7 +136,8 @@ li.subtotal:before {
 
 .price,
 .quantity,
-.subtotal {
+.subtotal
+{
   width: 15%;
 }
 
@@ -207,7 +198,6 @@ li.subtotal:before {
   background-color: #ccc;
   border: 1px solid #aaa;
   border-radius: 4px;
-  font-size: 0.625rem;
   padding: 2px;
   width: 3.75rem;
 }
@@ -231,12 +221,11 @@ aside {
 
 .summary-total-items {
   color: #666;
-  font-size: 0.875rem;
   text-align: center;
 }
 
 .summary-subtotal,
-.summary-total {
+.summary-total, .post-total {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   clear: both;
@@ -244,13 +233,14 @@ aside {
   overflow: hidden;
   padding: 0.5rem 0;
 }
-
 .subtotal-title,
 .subtotal-value,
 .total-title,
 .total-value,
 .promo-title,
-.promo-value {
+.promo-value,
+.post-title,
+.post-value {
   color: #111;
   float: left;
   width: 50%;
@@ -280,7 +270,8 @@ aside {
 }
 
 .subtotal-value,
-.total-value {
+.total-value,
+.post-value {
   text-align: right;
 }
 
@@ -296,7 +287,6 @@ aside {
 .checkout-cta {
   display: block;
   float: none;
-  font-size: 0.75rem;
   text-align: center;
   text-transform: uppercase;
   padding: 0.625rem 0;
@@ -308,7 +298,6 @@ aside {
   border: 1px solid #aaa;
   border-radius: 4px;
   display: block;
-  font-size: 0.625rem;
   height: 34px;
   width: 100%;
 }

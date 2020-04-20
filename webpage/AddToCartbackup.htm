@@ -1,0 +1,100 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/AddToCart.css">
+  <script src="../js/add2cart.js" async ></script>
+  <title>Shopping Cart</title>
+</head>
+
+<body>
+  <main>
+    <div class="basket">
+      <div class="basket-module">
+       <h1 style="font-size: x-large;"><b>Shopping Cart</b></h1>
+      </div>
+      <div class="basket-labels">
+        <ul>
+          <li class="item item-heading">Item</li>
+          <li class="price">Price</li>
+          <li class="quantity">Quantity</li>
+          <li class="subtotal">Subtotal</li>
+        </ul>
+      </div>
+      <div class="basket-product">
+        <div class="item">
+          <div class="product-image">
+            <img src="../image/product_pic/azul_1.jpeg" alt="Placholder Image 2" class="product-frame">
+            
+          </div>
+          <div class="product-details">
+            <h1><strong><span class="item-quantity">Azul Boardgame</span></strong></h1>
+            <p><strong>⭐⭐⭐⭐⭐</strong></p>
+          </div>
+        </div>
+        <div class="price">82.90</div>
+        <div class="quantity">
+          <input type="number" value="1" min="1" class="quantity-field">
+        </div>
+        <div class="subtotal">82.90</div>
+        <div class="remove">
+          <button>Remove</button>
+        </div>
+    </div>
+      <div class="basket-product">
+        <div class="item">
+          <div class="product-image">
+            <img src="../image/product_pic/domino_3.jpg" alt="Placholder Image 2" class="product-frame">
+          </div>
+          <div class="product-details">
+            <h1><strong><span class="item-quantity">Domino Tiles</span></strong></h1>
+            <p><strong>⭐⭐⭐⭐⭐</strong></p>
+          </div>
+        </div>
+        <div class="price">31.10</div>
+        <div class="quantity">
+          <input type="number" value="1" min="1" class="quantity-field">
+        </div>
+        <div class="subtotal">31.10</div>
+        <div class="remove">
+          <button>Remove</button>
+        </div>
+      </div>
+    </div>
+    <aside>
+      <div class="summary">
+        <div class="summary-total-items"><span class="total-items"></span> Items in your Cart</div>
+        <div class="summary-subtotal">
+          <div class="subtotal-title">Subtotal</div>
+          <div class="subtotal-value final-value" id="basket-subtotal">114.00</div>
+        </div>
+        <div class="summary-delivery">
+          <select name="delivery-collection" class="summary-delivery-selection">
+             <option value="0" selected>Delivery via Postage</option>
+             <option value="1" >Collect at Mindly Tabletop store</option>
+          </select>
+          <div class="post-total">
+          <div class="post-title">Postage & Packing</div>
+          <div class="post-value"></div>
+        </div>
+        </div>
+        <div class="summary-total">
+          <div class="total-title">Total</div>
+          <div class="total-value final-value" id="basket-total">55.00</div>
+        </div>
+        <div class="summary-checkout">
+          <a href="Checkout.htm">
+          <button class="checkout-cta">Go to Secure Checkout</button>
+          </a>
+        </div>
+      </div>
+    </aside>
+  </main>
+</body>
+<footer>
+  <h4>Mindly Tabletop Cafe and Store, Penang, Malaysia™</h4>
+</footer>
+
+</html>

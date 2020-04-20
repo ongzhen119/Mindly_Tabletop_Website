@@ -39,7 +39,7 @@
       .text1{
         height:200px ;
         color: #e3e3e3;
-        font-size: 39px;
+        font-size: 33px;
         font-weight: 800;
         margin-bottom: 115px;
         letter-spacing: 9px;
@@ -63,11 +63,11 @@
           margin-bottom: -40px;
          } 
         30%{
-          letter-spacing: 15px;
+          letter-spacing: 14px;
          margin-bottom: -40px;
          }
         85%{
-          letter-spacing: 9px;
+          letter-spacing: 8px;
           margin-bottom: -40px;
         }
       }
@@ -75,8 +75,8 @@
         justify-content: center;
         align-items: center;
         position: absolute;
-        top: 550px;
-        left: 90px;
+        top: 570px;
+        left: 100px;
         display: flex;
         flex-direction: row-reverse;
       }
@@ -136,41 +136,64 @@
 
 
     </style>
-    <body style="height: 1000px;">
+    <body style="height: 1000px;" onload = "topCart()">
       <div class ="header">
         <div class="inner-header">
         <h>MINDLY TABLETOP Cafe and Store in Penang , Malaysia</h>
           <ul>
-            <li><a href="">Game Request</a></li>
-            <li><a href="">Cafe</a></li>
-            <li><a href="">FAQ</a></li>
-            <li><a href="">Contact Us</a></li>
+            <li><a href="gamerequest.htm">Game Request</a></li>
+            <li><a href="cafemenu.htm">Cafe</a></li>
+            <li><a href="faq.htm">FAQ</a></li>
+            <li><a href="contactus.htm">Contact Us</a></li>
             <li><a href="https://www.facebook.com/pg/Mindly-Tabletop-cafe-and-store-100484604971735/posts/?ref=page_internal" target="_blank" title="Follow on Facebook"><i class="fab fa-facebook-square fa-lg"></i></a></li>
             <li><a href="mailto:ongzc-pm19@student.tarc.edu.my" title="Send us an email"><i class="fas fa-envelope fa-lg"></i></a></li>
             <li><a href="tel:017-5751954" title="Call us"><i class="fas fa-phone"></i></a></li>
           </ul>
         </div>
       </div>
-      <div class="sticky-top">
-    
+
+      <div class="sticky-top" >
         <div class="inner-header" >
           <img src="../image/component/mindly_logo.png"width="100px"height="95px"/>
           <div class="search-box" >
-            <input class="search-txt" type="text" name="" placeholder="Type to search">
+            <input class="search-txt" type="text" name="" placeholder="search board games">
             <a class="search-btn" href="#">
               <i class="fas fa-search"></i>
             </a>
           </div>
-          <div class="profile-btn">
-            <i class="fas fa-user fa-4x" ></i>
-          </div><div class="cart-btn">
-            <i class="fas fa-shopping-cart fa-4x"></i>
-          </div>
-      </div>
-  
-      <div style="background-color: rgb(227, 227, 228)">
-          <div class="inner-header" >
+
+          <div class=" profile dropdown " >
+            <button class="dropbtn profile-btn"><i class="fas fa-user fa-3x" ></i></button>
+            <br><br>
+              <div class="dropdown-content" style="top: 70px;">
+                <a href="Login.htm">Login <i class="fas fa-sign-in-alt fa-lg"></i></a>
+                <a href="ProfileTest.htm">Profile<i class="fas fa-user fa-lg" ></i></a>
+                
+              </div>
             
+          </div>
+
+
+          <div class="cart-btn">
+            <i class="fas fa-shopping-cart fa-3x" onclick="location.href= 'AddToCart.htm';"></i> 
+            <script>
+              function topCart(){
+              var price = 0;
+              for(var i =0; i< 50; i++){
+                if (localStorage.getItem(i) == null){
+              continue;
+               }
+              var list = JSON.parse(localStorage.getItem(i));
+              price += list.price * list.quantity;
+              }
+              document.getElementById("cprice").innerHTML = "/ RM" + price.toFixed(2);
+            }
+            </script>
+            <span style="font-size: 25px;" id="cprice"></span>            
+          </div>
+        </div>
+        <div style="background-color: #e3e3e3;">
+          <div class="inner-header" >
             <div class="main-nav" >
               <a href="homepage.htm">HOME <i class="fas fa-home fa-lg"></i></a>
               <div class="dropdown">
@@ -178,11 +201,11 @@
                 <div class="dropdown-content">
                   <a href="#">Hot Selling</a>
                   <a href="#">New Arrival</a>
-                  <a href="#">All Games</a>
+                  <a href="#">Promotion</a>
                 </div>
               </div>
               <div class="dropdown">
-                <button class="dropbtn">CATEGORY<i class="fas fa-caret-down fa-lg"></i></button>
+                <button class="dropbtn"> CATEGORY <i class="fas fa-caret-down fa-lg"></i></button>
                 <div class="dropdown-content">
                   <a href="#">Board Games</a>
                   <a href="#">Strategy Games</a>
@@ -190,7 +213,7 @@
                   <a href="#">Accessories</a>
                 </div>
               </div>
-              <a href=""> CAFE <i class="fas fa-coffee fa-lg"></i></a>
+              <a href="cafemenu.htm"> CAFE <i class="fas fa-coffee fa-lg"></i></a>
             </div>
           </div>
         </div>
@@ -212,7 +235,7 @@
             </div>
             <div class="card"
              style="position: absolute;top:20px;left:0px;width:430px;height:600px">
-              <h3 style="font-size: 35px;text-align: center;letter-spacing: 1px;">GET IN TOUCH WITH US</h3><br/>
+              <h3 style="font-size: 30px;text-align: center;letter-spacing: 1px;padding-top:35px ;">GET IN TOUCH WITH US</h3><br/>
               <form action="">
                   <label for="name">Your name <span class="red">(required)</span></label> <br/>
                   <input placeholder="eg: John "type="text" name="name" id="name"size ="35"autofocus required> <br/><br/>

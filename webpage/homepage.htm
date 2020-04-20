@@ -7,8 +7,9 @@
         <link href="../css/style.css" rel="stylesheet" type="text/css"/>
         <link href="../css/home.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="../css/swiper.min.css" type="text/css">
+        <script src="../js/homepagecart.js"></script>
     </head>
-    <body style="height: auto;">
+    <body style="height: auto;" onload = "topCart()">
       <div class ="header">
         <div class="inner-header">
         <h>MINDLY TABLETOP Cafe and Store in Penang , Malaysia</h>
@@ -28,17 +29,40 @@
         <div class="inner-header" >
           <img src="../image/component/mindly_logo.png"width="100px"height="95px"/>
           <div class="search-box" >
-            <input class="search-txt" type="text" name="" placeholder="Type to search">
+            <input class="search-txt" type="text" name="" placeholder="search board games">
             <a class="search-btn" href="#">
               <i class="fas fa-search"></i>
             </a>
           </div>
-          <div class="profile-btn">
-            <i class="fas fa-user fa-3x" ></i>
+
+          <div class=" profile dropdown " >
+            <button class="dropbtn profile-btn"><i class="fas fa-user fa-3x" ></i></button>
+            <br><br>
+              <div class="dropdown-content" style="top: 70px;">
+                <a href="Login.htm">Login <i class="fas fa-sign-in-alt fa-lg"></i></a>
+                <a href="ProfileTest.htm">Profile<i class="fas fa-user fa-lg" ></i></a>
+                
+              </div>
+            
           </div>
+
+
           <div class="cart-btn">
-            <i class="fas fa-shopping-cart fa-3x"></i> 
-            <span style="font-size: 25px;">/ RM0.00</span>            
+            <i class="fas fa-shopping-cart fa-3x" onclick="location.href= 'AddToCart.htm';"></i> 
+            <script>
+              function topCart(){
+              var price = 0;
+              for(var i =0; i< 50; i++){
+                if (localStorage.getItem(i) == null){
+              continue;
+               }
+              var list = JSON.parse(localStorage.getItem(i));
+              price += list.price * list.quantity;
+              }
+              document.getElementById("cprice").innerHTML = "/ RM " + price.toFixed(2);
+            }
+            </script>
+            <span style="font-size: 25px;" id="cprice">/ RM 0.00</span>            
           </div>
         </div>
         <div style="background-color: #e3e3e3;">
@@ -146,7 +170,7 @@
             <div class="slider-box">
               <p class="status">HOT</p>
               <div class="img-box">
-               <img src="../image/product_pic/azul_1.jpeg" alt="" >
+               <img class="image" src="../image/product_pic/azul_1.jpeg" alt="" >
               </div>
               <div class="cart "><a href=""><i title="Add to cart" class="fa fa-cart-plus card"></i></a></div>
               <div class="fav "><a href=""><i title="Add to favourite" i class="fa fa-heart card"></i></a></div>
@@ -154,8 +178,8 @@
               <div class="view">
                   <a href="#">View More</a>
               </div>
-              <p class="detail">Azul (Limited Edition) Glass 
-                <a href="#" class="price"> <br/> Price-RM129.80</a>
+              <p class="detail"><span class="name">Azul: Stained Glass (Limited Edition)</span>
+                <a href="#" class="price"><br/> Price-RM129.80</a>
               </p>
             </div>
           </div>
@@ -164,7 +188,7 @@
             <div class="slider-box">
               <p class="status">HOT</p>
               <div class="img-box">
-               <img src="../image/product_pic/azul_1.jpeg" alt="" >
+               <img class="image" src="../image/product_pic/azul_1.jpeg" alt="" >
               </div>
               <div class="cart "><a href=""><i title="Add to cart" class="fa fa-cart-plus card"></i></a></div>
               <div class="fav "><a href=""><i title="Add to favourite" i class="fa fa-heart card"></i></a></div>
@@ -172,7 +196,7 @@
               <div class="view">
                   <a href="#">View More</a>
               </div>
-              <p class="detail">Azul (Limited Edition) Glass 
+              <p class="detail"><span class="name">Azul (Limited Edition) Glass </span>
                 <a href="#" class="price"> <br/> Price-RM129.80</a>
               </p>
             </div>
@@ -182,7 +206,7 @@
             <div class="slider-box">
               <p class="status">HOT</p>
               <div class="img-box">
-               <img src="../image/product_pic/azul_1.jpeg" alt="" >
+               <img class="image" src="../image/product_pic/azul_1.jpeg" alt="" >
               </div>
               <div class="cart "><a href=""><i title="Add to cart" class="fa fa-cart-plus card"></i></a></div>
               <div class="fav "><a href=""><i title="Add to favourite" i class="fa fa-heart card"></i></a></div>
@@ -200,7 +224,7 @@
             <div class="slider-box">
               <p class="status">HOT</p>
               <div class="img-box">
-               <img src="../image/product_pic/azul_1.jpeg" alt="" >
+               <img class="image" src="../image/product_pic/azul_1.jpeg" alt="" >
               </div>
               <div class="cart "><a href=""><i title="Add to cart" class="fa fa-cart-plus card"></i></a></div>
               <div class="fav "><a href=""><i title="Add to favourite" i class="fa fa-heart card"></i></a></div>
@@ -218,7 +242,7 @@
             <div class="slider-box">
               <p class="status">HOT</p>
               <div class="img-box">
-               <img src="../image/product_pic/azul_1.jpeg" alt="" >
+               <img class="image" src="../image/product_pic/azul_1.jpeg" alt="" >
               </div>
               <div class="cart "><a href=""><i title="Add to cart" class="fa fa-cart-plus card"></i></a></div>
               <div class="fav "><a href=""><i title="Add to favourite" i class="fa fa-heart card"></i></a></div>
@@ -236,7 +260,7 @@
             <div class="slider-box">
               <p class="status">HOT</p>
               <div class="img-box">
-               <img src="../image/product_pic/azul_1.jpeg" alt="" >
+               <img class="image" src="../image/product_pic/azul_1.jpeg" alt="" >
               </div>
               <div class="cart "><a href=""><i title="Add to cart" class="fa fa-cart-plus card"></i></a></div>
               <div class="fav "><a href=""><i title="Add to favourite" i class="fa fa-heart card"></i></a></div>
@@ -254,7 +278,7 @@
             <div class="slider-box">
               <p class="status">HOT</p>
               <div class="img-box">
-               <img src="../image/product_pic/azul_1.jpeg" alt="" >
+               <img class="image" src="../image/product_pic/azul_1.jpeg" alt="" >
               </div>
               <div class="cart "><a href=""><i title="Add to cart" class="fa fa-cart-plus card"></i></a></div>
               <div class="fav "><a href=""><i title="Add to favourite" i class="fa fa-heart card"></i></a></div>
@@ -272,7 +296,7 @@
             <div class="slider-box">
               <p class="status">HOT</p>
               <div class="img-box">
-               <img src="../image/product_pic/azul_1.jpeg" alt="" >
+               <img class="image" src="../image/product_pic/azul_1.jpeg" alt="" >
               </div>
               <div class="cart "><a href=""><i title="Add to cart" class="fa fa-cart-plus card"></i></a></div>
               <div class="fav "><a href=""><i title="Add to favourite" i class="fa fa-heart card"></i></a></div>
@@ -290,7 +314,7 @@
             <div class="slider-box">
               <p class="status">HOT</p>
               <div class="img-box">
-               <img src="../image/product_pic/azul_1.jpeg" alt="" >
+               <img class="image" src="../image/product_pic/azul_1.jpeg" alt="" >
               </div>
               <div class="cart "><a href=""><i title="Add to cart" class="fa fa-cart-plus card"></i></a></div>
               <div class="fav "><a href=""><i title="Add to favourite" i class="fa fa-heart card"></i></a></div>
@@ -308,7 +332,7 @@
             <div class="slider-box">
               <p class="status">HOT</p>
               <div class="img-box">
-               <img src="../image/product_pic/azul_1.jpeg" alt="" >
+               <img class="image" src="../image/product_pic/azul_1.jpeg" alt="" >
               </div>
               <div class="cart "><a href=""><i title="Add to cart" class="fa fa-cart-plus card"></i></a></div>
               <div class="fav "><a href=""><i title="Add to favourite" i class="fa fa-heart card"></i></a></div>
@@ -316,7 +340,7 @@
               <div class="view">
                   <a href="#">View More</a>
               </div>
-              <p class="detail">Azul (Limited Edition) Glass 
+              <p class="detail">Azul: Stained Glass (Limited Edition)
                 <a href="#" class="price"> <br/> Price-RM129.80</a>
               </p>
             </div>
@@ -345,7 +369,7 @@
               <div class="slider-box">
                 <p class="status">NEW</p>
                 <div class="img-box">
-                 <img src="../image/product_pic/azul_1.jpeg" alt="" >
+                 <img class="image" src="../image/product_pic/azul_1.jpeg" alt="" >
                 </div>
                 <div class="cart "><a href="#"><i title="Add to cart" class="fa fa-cart-plus card"></i></a></div>
                 <div class="fav "><a href="#"><i title="Add to favourite" i class="fa fa-heart card"></i></a></div>
@@ -363,7 +387,7 @@
               <div class="slider-box">
                 <p class="status">NEW</p>
                 <div class="img-box">
-                 <img src="../image/product_pic/azul_1.jpeg" alt="" >
+                 <img class="image" src="../image/product_pic/azul_1.jpeg" alt="" >
                 </div>
                 <div class="cart "><a href=""><i title="Add to cart" class="fa fa-cart-plus card"></i></a></div>
                 <div class="fav "><a href=""><i title="Add to favourite" i class="fa fa-heart card"></i></a></div>
@@ -381,7 +405,7 @@
               <div class="slider-box">
                 <p class="status">NEW</p>
                 <div class="img-box">
-                 <img src="../image/product_pic/azul_1.jpeg" alt="" >
+                 <img class="image" src="../image/product_pic/azul_1.jpeg" alt="" >
                 </div>
                 <div class="cart "><a href=""><i title="Add to cart" class="fa fa-cart-plus card"></i></a></div>
                 <div class="fav "><a href=""><i title="Add to favourite" i class="fa fa-heart card"></i></a></div>
@@ -399,7 +423,7 @@
               <div class="slider-box">
                 <p class="status">NEW</p>
                 <div class="img-box">
-                 <img src="../image/product_pic/azul_1.jpeg" alt="" >
+                 <img class="image" src="../image/product_pic/azul_1.jpeg" alt="" >
                 </div>
                 <div class="cart "><a href=""><i title="Add to cart" class="fa fa-cart-plus card"></i></a></div>
                 <div class="fav "><a href=""><i title="Add to favourite" i class="fa fa-heart card"></i></a></div>
@@ -417,7 +441,7 @@
               <div class="slider-box">
                 <p class="status">NEW</p>
                 <div class="img-box">
-                 <img src="../image/product_pic/azul_1.jpeg" alt="" >
+                 <img class="image" src="../image/product_pic/azul_1.jpeg" alt="" >
                 </div>
                 <div class="cart "><a href=""><i title="Add to cart" class="fa fa-cart-plus card"></i></a></div>
                 <div class="fav "><a href=""><i title="Add to favourite" i class="fa fa-heart card"></i></a></div>
@@ -435,7 +459,7 @@
               <div class="slider-box">
                 <p class="status">NEW</p>
                 <div class="img-box">
-                 <img src="../image/product_pic/azul_1.jpeg" alt="" >
+                 <img class="image" src="../image/product_pic/azul_1.jpeg" alt="" >
                 </div>
                 <div class="cart "><a href=""><i title="Add to cart" class="fa fa-cart-plus card"></i></a></div>
                 <div class="fav "><a href=""><i title="Add to favourite" i class="fa fa-heart card"></i></a></div>
@@ -453,7 +477,7 @@
               <div class="slider-box">
                 <p class="status">NEW</p>
                 <div class="img-box">
-                 <img src="../image/product_pic/azul_1.jpeg" alt="" >
+                 <img class="image" src="../image/product_pic/azul_1.jpeg" alt="" >
                 </div>
                 <div class="cart "><a href=""><i title="Add to cart" class="fa fa-cart-plus card"></i></a></div>
                 <div class="fav "><a href=""><i title="Add to favourite" i class="fa fa-heart card"></i></a></div>
@@ -471,7 +495,7 @@
               <div class="slider-box">
                 <p class="status">NEW</p>
                 <div class="img-box">
-                 <img src="../image/product_pic/azul_1.jpeg" alt="" >
+                 <img class="image" src="../image/product_pic/azul_1.jpeg" alt="" >
                 </div>
                 <div class="cart "><a href=""><i title="Add to cart" class="fa fa-cart-plus card"></i></a></div>
                 <div class="fav "><a href=""><i title="Add to favourite" i class="fa fa-heart card"></i></a></div>
@@ -489,7 +513,7 @@
               <div class="slider-box">
                 <p class="status">NEW</p>
                 <div class="img-box">
-                 <img src="../image/product_pic/azul_1.jpeg" alt="" >
+                 <img class="image" src="../image/product_pic/azul_1.jpeg" alt="" >
                 </div>
                 <div class="cart "><a href=""><i title="Add to cart" class="fa fa-cart-plus card"></i></a></div>
                 <div class="fav "><a href=""><i title="Add to favourite" i class="fa fa-heart card"></i></a></div>
@@ -507,7 +531,7 @@
               <div class="slider-box">
                 <p class="status">NEW</p>
                 <div class="img-box">
-                 <img src="../image/product_pic/azul_1.jpeg" alt="" >
+                 <img class="image" src="../image/product_pic/azul_1.jpeg" alt="" >
                 </div>
                 <div class="cart "><a href=""><i title="Add to cart" class="fa fa-cart-plus card"></i></a></div>
                 <div class="fav "><a href=""><i title="Add to favourite" i class="fa fa-heart card"></i></a></div>
@@ -526,9 +550,8 @@
           <div class="swiper-pagination" ></div>
         </div>
 
-      <!-- Swiper JS -->
-      <script type="text/javascript" src="../js/swiper.min.js"></script>
-      <script src="../js/script.js"></script>
+
+
 
 
       <!--Footer-->
@@ -572,7 +595,11 @@
 
 
   </body>
+      <!-- Swiper JS -->
+      <script type="text/javascript" src="../js/swiper.min.js"></script>
+      <script type="text/javascript"src="../js/script.js"></script>
 
+      
 </html>
 
 

@@ -165,7 +165,8 @@
     function check(){
         var target = event.target;
         if (localStorage.length == 0){
-            alert("There is no item in your cart!")
+            alert("There is no item in your cart! Consider browsing our store to add product~");
+            location.href = "homepage.htm";
         }
         else{
             location.href = "Checkout.htm";

@@ -290,7 +290,7 @@ button.addcart{
     border: 1px solid black;
     padding: 1px 1px;
     margin: 1px 0;
-    border-radius: 5px;
+    border-radius: 3px;
 
 }
 
@@ -308,7 +308,7 @@ button.addfav{
     border: 1px solid black;
     padding: 1px 1px;
     margin: 1px 0;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 .addcart:hover{

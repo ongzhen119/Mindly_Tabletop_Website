@@ -117,8 +117,10 @@ td.product{
     text-shadow: 1px 1px gray;
     font-family:'Roboto';
     font-size:1.1em;
-    bottom:-45px;
+    height:50px;
+    bottom:-55px;
     left:0px;
+    text-align:top;
     width:100%;
     user-select: none;
     
@@ -130,7 +132,7 @@ td.product{
     font-weight:bold;
     font-family:'Roboto';
     line-height: 2em;
-    bottom:-70px;
+    bottom:-90px;
     left:60px;
 }
 

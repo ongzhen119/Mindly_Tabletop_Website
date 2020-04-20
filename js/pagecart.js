@@ -38,4 +38,5 @@ function addFlayout(event){
         price, name, image, quantity
     };
     localStorage.setItem(number, JSON.stringify(productInfo));
+    location.reload();
 }

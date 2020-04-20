@@ -245,10 +245,13 @@ align-items: center;
 .grabbable{
   cursor: grab;
   cursor: -webkit-grab;
+  cursor: -moz-grab;
 }
 .grabbable:active{
   cursor: grabbing;
   cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+
 }
 .cart , .fav{
   width:60px;

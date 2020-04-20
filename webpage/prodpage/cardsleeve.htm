@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/979e56d4a3.js" crossorigin="anonymous" rel="stylesheet"></script>
+    <script src="https://kit.fontawesome.com/979e56d4a3.js" crossorigin="anonymous"></script>
     <link href="../../css/style.css" rel="stylesheet" type="text/css"/>
     <link href="../../css/pPage.css" rel="stylesheet" type="text/css"/>
     <script src="../../js/pagecart.js"></script>
-    <title>Document</title>
+    <title>Product-Mindly Tabletop cafe and Store in Penang , Malaysia</title>
  
 </head>
-<body onload="qty(0); rating(); topCart(); " style="height: inherit !important;">
+<body onload="qty(0); rating(); topCart();" style="height: inherit !important;">
    
   <div class ="header">
     <div class="inner-header">
@@ -93,8 +93,6 @@
       </div>
     </div>
   </div>
-
-      <!-----------------------------------------------------SLIDE------------------------------------------->
       <div class = "icontainer">
       <div class = "slide fade">
           <img class="image" src="../../image/product_pic/cardSleeve_1.jpg"/>
@@ -148,13 +146,13 @@
         function qty(n){
             QtyIndex += n;
             if (QtyIndex < 1) {QtyIndex = 1};
-            if (QtyIndex > 26) {QtyIndex = 26};
+            if (QtyIndex > 4) {QtyIndex = 4};
             document.getElementById("result").innerHTML = QtyIndex;
         }
         
 
       function rating(){
-      var rating = 3;
+      var rating = 2;
       var star = document.getElementsByClassName("star");
       for(var i = 0; i < rating; i++){
         star[i].innerHTML += "&#9733";
@@ -185,11 +183,10 @@
       </script>
     </div>
 
-      <!-----------------------------------------------------DETAILS------------------------------------------->
 
     <div class="summary">
         <div class="name">Ultra Pro Deck Protector Sleeves for Standard Size Cards</div>
-        <div class="price"><p>RM 15.50</p class="rprice"><div class="stock">26 in stock</div></div>
+        <div class="price"><p class="rprice">RM 15.50</p><div class="stock">9 in stock</div></div>
         <div class="rating">
           <p>Customer's reviews <i class="fas fa-caret-right"></i></p>
           <table style="display:inline-block">
@@ -218,12 +215,11 @@
       <button class="addfav"><i class="fa fa-heart"></i> Add to favourite</button>
       </div>
     </div>
-      <!-----------------------------------------------------DESCRIPTION------------------------------------------->
-
     <div class="description">
         <h2>Description</h2>
         <p>Protect standard sized gaming and other cards (MTG, Pokemon, etc). high clarity and excellent quality From a TRUSTED brand name, ultra-pro. Black 200 Count bundle.     
-             </p>
+        </p>
+        <h2>Product Information</h2>
         <table class="information" cellspacing="0" >
           <colgroup>
             <col style="background-color: rgb(243,243,243);">
@@ -257,7 +253,7 @@
           <td class="product"><div class="container"><a href = "mahjong.htm"><img src = "../../image/product_pic/mahjong_1.jfif" ><div class="view">View More</div></a><p>Chinese Mahjong Game Set</p><div class="containerp">RM<span class="price" >120.50</span></div></div></td>
       </tr>
       <tr>
-        <td class="product"><div class="container"><a href = "domino.htm"><img src = "../../image/product_pic/domino_1.jfif" ><div class="view">View More</div></a><p>Domino Squares Set</p><div class="containerp">RM<span class="price" >31.10</span></div></div></td>
+        <td class="product"><div class="container"><a href = "fjords.htm"  ><img src = "../../image/product_pic/fjords_1.jpg" ><div class="view">View More</div></a><p>Fjords (2004)</p><div class="containerp">RM<span class="price" >154.40</span></div></div></td>
       </tr>
       <tr>
         <td class="product"><div class="container"><a href = "kingabbey.htm"><img src = "../../image/product_pic/kingsAbbey_1.jpg" ><div class="view">View More</div></a><p>The King's Abbey (English First Edition)</p><div class="containerp">RM<span class="price" >324.40</span></div></div></td>

@@ -20,7 +20,7 @@ form input[type=text]:focus,form  input[type=password]:focus ,form  input[type=e
 /* Set a style for all buttons */
 .inner button {
   position: absolute;
-  top:554px;
+  top:570px;
   left: 160px;
   color: black;
   padding: 14px 20px;
